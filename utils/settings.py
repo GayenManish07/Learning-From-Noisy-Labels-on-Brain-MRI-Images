@@ -22,7 +22,7 @@ def get_args():
         mnist_root = './data/mnist'
         cifar10_root = './data/cifar10'
         cifar100_root = './data/cifar100'
-        batch_size = 256
+        batch_size = 16
         device = 'cuda:0'
         data_device = 1
         noise_type = 'sn'
