@@ -1,0 +1,1267 @@
+Use default setting
+{'batch_size': 512, 'lr': 0.0001, 'lr2': 1e-05, 'momentum': 0.9, 'weight_decay': 0.001, 'backbone': 'resnet50', 'optim': 'SGD', 'scheduler': None, 'workers': 4, 'forget_rate': 0.2, 'num_gradual': 10, 'exponent': 1, 'loss_type': 'coteaching_plus', 'warmup': 0, 'linear_num': 256, 'alpha': 0.4, 'beta': 0.1, 'lambda1': 300, 'K': 10.0, 'start_epoch': 0, 'epochs': 120, 'stage1': 45, 'stage2': 84, 'noise': 0.3, 'noise_type': 'symmetric', 'dataset': 'aptos', 'image_size': 224, 'classnum': 5, 'device': 'cuda:0', 'data_device': 1, 'root': '/home/fgldlb/Documents/ISIC-Archive-Downloader/NewData', 'datanum': 15000, 'train_redux': None, 'test_redux': None, 'val_redux': None, 'full_test': False, 'random_ind_redux': False, 'curriculum': 1, 'cluster_mode': 'dual', 'dim_reduce': 256, 'mix_grad': 1, 'discard': 0, 'gamma': 0.6, 'finetune_schedule': 0, 'dir': 'experiment/test-debug', 'random_seed': None, 'checkpoint_dir': 'experiment/test-debug/checkpoint.pth.tar', 'modelbest_dir': 'experiment/test-debug/model_best.pth.tar', 'record_dir': 'experiment/test-debug/record.json', 'y_file': 'experiment/test-debug/y.npy'}
+nbclasses 5
+Actual noise 0.30
+Noise added. Actual noise rate: 0.30
+Train num: 2930	Val num: 366	Test num: 366
+=> no checkpoint found at 'experiment/test-debug/checkpoint.pth.tar'
+-----------------
+Train Epoch [0/120]  Batch [0/6]  Time 32.929 (32.929)  LossA 1.654 (1.654)  LossB 1.654 (1.654)  Prec1A 27.539 (27.539)  Prec1B 23.047 (23.047)Train Epoch [0/120]  Batch [1/6]  Time 1.729 (17.329)  LossA 1.598 (1.626)  LossB 1.598 (1.626)  Prec1A 33.789 (30.664)  Prec1B 22.461 (22.754)Train Epoch [0/120]  Batch [2/6]  Time 1.730 (12.129)  LossA 1.629 (1.627)  LossB 1.629 (1.627)  Prec1A 30.078 (30.469)  Prec1B 24.805 (23.438)Train Epoch [0/120]  Batch [3/6]  Time 1.731 (9.529)  LossA 1.558 (1.610)  LossB 1.558 (1.610)  Prec1A 32.422 (30.957)  Prec1B 26.172 (24.121)Train Epoch [0/120]  Batch [4/6]  Time 27.460 (13.116)  LossA 1.581 (1.604)  LossB 1.581 (1.604)  Prec1A 32.812 (31.328)  Prec1B 25.977 (24.492)Train Epoch [0/120]  Batch [5/6]  Time 1.243 (11.137)  LossA 1.589 (1.601)  LossB 1.589 (1.601)  Prec1A 31.622 (31.365)  Prec1B 28.919 (25.051)
+ * Top1 acc:	A: 31.365	B: 25.051
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7027	B: 0.7027
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [0/120]  Batch [0/1]  Time 21.677 (21.677)  LossA 1.538 (1.538)  LossB 1.542 (1.542)  Prec1A 40.437 (40.437)  Prec1B 22.131 (22.131)
+ * Top1 acc:	A: 40.437	B: 22.131
+Test Epoch [0/120]  Batch [0/1]  Time 24.607 (24.607)  LossA 1.601 (1.601)  LossB 1.571 (1.571)  Prec1A 34.699 (34.699)  Prec1B 21.038 (21.038)
+ * Top1 acc:	A: 34.699	B: 21.038
+Saving best model at epoch 1
+Epoch 0 using 1.0 min 53.65 sec
+-----------------
+Train Epoch [1/120]  Batch [0/6]  Time 32.787 (32.787)  LossA 1.495 (1.495)  LossB 1.495 (1.495)  Prec1A 33.984 (33.984)  Prec1B 29.297 (29.297)Train Epoch [1/120]  Batch [1/6]  Time 1.730 (17.259)  LossA 1.506 (1.501)  LossB 1.506 (1.501)  Prec1A 36.328 (35.156)  Prec1B 28.516 (28.906)Train Epoch [1/120]  Batch [2/6]  Time 1.731 (12.083)  LossA 1.521 (1.507)  LossB 1.521 (1.507)  Prec1A 34.766 (35.026)  Prec1B 30.469 (29.427)Train Epoch [1/120]  Batch [3/6]  Time 1.730 (9.495)  LossA 1.451 (1.493)  LossB 1.451 (1.493)  Prec1A 41.016 (36.523)  Prec1B 33.594 (30.469)Train Epoch [1/120]  Batch [4/6]  Time 27.313 (13.058)  LossA 1.486 (1.492)  LossB 1.486 (1.492)  Prec1A 36.133 (36.445)  Prec1B 31.055 (30.586)Train Epoch [1/120]  Batch [5/6]  Time 1.242 (11.089)  LossA 1.432 (1.482)  LossB 1.432 (1.482)  Prec1A 36.757 (36.485)  Prec1B 33.243 (30.922)
+ * Top1 acc:	A: 36.485	B: 30.922
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7078	B: 0.7095
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [1/120]  Batch [0/1]  Time 21.778 (21.778)  LossA 1.438 (1.438)  LossB 1.549 (1.549)  Prec1A 50.273 (50.273)  Prec1B 33.333 (33.333)
+ * Top1 acc:	A: 50.273	B: 33.333
+Test Epoch [1/120]  Batch [0/1]  Time 24.724 (24.724)  LossA 1.473 (1.473)  LossB 1.565 (1.565)  Prec1A 45.082 (45.082)  Prec1B 27.869 (27.869)
+ * Top1 acc:	A: 45.082	B: 27.869
+Saving best model at epoch 2
+Epoch 1 using 1.0 min 53.58 sec
+-----------------
+Train Epoch [2/120]  Batch [0/6]  Time 33.985 (33.985)  LossA 1.433 (1.433)  LossB 1.433 (1.433)  Prec1A 40.039 (40.039)  Prec1B 34.180 (34.180)Train Epoch [2/120]  Batch [1/6]  Time 1.730 (17.857)  LossA 1.424 (1.428)  LossB 1.424 (1.428)  Prec1A 36.914 (38.477)  Prec1B 34.961 (34.570)Train Epoch [2/120]  Batch [2/6]  Time 1.729 (12.481)  LossA 1.433 (1.430)  LossB 1.433 (1.430)  Prec1A 38.477 (38.477)  Prec1B 36.133 (35.091)Train Epoch [2/120]  Batch [3/6]  Time 1.729 (9.793)  LossA 1.421 (1.427)  LossB 1.421 (1.427)  Prec1A 35.547 (37.744)  Prec1B 36.328 (35.400)Train Epoch [2/120]  Batch [4/6]  Time 25.859 (13.006)  LossA 1.376 (1.417)  LossB 1.376 (1.417)  Prec1A 40.625 (38.320)  Prec1B 39.648 (36.250)Train Epoch [2/120]  Batch [5/6]  Time 1.243 (11.046)  LossA 1.348 (1.406)  LossB 1.348 (1.406)  Prec1A 43.514 (38.976)  Prec1B 39.459 (36.655)
+ * Top1 acc:	A: 38.976	B: 36.655
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7226	B: 0.7252
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [2/120]  Batch [0/1]  Time 21.743 (21.743)  LossA 1.337 (1.337)  LossB 1.430 (1.430)  Prec1A 54.645 (54.645)  Prec1B 43.989 (43.989)
+ * Top1 acc:	A: 54.645	B: 43.989
+Test Epoch [2/120]  Batch [0/1]  Time 24.715 (24.715)  LossA 1.384 (1.384)  LossB 1.451 (1.451)  Prec1A 48.634 (48.634)  Prec1B 39.891 (39.891)
+ * Top1 acc:	A: 48.634	B: 39.891
+Saving best model at epoch 3
+Epoch 2 using 1.0 min 53.26 sec
+-----------------
+Train Epoch [3/120]  Batch [0/6]  Time 33.710 (33.710)  LossA 1.351 (1.351)  LossB 1.351 (1.351)  Prec1A 37.891 (37.891)  Prec1B 38.477 (38.477)Train Epoch [3/120]  Batch [1/6]  Time 1.730 (17.720)  LossA 1.370 (1.360)  LossB 1.370 (1.360)  Prec1A 37.891 (37.891)  Prec1B 41.211 (39.844)Train Epoch [3/120]  Batch [2/6]  Time 1.730 (12.390)  LossA 1.275 (1.332)  LossB 1.275 (1.332)  Prec1A 42.969 (39.583)  Prec1B 43.945 (41.211)Train Epoch [3/120]  Batch [3/6]  Time 1.730 (9.725)  LossA 1.347 (1.336)  LossB 1.347 (1.336)  Prec1A 41.016 (39.941)  Prec1B 40.234 (40.967)Train Epoch [3/120]  Batch [4/6]  Time 26.006 (12.981)  LossA 1.358 (1.340)  LossB 1.358 (1.340)  Prec1A 38.086 (39.570)  Prec1B 38.672 (40.508)Train Epoch [3/120]  Batch [5/6]  Time 1.241 (11.024)  LossA 1.317 (1.336)  LossB 1.317 (1.336)  Prec1A 41.892 (39.863)  Prec1B 41.892 (40.683)
+ * Top1 acc:	A: 39.863	B: 40.683
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7500	B: 0.7545
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [3/120]  Batch [0/1]  Time 21.828 (21.828)  LossA 1.274 (1.274)  LossB 1.307 (1.307)  Prec1A 54.645 (54.645)  Prec1B 55.464 (55.464)
+ * Top1 acc:	A: 54.645	B: 55.464
+Test Epoch [3/120]  Batch [0/1]  Time 24.797 (24.797)  LossA 1.335 (1.335)  LossB 1.352 (1.352)  Prec1A 49.727 (49.727)  Prec1B 49.454 (49.454)
+ * Top1 acc:	A: 49.727	B: 49.454
+Saving best model at epoch 4
+Epoch 3 using 1.0 min 53.33 sec
+-----------------
+Train Epoch [4/120]  Batch [0/6]  Time 34.114 (34.114)  LossA 1.256 (1.256)  LossB 1.256 (1.256)  Prec1A 41.602 (41.602)  Prec1B 42.969 (42.969)Train Epoch [4/120]  Batch [1/6]  Time 1.729 (17.922)  LossA 1.348 (1.302)  LossB 1.348 (1.302)  Prec1A 40.234 (40.918)  Prec1B 41.602 (42.285)Train Epoch [4/120]  Batch [2/6]  Time 1.729 (12.524)  LossA 1.274 (1.292)  LossB 1.274 (1.292)  Prec1A 41.602 (41.146)  Prec1B 42.578 (42.383)Train Epoch [4/120]  Batch [3/6]  Time 1.729 (9.825)  LossA 1.298 (1.294)  LossB 1.298 (1.294)  Prec1A 39.844 (40.820)  Prec1B 42.383 (42.383)Train Epoch [4/120]  Batch [4/6]  Time 25.672 (12.995)  LossA 1.311 (1.297)  LossB 1.311 (1.297)  Prec1A 40.820 (40.820)  Prec1B 39.844 (41.875)Train Epoch [4/120]  Batch [5/6]  Time 1.242 (11.036)  LossA 1.271 (1.293)  LossB 1.271 (1.293)  Prec1A 39.730 (40.683)  Prec1B 43.784 (42.116)
+ * Top1 acc:	A: 40.683	B: 42.116
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7547	B: 0.7549
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [4/120]  Batch [0/1]  Time 21.669 (21.669)  LossA 1.239 (1.239)  LossB 1.217 (1.217)  Prec1A 55.738 (55.738)  Prec1B 55.464 (55.464)
+ * Top1 acc:	A: 55.738	B: 55.464
+Test Epoch [4/120]  Batch [0/1]  Time 24.636 (24.636)  LossA 1.300 (1.300)  LossB 1.278 (1.278)  Prec1A 50.820 (50.820)  Prec1B 48.907 (48.907)
+ * Top1 acc:	A: 50.820	B: 48.907
+Saving best model at epoch 5
+Epoch 4 using 1.0 min 53.07 sec
+-----------------
+Train Epoch [5/120]  Batch [0/6]  Time 33.319 (33.319)  LossA 1.244 (1.244)  LossB 1.244 (1.244)  Prec1A 40.430 (40.430)  Prec1B 43.164 (43.164)Train Epoch [5/120]  Batch [1/6]  Time 1.729 (17.524)  LossA 1.182 (1.213)  LossB 1.182 (1.213)  Prec1A 43.164 (41.797)  Prec1B 44.336 (43.750)Train Epoch [5/120]  Batch [2/6]  Time 1.730 (12.259)  LossA 1.235 (1.220)  LossB 1.235 (1.220)  Prec1A 40.430 (41.341)  Prec1B 40.039 (42.513)Train Epoch [5/120]  Batch [3/6]  Time 1.730 (9.627)  LossA 1.274 (1.234)  LossB 1.274 (1.234)  Prec1A 39.648 (40.918)  Prec1B 40.430 (41.992)Train Epoch [5/120]  Batch [4/6]  Time 25.856 (12.873)  LossA 1.165 (1.220)  LossB 1.165 (1.220)  Prec1A 42.383 (41.211)  Prec1B 42.773 (42.148)Train Epoch [5/120]  Batch [5/6]  Time 1.242 (10.934)  LossA 1.136 (1.206)  LossB 1.136 (1.206)  Prec1A 43.784 (41.536)  Prec1B 44.595 (42.457)
+ * Top1 acc:	A: 41.536	B: 42.457
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7790	B: 0.7790
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [5/120]  Batch [0/1]  Time 21.750 (21.750)  LossA 1.171 (1.171)  LossB 1.136 (1.136)  Prec1A 56.831 (56.831)  Prec1B 56.831 (56.831)
+ * Top1 acc:	A: 56.831	B: 56.831
+Test Epoch [5/120]  Batch [0/1]  Time 24.699 (24.699)  LossA 1.239 (1.239)  LossB 1.202 (1.202)  Prec1A 53.005 (53.005)  Prec1B 53.825 (53.825)
+ * Top1 acc:	A: 53.005	B: 53.825
+Saving best model at epoch 6
+Epoch 5 using 1.0 min 52.62 sec
+-----------------
+Train Epoch [6/120]  Batch [0/6]  Time 33.924 (33.924)  LossA 1.126 (1.126)  LossB 1.126 (1.126)  Prec1A 41.406 (41.406)  Prec1B 46.680 (46.680)Train Epoch [6/120]  Batch [1/6]  Time 1.729 (17.827)  LossA 1.194 (1.160)  LossB 1.194 (1.160)  Prec1A 41.602 (41.504)  Prec1B 42.578 (44.629)Train Epoch [6/120]  Batch [2/6]  Time 1.728 (12.461)  LossA 1.140 (1.154)  LossB 1.140 (1.154)  Prec1A 43.164 (42.057)  Prec1B 45.703 (44.987)Train Epoch [6/120]  Batch [3/6]  Time 1.728 (9.778)  LossA 1.151 (1.153)  LossB 1.151 (1.153)  Prec1A 40.625 (41.699)  Prec1B 41.992 (44.238)Train Epoch [6/120]  Batch [4/6]  Time 26.395 (13.101)  LossA 1.146 (1.152)  LossB 1.146 (1.152)  Prec1A 40.430 (41.445)  Prec1B 45.117 (44.414)Train Epoch [6/120]  Batch [5/6]  Time 1.242 (11.125)  LossA 1.028 (1.131)  LossB 1.028 (1.131)  Prec1A 45.676 (41.980)  Prec1B 48.378 (44.915)
+ * Top1 acc:	A: 41.980	B: 44.915
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7923	B: 0.7912
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [6/120]  Batch [0/1]  Time 21.880 (21.880)  LossA 1.104 (1.104)  LossB 1.071 (1.071)  Prec1A 57.377 (57.377)  Prec1B 58.470 (58.470)
+ * Top1 acc:	A: 57.377	B: 58.470
+Test Epoch [6/120]  Batch [0/1]  Time 24.809 (24.809)  LossA 1.167 (1.167)  LossB 1.135 (1.135)  Prec1A 54.098 (54.098)  Prec1B 54.645 (54.645)
+ * Top1 acc:	A: 54.098	B: 54.645
+Saving best model at epoch 7
+Epoch 6 using 1.0 min 54.00 sec
+-----------------
+Train Epoch [7/120]  Batch [0/6]  Time 33.967 (33.967)  LossA 1.121 (1.121)  LossB 1.121 (1.121)  Prec1A 38.867 (38.867)  Prec1B 42.773 (42.773)Train Epoch [7/120]  Batch [1/6]  Time 1.727 (17.847)  LossA 1.077 (1.099)  LossB 1.077 (1.099)  Prec1A 41.406 (40.137)  Prec1B 44.727 (43.750)Train Epoch [7/120]  Batch [2/6]  Time 1.729 (12.474)  LossA 1.049 (1.082)  LossB 1.049 (1.082)  Prec1A 41.797 (40.690)  Prec1B 46.875 (44.792)Train Epoch [7/120]  Batch [3/6]  Time 1.730 (9.788)  LossA 1.008 (1.064)  LossB 1.008 (1.064)  Prec1A 43.945 (41.504)  Prec1B 44.531 (44.727)Train Epoch [7/120]  Batch [4/6]  Time 26.326 (13.096)  LossA 0.988 (1.049)  LossB 0.988 (1.049)  Prec1A 45.898 (42.383)  Prec1B 52.148 (46.211)Train Epoch [7/120]  Batch [5/6]  Time 1.242 (11.120)  LossA 1.042 (1.048)  LossB 1.042 (1.048)  Prec1A 43.784 (42.560)  Prec1B 47.568 (46.382)
+ * Top1 acc:	A: 42.560	B: 46.382
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7948	B: 0.7984
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [7/120]  Batch [0/1]  Time 21.758 (21.758)  LossA 1.049 (1.049)  LossB 1.020 (1.020)  Prec1A 60.383 (60.383)  Prec1B 60.929 (60.929)
+ * Top1 acc:	A: 60.383	B: 60.929
+Test Epoch [7/120]  Batch [0/1]  Time 24.716 (24.716)  LossA 1.110 (1.110)  LossB 1.094 (1.094)  Prec1A 55.191 (55.191)  Prec1B 56.557 (56.557)
+ * Top1 acc:	A: 55.191	B: 56.557
+Saving best model at epoch 8
+Epoch 7 using 1.0 min 53.75 sec
+-----------------
+Train Epoch [8/120]  Batch [0/6]  Time 34.474 (34.474)  LossA 0.963 (0.963)  LossB 0.963 (0.963)  Prec1A 46.875 (46.875)  Prec1B 49.023 (49.023)Train Epoch [8/120]  Batch [1/6]  Time 1.729 (18.101)  LossA 0.922 (0.943)  LossB 0.922 (0.943)  Prec1A 46.875 (46.875)  Prec1B 47.070 (48.047)Train Epoch [8/120]  Batch [2/6]  Time 1.730 (12.644)  LossA 1.036 (0.974)  LossB 1.036 (0.974)  Prec1A 42.773 (45.508)  Prec1B 42.969 (46.354)Train Epoch [8/120]  Batch [3/6]  Time 1.730 (9.916)  LossA 1.041 (0.991)  LossB 1.041 (0.991)  Prec1A 43.359 (44.971)  Prec1B 45.508 (46.143)Train Epoch [8/120]  Batch [4/6]  Time 26.647 (13.262)  LossA 1.032 (0.999)  LossB 1.032 (0.999)  Prec1A 40.820 (44.141)  Prec1B 45.508 (46.016)Train Epoch [8/120]  Batch [5/6]  Time 1.242 (11.259)  LossA 0.920 (0.986)  LossB 0.920 (0.986)  Prec1A 45.676 (44.334)  Prec1B 45.946 (46.007)
+ * Top1 acc:	A: 44.334	B: 46.007
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8122	B: 0.8207
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [8/120]  Batch [0/1]  Time 21.819 (21.819)  LossA 1.007 (1.007)  LossB 0.978 (0.978)  Prec1A 60.383 (60.383)  Prec1B 62.842 (62.842)
+ * Top1 acc:	A: 60.383	B: 62.842
+Test Epoch [8/120]  Batch [0/1]  Time 24.704 (24.704)  LossA 1.067 (1.067)  LossB 1.075 (1.075)  Prec1A 55.464 (55.464)  Prec1B 55.738 (55.738)
+ * Top1 acc:	A: 55.464	B: 55.738
+Saving best model at epoch 9
+Epoch 8 using 1.0 min 54.63 sec
+-----------------
+Train Epoch [9/120]  Batch [0/6]  Time 33.331 (33.331)  LossA 0.978 (0.978)  LossB 0.978 (0.978)  Prec1A 40.039 (40.039)  Prec1B 41.992 (41.992)Train Epoch [9/120]  Batch [1/6]  Time 1.729 (17.530)  LossA 0.951 (0.964)  LossB 0.951 (0.964)  Prec1A 41.992 (41.016)  Prec1B 48.047 (45.020)Train Epoch [9/120]  Batch [2/6]  Time 1.729 (12.263)  LossA 0.852 (0.927)  LossB 0.852 (0.927)  Prec1A 47.852 (43.294)  Prec1B 50.586 (46.875)Train Epoch [9/120]  Batch [3/6]  Time 1.729 (9.629)  LossA 0.897 (0.920)  LossB 0.897 (0.920)  Prec1A 45.898 (43.945)  Prec1B 50.781 (47.852)Train Epoch [9/120]  Batch [4/6]  Time 27.075 (13.119)  LossA 0.850 (0.906)  LossB 0.850 (0.906)  Prec1A 46.484 (44.453)  Prec1B 48.242 (47.930)Train Epoch [9/120]  Batch [5/6]  Time 1.242 (11.139)  LossA 0.974 (0.917)  LossB 0.974 (0.917)  Prec1A 40.270 (43.925)  Prec1B 45.405 (47.611)
+ * Top1 acc:	A: 43.925	B: 47.611
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8313	B: 0.8311
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [9/120]  Batch [0/1]  Time 21.810 (21.810)  LossA 0.984 (0.984)  LossB 0.955 (0.955)  Prec1A 61.475 (61.475)  Prec1B 64.754 (64.754)
+ * Top1 acc:	A: 61.475	B: 64.754
+Test Epoch [9/120]  Batch [0/1]  Time 24.828 (24.828)  LossA 1.040 (1.040)  LossB 1.056 (1.056)  Prec1A 55.191 (55.191)  Prec1B 56.284 (56.284)
+ * Top1 acc:	A: 55.191	B: 56.284
+Saving best model at epoch 10
+Epoch 9 using 1.0 min 54.04 sec
+-----------------
+Train Epoch [10/120]  Batch [0/6]  Time 33.475 (33.475)  LossA 0.906 (0.906)  LossB 0.906 (0.906)  Prec1A 43.945 (43.945)  Prec1B 50.586 (50.586)Train Epoch [10/120]  Batch [1/6]  Time 1.729 (17.602)  LossA 0.923 (0.914)  LossB 0.923 (0.914)  Prec1A 45.312 (44.629)  Prec1B 48.242 (49.414)Train Epoch [10/120]  Batch [2/6]  Time 1.729 (12.311)  LossA 1.021 (0.950)  LossB 1.021 (0.950)  Prec1A 42.578 (43.945)  Prec1B 45.703 (48.177)Train Epoch [10/120]  Batch [3/6]  Time 1.729 (9.666)  LossA 0.844 (0.923)  LossB 0.844 (0.923)  Prec1A 45.898 (44.434)  Prec1B 48.242 (48.193)Train Epoch [10/120]  Batch [4/6]  Time 27.753 (13.283)  LossA 0.950 (0.929)  LossB 0.950 (0.929)  Prec1A 42.578 (44.062)  Prec1B 44.727 (47.500)Train Epoch [10/120]  Batch [5/6]  Time 1.242 (11.276)  LossA 0.896 (0.923)  LossB 0.896 (0.923)  Prec1A 43.784 (44.027)  Prec1B 46.757 (47.406)
+ * Top1 acc:	A: 44.027	B: 47.406
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8309	B: 0.8371
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [10/120]  Batch [0/1]  Time 21.813 (21.813)  LossA 0.969 (0.969)  LossB 0.942 (0.942)  Prec1A 61.475 (61.475)  Prec1B 64.481 (64.481)
+ * Top1 acc:	A: 61.475	B: 64.481
+Test Epoch [10/120]  Batch [0/1]  Time 24.767 (24.767)  LossA 1.028 (1.028)  LossB 1.042 (1.042)  Prec1A 55.738 (55.738)  Prec1B 57.104 (57.104)
+ * Top1 acc:	A: 55.738	B: 57.104
+Epoch 10 using 1.0 min 54.61 sec
+-----------------
+Train Epoch [11/120]  Batch [0/6]  Time 34.627 (34.627)  LossA 0.940 (0.940)  LossB 0.940 (0.940)  Prec1A 42.969 (42.969)  Prec1B 46.484 (46.484)Train Epoch [11/120]  Batch [1/6]  Time 1.729 (18.178)  LossA 0.916 (0.928)  LossB 0.916 (0.928)  Prec1A 44.531 (43.750)  Prec1B 46.680 (46.582)Train Epoch [11/120]  Batch [2/6]  Time 1.730 (12.695)  LossA 0.914 (0.923)  LossB 0.914 (0.923)  Prec1A 42.773 (43.424)  Prec1B 48.047 (47.070)Train Epoch [11/120]  Batch [3/6]  Time 1.730 (9.954)  LossA 0.805 (0.894)  LossB 0.805 (0.894)  Prec1A 47.461 (44.434)  Prec1B 52.148 (48.340)Train Epoch [11/120]  Batch [4/6]  Time 25.468 (13.057)  LossA 0.870 (0.889)  LossB 0.870 (0.889)  Prec1A 44.531 (44.453)  Prec1B 48.828 (48.438)Train Epoch [11/120]  Batch [5/6]  Time 1.241 (11.088)  LossA 0.998 (0.907)  LossB 0.998 (0.907)  Prec1A 42.432 (44.198)  Prec1B 45.405 (48.055)
+ * Top1 acc:	A: 44.198	B: 48.055
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8288	B: 0.8333
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [11/120]  Batch [0/1]  Time 21.677 (21.677)  LossA 0.958 (0.958)  LossB 0.932 (0.932)  Prec1A 61.749 (61.749)  Prec1B 65.301 (65.301)
+ * Top1 acc:	A: 61.749	B: 65.301
+Test Epoch [11/120]  Batch [0/1]  Time 24.695 (24.695)  LossA 1.020 (1.020)  LossB 1.026 (1.026)  Prec1A 54.645 (54.645)  Prec1B 58.470 (58.470)
+ * Top1 acc:	A: 54.645	B: 58.470
+Saving best model at epoch 12
+Epoch 11 using 1.0 min 53.46 sec
+-----------------
+Train Epoch [12/120]  Batch [0/6]  Time 34.607 (34.607)  LossA 0.868 (0.868)  LossB 0.868 (0.868)  Prec1A 43.750 (43.750)  Prec1B 47.070 (47.070)Train Epoch [12/120]  Batch [1/6]  Time 1.732 (18.169)  LossA 0.843 (0.855)  LossB 0.843 (0.855)  Prec1A 46.875 (45.312)  Prec1B 50.000 (48.535)Train Epoch [12/120]  Batch [2/6]  Time 1.729 (12.689)  LossA 0.910 (0.873)  LossB 0.910 (0.873)  Prec1A 45.117 (45.247)  Prec1B 49.805 (48.958)Train Epoch [12/120]  Batch [3/6]  Time 1.729 (9.949)  LossA 0.914 (0.884)  LossB 0.914 (0.884)  Prec1A 43.555 (44.824)  Prec1B 47.461 (48.584)Train Epoch [12/120]  Batch [4/6]  Time 25.022 (12.964)  LossA 0.810 (0.869)  LossB 0.810 (0.869)  Prec1A 48.828 (45.625)  Prec1B 50.977 (49.062)Train Epoch [12/120]  Batch [5/6]  Time 1.242 (11.010)  LossA 0.970 (0.886)  LossB 0.970 (0.886)  Prec1A 41.351 (45.085)  Prec1B 44.054 (48.430)
+ * Top1 acc:	A: 45.085	B: 48.430
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8264	B: 0.8304
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [12/120]  Batch [0/1]  Time 21.737 (21.737)  LossA 0.945 (0.945)  LossB 0.923 (0.923)  Prec1A 62.842 (62.842)  Prec1B 66.940 (66.940)
+ * Top1 acc:	A: 62.842	B: 66.940
+Test Epoch [12/120]  Batch [0/1]  Time 24.688 (24.688)  LossA 1.009 (1.009)  LossB 1.015 (1.015)  Prec1A 56.011 (56.011)  Prec1B 59.563 (59.563)
+ * Top1 acc:	A: 56.011	B: 59.563
+Saving best model at epoch 13
+Epoch 12 using 1.0 min 53.04 sec
+-----------------
+Train Epoch [13/120]  Batch [0/6]  Time 34.555 (34.555)  LossA 0.781 (0.781)  LossB 0.781 (0.781)  Prec1A 47.461 (47.461)  Prec1B 50.977 (50.977)Train Epoch [13/120]  Batch [1/6]  Time 1.729 (18.142)  LossA 0.845 (0.813)  LossB 0.845 (0.813)  Prec1A 46.484 (46.973)  Prec1B 51.172 (51.074)Train Epoch [13/120]  Batch [2/6]  Time 1.729 (12.671)  LossA 0.992 (0.873)  LossB 0.992 (0.873)  Prec1A 42.773 (45.573)  Prec1B 44.531 (48.893)Train Epoch [13/120]  Batch [3/6]  Time 1.730 (9.936)  LossA 0.800 (0.855)  LossB 0.800 (0.855)  Prec1A 49.609 (46.582)  Prec1B 51.367 (49.512)Train Epoch [13/120]  Batch [4/6]  Time 25.598 (13.068)  LossA 0.995 (0.883)  LossB 0.995 (0.883)  Prec1A 41.602 (45.586)  Prec1B 44.336 (48.477)Train Epoch [13/120]  Batch [5/6]  Time 1.242 (11.097)  LossA 0.868 (0.880)  LossB 0.868 (0.880)  Prec1A 47.568 (45.836)  Prec1B 50.541 (48.737)
+ * Top1 acc:	A: 45.836	B: 48.737
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8271	B: 0.8274
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [13/120]  Batch [0/1]  Time 21.711 (21.711)  LossA 0.932 (0.932)  LossB 0.918 (0.918)  Prec1A 64.481 (64.481)  Prec1B 66.393 (66.393)
+ * Top1 acc:	A: 64.481	B: 66.393
+Test Epoch [13/120]  Batch [0/1]  Time 24.655 (24.655)  LossA 0.997 (0.997)  LossB 1.008 (1.008)  Prec1A 57.924 (57.924)  Prec1B 60.383 (60.383)
+ * Top1 acc:	A: 57.924	B: 60.383
+Epoch 13 using 1.0 min 53.32 sec
+-----------------
+Train Epoch [14/120]  Batch [0/6]  Time 33.605 (33.605)  LossA 0.959 (0.959)  LossB 0.959 (0.959)  Prec1A 43.164 (43.164)  Prec1B 45.508 (45.508)Train Epoch [14/120]  Batch [1/6]  Time 1.729 (17.667)  LossA 0.830 (0.894)  LossB 0.830 (0.894)  Prec1A 46.094 (44.629)  Prec1B 50.781 (48.145)Train Epoch [14/120]  Batch [2/6]  Time 1.729 (12.354)  LossA 0.857 (0.882)  LossB 0.857 (0.882)  Prec1A 49.023 (46.094)  Prec1B 50.195 (48.828)Train Epoch [14/120]  Batch [3/6]  Time 1.729 (9.698)  LossA 0.884 (0.882)  LossB 0.884 (0.882)  Prec1A 48.438 (46.680)  Prec1B 52.930 (49.854)Train Epoch [14/120]  Batch [4/6]  Time 26.768 (13.112)  LossA 0.858 (0.878)  LossB 0.858 (0.878)  Prec1A 43.555 (46.055)  Prec1B 48.828 (49.648)Train Epoch [14/120]  Batch [5/6]  Time 1.242 (11.134)  LossA 0.835 (0.871)  LossB 0.835 (0.871)  Prec1A 47.568 (46.246)  Prec1B 51.351 (49.863)
+ * Top1 acc:	A: 46.246	B: 49.863
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8341	B: 0.8333
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [14/120]  Batch [0/1]  Time 21.784 (21.784)  LossA 0.920 (0.920)  LossB 0.912 (0.912)  Prec1A 65.847 (65.847)  Prec1B 67.213 (67.213)
+ * Top1 acc:	A: 65.847	B: 67.213
+Test Epoch [14/120]  Batch [0/1]  Time 24.796 (24.796)  LossA 0.984 (0.984)  LossB 0.998 (0.998)  Prec1A 59.016 (59.016)  Prec1B 62.022 (62.022)
+ * Top1 acc:	A: 59.016	B: 62.022
+Saving best model at epoch 15
+Epoch 14 using 1.0 min 53.94 sec
+-----------------
+Train Epoch [15/120]  Batch [0/6]  Time 33.461 (33.461)  LossA 0.885 (0.885)  LossB 0.885 (0.885)  Prec1A 46.875 (46.875)  Prec1B 48.633 (48.633)Train Epoch [15/120]  Batch [1/6]  Time 1.733 (17.597)  LossA 0.805 (0.845)  LossB 0.805 (0.845)  Prec1A 50.000 (48.438)  Prec1B 54.492 (51.562)Train Epoch [15/120]  Batch [2/6]  Time 1.826 (12.340)  LossA 1.021 (0.904)  LossB 1.021 (0.904)  Prec1A 39.258 (45.378)  Prec1B 43.555 (48.893)Train Epoch [15/120]  Batch [3/6]  Time 1.872 (9.723)  LossA 0.804 (0.879)  LossB 0.804 (0.879)  Prec1A 49.609 (46.436)  Prec1B 51.367 (49.512)Train Epoch [15/120]  Batch [4/6]  Time 26.920 (13.162)  LossA 0.901 (0.883)  LossB 0.901 (0.883)  Prec1A 46.680 (46.484)  Prec1B 49.023 (49.414)Train Epoch [15/120]  Batch [5/6]  Time 1.244 (11.176)  LossA 0.864 (0.880)  LossB 0.864 (0.880)  Prec1A 48.378 (46.724)  Prec1B 51.622 (49.693)
+ * Top1 acc:	A: 46.724	B: 49.693
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8304	B: 0.8330
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [15/120]  Batch [0/1]  Time 21.841 (21.841)  LossA 0.909 (0.909)  LossB 0.905 (0.905)  Prec1A 67.760 (67.760)  Prec1B 67.213 (67.213)
+ * Top1 acc:	A: 67.760	B: 67.213
+Test Epoch [15/120]  Batch [0/1]  Time 24.852 (24.852)  LossA 0.973 (0.973)  LossB 0.990 (0.990)  Prec1A 61.202 (61.202)  Prec1B 63.661 (63.661)
+ * Top1 acc:	A: 61.202	B: 63.661
+Saving best model at epoch 16
+Epoch 15 using 1.0 min 54.33 sec
+-----------------
+Train Epoch [16/120]  Batch [0/6]  Time 34.638 (34.638)  LossA 0.860 (0.860)  LossB 0.860 (0.860)  Prec1A 47.266 (47.266)  Prec1B 49.805 (49.805)Train Epoch [16/120]  Batch [1/6]  Time 1.735 (18.186)  LossA 0.842 (0.851)  LossB 0.842 (0.851)  Prec1A 47.852 (47.559)  Prec1B 50.195 (50.000)Train Epoch [16/120]  Batch [2/6]  Time 1.734 (12.702)  LossA 0.895 (0.866)  LossB 0.895 (0.866)  Prec1A 48.828 (47.982)  Prec1B 50.195 (50.065)Train Epoch [16/120]  Batch [3/6]  Time 1.736 (9.961)  LossA 0.910 (0.877)  LossB 0.910 (0.877)  Prec1A 44.531 (47.119)  Prec1B 46.094 (49.072)Train Epoch [16/120]  Batch [4/6]  Time 26.218 (13.212)  LossA 0.869 (0.875)  LossB 0.869 (0.875)  Prec1A 49.414 (47.578)  Prec1B 50.781 (49.414)Train Epoch [16/120]  Batch [5/6]  Time 1.247 (11.218)  LossA 0.858 (0.872)  LossB 0.858 (0.872)  Prec1A 51.622 (48.089)  Prec1B 52.162 (49.761)
+ * Top1 acc:	A: 48.089	B: 49.761
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8351	B: 0.8340
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [16/120]  Batch [0/1]  Time 21.761 (21.761)  LossA 0.901 (0.901)  LossB 0.901 (0.901)  Prec1A 68.852 (68.852)  Prec1B 68.306 (68.306)
+ * Top1 acc:	A: 68.852	B: 68.306
+Test Epoch [16/120]  Batch [0/1]  Time 24.715 (24.715)  LossA 0.965 (0.965)  LossB 0.984 (0.984)  Prec1A 62.842 (62.842)  Prec1B 63.934 (63.934)
+ * Top1 acc:	A: 62.842	B: 63.934
+Saving best model at epoch 17
+Epoch 16 using 1.0 min 54.35 sec
+-----------------
+Train Epoch [17/120]  Batch [0/6]  Time 34.890 (34.890)  LossA 0.905 (0.905)  LossB 0.905 (0.905)  Prec1A 46.094 (46.094)  Prec1B 47.852 (47.852)Train Epoch [17/120]  Batch [1/6]  Time 2.164 (18.527)  LossA 0.883 (0.894)  LossB 0.883 (0.894)  Prec1A 49.805 (47.949)  Prec1B 50.781 (49.316)Train Epoch [17/120]  Batch [2/6]  Time 2.161 (13.071)  LossA 0.807 (0.865)  LossB 0.807 (0.865)  Prec1A 50.195 (48.698)  Prec1B 49.805 (49.479)Train Epoch [17/120]  Batch [3/6]  Time 2.184 (10.350)  LossA 0.844 (0.860)  LossB 0.844 (0.860)  Prec1A 48.633 (48.682)  Prec1B 50.000 (49.609)Train Epoch [17/120]  Batch [4/6]  Time 24.478 (13.175)  LossA 0.877 (0.863)  LossB 0.877 (0.863)  Prec1A 50.195 (48.984)  Prec1B 50.977 (49.883)Train Epoch [17/120]  Batch [5/6]  Time 1.546 (11.237)  LossA 0.962 (0.880)  LossB 0.962 (0.880)  Prec1A 45.946 (48.601)  Prec1B 46.757 (49.488)
+ * Top1 acc:	A: 48.601	B: 49.488
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8289	B: 0.8287
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [17/120]  Batch [0/1]  Time 22.356 (22.356)  LossA 0.896 (0.896)  LossB 0.893 (0.893)  Prec1A 68.579 (68.579)  Prec1B 69.399 (69.399)
+ * Top1 acc:	A: 68.579	B: 69.399
+Test Epoch [17/120]  Batch [0/1]  Time 24.957 (24.957)  LossA 0.959 (0.959)  LossB 0.974 (0.974)  Prec1A 63.934 (63.934)  Prec1B 64.481 (64.481)
+ * Top1 acc:	A: 63.934	B: 64.481
+Saving best model at epoch 18
+Epoch 17 using 1.0 min 55.30 sec
+-----------------
+Train Epoch [18/120]  Batch [0/6]  Time 32.949 (32.949)  LossA 0.746 (0.746)  LossB 0.746 (0.746)  Prec1A 52.344 (52.344)  Prec1B 54.688 (54.688)Train Epoch [18/120]  Batch [1/6]  Time 1.730 (17.339)  LossA 0.948 (0.847)  LossB 0.948 (0.847)  Prec1A 48.242 (50.293)  Prec1B 50.000 (52.344)Train Epoch [18/120]  Batch [2/6]  Time 1.731 (12.136)  LossA 0.859 (0.851)  LossB 0.859 (0.851)  Prec1A 48.828 (49.805)  Prec1B 49.023 (51.237)Train Epoch [18/120]  Batch [3/6]  Time 1.731 (9.535)  LossA 0.854 (0.852)  LossB 0.854 (0.852)  Prec1A 50.000 (49.854)  Prec1B 50.781 (51.123)Train Epoch [18/120]  Batch [4/6]  Time 25.749 (12.778)  LossA 0.912 (0.864)  LossB 0.912 (0.864)  Prec1A 46.094 (49.102)  Prec1B 47.852 (50.469)Train Epoch [18/120]  Batch [5/6]  Time 1.242 (10.855)  LossA 0.845 (0.861)  LossB 0.845 (0.861)  Prec1A 51.081 (49.352)  Prec1B 51.622 (50.614)
+ * Top1 acc:	A: 49.352	B: 50.614
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8265	B: 0.8273
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [18/120]  Batch [0/1]  Time 21.843 (21.843)  LossA 0.889 (0.889)  LossB 0.886 (0.886)  Prec1A 69.126 (69.126)  Prec1B 69.126 (69.126)
+ * Top1 acc:	A: 69.126	B: 69.126
+Test Epoch [18/120]  Batch [0/1]  Time 24.775 (24.775)  LossA 0.950 (0.950)  LossB 0.968 (0.968)  Prec1A 64.754 (64.754)  Prec1B 64.754 (64.754)
+ * Top1 acc:	A: 64.754	B: 64.754
+Epoch 18 using 1.0 min 52.12 sec
+-----------------
+Train Epoch [19/120]  Batch [0/6]  Time 32.370 (32.370)  LossA 0.904 (0.904)  LossB 0.904 (0.904)  Prec1A 48.242 (48.242)  Prec1B 49.023 (49.023)Train Epoch [19/120]  Batch [1/6]  Time 1.874 (17.122)  LossA 0.897 (0.901)  LossB 0.897 (0.901)  Prec1A 48.242 (48.242)  Prec1B 48.828 (48.926)Train Epoch [19/120]  Batch [2/6]  Time 1.729 (11.991)  LossA 0.965 (0.922)  LossB 0.965 (0.922)  Prec1A 46.875 (47.786)  Prec1B 48.828 (48.893)Train Epoch [19/120]  Batch [3/6]  Time 1.729 (9.426)  LossA 0.826 (0.898)  LossB 0.826 (0.898)  Prec1A 49.609 (48.242)  Prec1B 51.172 (49.463)Train Epoch [19/120]  Batch [4/6]  Time 26.967 (12.934)  LossA 0.813 (0.881)  LossB 0.813 (0.881)  Prec1A 51.562 (48.906)  Prec1B 51.172 (49.805)Train Epoch [19/120]  Batch [5/6]  Time 1.243 (10.986)  LossA 0.833 (0.873)  LossB 0.833 (0.873)  Prec1A 54.324 (49.590)  Prec1B 53.514 (50.273)
+ * Top1 acc:	A: 49.590	B: 50.273
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8250	B: 0.8237
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [19/120]  Batch [0/1]  Time 21.768 (21.768)  LossA 0.884 (0.884)  LossB 0.880 (0.880)  Prec1A 69.399 (69.399)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 69.399	B: 69.672
+Test Epoch [19/120]  Batch [0/1]  Time 24.659 (24.659)  LossA 0.945 (0.945)  LossB 0.962 (0.962)  Prec1A 64.754 (64.754)  Prec1B 65.847 (65.847)
+ * Top1 acc:	A: 64.754	B: 65.847
+Saving best model at epoch 20
+Epoch 19 using 1.0 min 52.89 sec
+-----------------
+Train Epoch [20/120]  Batch [0/6]  Time 32.242 (32.242)  LossA 0.830 (0.830)  LossB 0.830 (0.830)  Prec1A 50.781 (50.781)  Prec1B 52.344 (52.344)Train Epoch [20/120]  Batch [1/6]  Time 1.730 (16.986)  LossA 0.866 (0.848)  LossB 0.866 (0.848)  Prec1A 49.023 (49.902)  Prec1B 49.805 (51.074)Train Epoch [20/120]  Batch [2/6]  Time 1.730 (11.901)  LossA 0.836 (0.844)  LossB 0.836 (0.844)  Prec1A 49.023 (49.609)  Prec1B 52.344 (51.497)Train Epoch [20/120]  Batch [3/6]  Time 1.730 (9.358)  LossA 0.860 (0.848)  LossB 0.860 (0.848)  Prec1A 51.367 (50.049)  Prec1B 51.953 (51.611)Train Epoch [20/120]  Batch [4/6]  Time 26.442 (12.775)  LossA 0.936 (0.866)  LossB 0.936 (0.866)  Prec1A 46.875 (49.414)  Prec1B 50.195 (51.328)Train Epoch [20/120]  Batch [5/6]  Time 1.243 (10.853)  LossA 0.879 (0.868)  LossB 0.879 (0.868)  Prec1A 51.622 (49.693)  Prec1B 50.541 (51.229)
+ * Top1 acc:	A: 49.693	B: 51.229
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8253	B: 0.8275
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [20/120]  Batch [0/1]  Time 21.877 (21.877)  LossA 0.882 (0.882)  LossB 0.874 (0.874)  Prec1A 70.492 (70.492)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.492	B: 70.492
+Test Epoch [20/120]  Batch [0/1]  Time 24.779 (24.779)  LossA 0.940 (0.940)  LossB 0.958 (0.958)  Prec1A 65.574 (65.574)  Prec1B 66.667 (66.667)
+ * Top1 acc:	A: 65.574	B: 66.667
+Saving best model at epoch 21
+Epoch 20 using 1.0 min 52.34 sec
+-----------------
+Train Epoch [21/120]  Batch [0/6]  Time 33.254 (33.254)  LossA 0.792 (0.792)  LossB 0.792 (0.792)  Prec1A 54.102 (54.102)  Prec1B 55.078 (55.078)Train Epoch [21/120]  Batch [1/6]  Time 1.731 (17.492)  LossA 0.872 (0.832)  LossB 0.872 (0.832)  Prec1A 48.633 (51.367)  Prec1B 50.391 (52.734)Train Epoch [21/120]  Batch [2/6]  Time 1.730 (12.238)  LossA 0.878 (0.848)  LossB 0.878 (0.848)  Prec1A 49.805 (50.846)  Prec1B 50.391 (51.953)Train Epoch [21/120]  Batch [3/6]  Time 1.729 (9.611)  LossA 0.924 (0.867)  LossB 0.924 (0.867)  Prec1A 47.461 (50.000)  Prec1B 50.391 (51.562)Train Epoch [21/120]  Batch [4/6]  Time 25.433 (12.776)  LossA 0.848 (0.863)  LossB 0.848 (0.863)  Prec1A 51.758 (50.352)  Prec1B 51.562 (51.562)Train Epoch [21/120]  Batch [5/6]  Time 1.242 (10.853)  LossA 0.880 (0.866)  LossB 0.880 (0.866)  Prec1A 51.081 (50.444)  Prec1B 54.324 (51.911)
+ * Top1 acc:	A: 50.444	B: 51.911
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8259	B: 0.8304
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [21/120]  Batch [0/1]  Time 21.829 (21.829)  LossA 0.878 (0.878)  LossB 0.869 (0.869)  Prec1A 70.765 (70.765)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 70.765	B: 70.219
+Test Epoch [21/120]  Batch [0/1]  Time 24.785 (24.785)  LossA 0.935 (0.935)  LossB 0.952 (0.952)  Prec1A 65.847 (65.847)  Prec1B 67.486 (67.486)
+ * Top1 acc:	A: 65.847	B: 67.486
+Saving best model at epoch 22
+Epoch 21 using 1.0 min 52.29 sec
+-----------------
+Train Epoch [22/120]  Batch [0/6]  Time 33.966 (33.966)  LossA 0.802 (0.802)  LossB 0.802 (0.802)  Prec1A 52.344 (52.344)  Prec1B 52.930 (52.930)Train Epoch [22/120]  Batch [1/6]  Time 1.729 (17.848)  LossA 0.883 (0.843)  LossB 0.883 (0.843)  Prec1A 47.656 (50.000)  Prec1B 48.242 (50.586)Train Epoch [22/120]  Batch [2/6]  Time 1.730 (12.475)  LossA 0.812 (0.833)  LossB 0.812 (0.833)  Prec1A 52.539 (50.846)  Prec1B 53.711 (51.628)Train Epoch [22/120]  Batch [3/6]  Time 1.731 (9.789)  LossA 0.882 (0.845)  LossB 0.882 (0.845)  Prec1A 50.000 (50.635)  Prec1B 52.148 (51.758)Train Epoch [22/120]  Batch [4/6]  Time 26.555 (13.142)  LossA 0.822 (0.840)  LossB 0.822 (0.840)  Prec1A 50.586 (50.625)  Prec1B 50.977 (51.602)Train Epoch [22/120]  Batch [5/6]  Time 1.242 (11.159)  LossA 0.937 (0.856)  LossB 0.937 (0.856)  Prec1A 48.919 (50.410)  Prec1B 50.541 (51.468)
+ * Top1 acc:	A: 50.410	B: 51.468
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8247	B: 0.8226
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [22/120]  Batch [0/1]  Time 21.762 (21.762)  LossA 0.873 (0.873)  LossB 0.867 (0.867)  Prec1A 71.311 (71.311)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 71.311	B: 70.219
+Test Epoch [22/120]  Batch [0/1]  Time 24.722 (24.722)  LossA 0.931 (0.931)  LossB 0.946 (0.946)  Prec1A 66.393 (66.393)  Prec1B 67.213 (67.213)
+ * Top1 acc:	A: 66.393	B: 67.213
+Saving best model at epoch 23
+Epoch 22 using 1.0 min 54.00 sec
+-----------------
+Train Epoch [23/120]  Batch [0/6]  Time 32.682 (32.682)  LossA 0.831 (0.831)  LossB 0.831 (0.831)  Prec1A 50.195 (50.195)  Prec1B 50.195 (50.195)Train Epoch [23/120]  Batch [1/6]  Time 1.730 (17.206)  LossA 0.881 (0.856)  LossB 0.881 (0.856)  Prec1A 50.586 (50.391)  Prec1B 49.609 (49.902)Train Epoch [23/120]  Batch [2/6]  Time 1.729 (12.047)  LossA 0.904 (0.872)  LossB 0.904 (0.872)  Prec1A 50.391 (50.391)  Prec1B 50.781 (50.195)Train Epoch [23/120]  Batch [3/6]  Time 1.730 (9.468)  LossA 0.793 (0.852)  LossB 0.793 (0.852)  Prec1A 52.539 (50.928)  Prec1B 53.516 (51.025)Train Epoch [23/120]  Batch [4/6]  Time 27.051 (12.984)  LossA 0.886 (0.859)  LossB 0.886 (0.859)  Prec1A 48.633 (50.469)  Prec1B 50.586 (50.938)Train Epoch [23/120]  Batch [5/6]  Time 1.243 (11.027)  LossA 0.871 (0.861)  LossB 0.871 (0.861)  Prec1A 50.000 (50.410)  Prec1B 52.973 (51.195)
+ * Top1 acc:	A: 50.410	B: 51.195
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8222	B: 0.8229
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [23/120]  Batch [0/1]  Time 21.799 (21.799)  LossA 0.866 (0.866)  LossB 0.863 (0.863)  Prec1A 71.311 (71.311)  Prec1B 70.765 (70.765)
+ * Top1 acc:	A: 71.311	B: 70.765
+Test Epoch [23/120]  Batch [0/1]  Time 24.658 (24.658)  LossA 0.923 (0.923)  LossB 0.943 (0.943)  Prec1A 67.213 (67.213)  Prec1B 66.940 (66.940)
+ * Top1 acc:	A: 67.213	B: 66.940
+Epoch 23 using 1.0 min 52.99 sec
+-----------------
+Train Epoch [24/120]  Batch [0/6]  Time 32.531 (32.531)  LossA 0.839 (0.839)  LossB 0.839 (0.839)  Prec1A 52.930 (52.930)  Prec1B 55.469 (55.469)Train Epoch [24/120]  Batch [1/6]  Time 1.731 (17.131)  LossA 0.882 (0.860)  LossB 0.882 (0.860)  Prec1A 47.656 (50.293)  Prec1B 48.047 (51.758)Train Epoch [24/120]  Batch [2/6]  Time 1.731 (11.998)  LossA 0.765 (0.828)  LossB 0.765 (0.828)  Prec1A 53.711 (51.432)  Prec1B 55.078 (52.865)Train Epoch [24/120]  Batch [3/6]  Time 1.730 (9.431)  LossA 0.963 (0.862)  LossB 0.963 (0.862)  Prec1A 47.266 (50.391)  Prec1B 49.023 (51.904)Train Epoch [24/120]  Batch [4/6]  Time 26.709 (12.886)  LossA 0.807 (0.851)  LossB 0.807 (0.851)  Prec1A 51.758 (50.664)  Prec1B 51.953 (51.914)Train Epoch [24/120]  Batch [5/6]  Time 1.243 (10.946)  LossA 0.879 (0.856)  LossB 0.879 (0.856)  Prec1A 51.622 (50.785)  Prec1B 51.892 (51.911)
+ * Top1 acc:	A: 50.785	B: 51.911
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8199	B: 0.8232
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [24/120]  Batch [0/1]  Time 21.773 (21.773)  LossA 0.860 (0.860)  LossB 0.858 (0.858)  Prec1A 71.585 (71.585)  Prec1B 71.311 (71.311)
+ * Top1 acc:	A: 71.585	B: 71.311
+Test Epoch [24/120]  Batch [0/1]  Time 24.639 (24.639)  LossA 0.918 (0.918)  LossB 0.938 (0.938)  Prec1A 68.033 (68.033)  Prec1B 67.486 (67.486)
+ * Top1 acc:	A: 68.033	B: 67.486
+Saving best model at epoch 25
+Epoch 24 using 1.0 min 52.64 sec
+-----------------
+Train Epoch [25/120]  Batch [0/6]  Time 31.751 (31.751)  LossA 0.897 (0.897)  LossB 0.897 (0.897)  Prec1A 47.461 (47.461)  Prec1B 48.242 (48.242)Train Epoch [25/120]  Batch [1/6]  Time 2.473 (17.112)  LossA 0.870 (0.884)  LossB 0.870 (0.884)  Prec1A 51.367 (49.414)  Prec1B 52.344 (50.293)Train Epoch [25/120]  Batch [2/6]  Time 1.730 (11.984)  LossA 0.849 (0.872)  LossB 0.849 (0.872)  Prec1A 50.977 (49.935)  Prec1B 52.539 (51.042)Train Epoch [25/120]  Batch [3/6]  Time 1.730 (9.421)  LossA 0.815 (0.858)  LossB 0.815 (0.858)  Prec1A 53.711 (50.879)  Prec1B 53.320 (51.611)Train Epoch [25/120]  Batch [4/6]  Time 26.501 (12.837)  LossA 0.815 (0.849)  LossB 0.815 (0.849)  Prec1A 50.977 (50.898)  Prec1B 52.539 (51.797)Train Epoch [25/120]  Batch [5/6]  Time 1.242 (10.904)  LossA 0.836 (0.847)  LossB 0.836 (0.847)  Prec1A 51.351 (50.956)  Prec1B 52.703 (51.911)
+ * Top1 acc:	A: 50.956	B: 51.911
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8246	B: 0.8260
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [25/120]  Batch [0/1]  Time 21.704 (21.704)  LossA 0.855 (0.855)  LossB 0.857 (0.857)  Prec1A 72.131 (72.131)  Prec1B 71.858 (71.858)
+ * Top1 acc:	A: 72.131	B: 71.858
+Test Epoch [25/120]  Batch [0/1]  Time 24.661 (24.661)  LossA 0.912 (0.912)  LossB 0.936 (0.936)  Prec1A 68.306 (68.306)  Prec1B 67.760 (67.760)
+ * Top1 acc:	A: 68.306	B: 67.760
+Saving best model at epoch 26
+Epoch 25 using 1.0 min 52.36 sec
+-----------------
+Train Epoch [26/120]  Batch [0/6]  Time 32.815 (32.815)  LossA 0.831 (0.831)  LossB 0.831 (0.831)  Prec1A 52.930 (52.930)  Prec1B 53.125 (53.125)Train Epoch [26/120]  Batch [1/6]  Time 1.728 (17.272)  LossA 0.816 (0.824)  LossB 0.816 (0.824)  Prec1A 50.977 (51.953)  Prec1B 53.516 (53.320)Train Epoch [26/120]  Batch [2/6]  Time 1.729 (12.091)  LossA 0.993 (0.880)  LossB 0.993 (0.880)  Prec1A 47.852 (50.586)  Prec1B 48.828 (51.823)Train Epoch [26/120]  Batch [3/6]  Time 1.730 (9.501)  LossA 0.827 (0.867)  LossB 0.827 (0.867)  Prec1A 51.562 (50.830)  Prec1B 52.930 (52.100)Train Epoch [26/120]  Batch [4/6]  Time 25.766 (12.754)  LossA 0.795 (0.853)  LossB 0.795 (0.853)  Prec1A 51.367 (50.938)  Prec1B 51.758 (52.031)Train Epoch [26/120]  Batch [5/6]  Time 1.242 (10.835)  LossA 0.800 (0.844)  LossB 0.800 (0.844)  Prec1A 52.432 (51.126)  Prec1B 54.324 (52.321)
+ * Top1 acc:	A: 51.126	B: 52.321
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8202	B: 0.8205
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [26/120]  Batch [0/1]  Time 21.856 (21.856)  LossA 0.851 (0.851)  LossB 0.854 (0.854)  Prec1A 72.404 (72.404)  Prec1B 71.585 (71.585)
+ * Top1 acc:	A: 72.404	B: 71.585
+Test Epoch [26/120]  Batch [0/1]  Time 24.762 (24.762)  LossA 0.909 (0.909)  LossB 0.935 (0.935)  Prec1A 68.033 (68.033)  Prec1B 68.579 (68.579)
+ * Top1 acc:	A: 68.033	B: 68.579
+Saving best model at epoch 27
+Epoch 26 using 1.0 min 52.19 sec
+-----------------
+Train Epoch [27/120]  Batch [0/6]  Time 32.963 (32.963)  LossA 0.790 (0.790)  LossB 0.790 (0.790)  Prec1A 54.883 (54.883)  Prec1B 56.445 (56.445)Train Epoch [27/120]  Batch [1/6]  Time 1.729 (17.346)  LossA 0.906 (0.848)  LossB 0.906 (0.848)  Prec1A 48.633 (51.758)  Prec1B 50.195 (53.320)Train Epoch [27/120]  Batch [2/6]  Time 1.729 (12.140)  LossA 0.800 (0.832)  LossB 0.800 (0.832)  Prec1A 52.344 (51.953)  Prec1B 52.930 (53.190)Train Epoch [27/120]  Batch [3/6]  Time 1.729 (9.537)  LossA 0.876 (0.843)  LossB 0.876 (0.843)  Prec1A 51.172 (51.758)  Prec1B 51.367 (52.734)Train Epoch [27/120]  Batch [4/6]  Time 26.050 (12.840)  LossA 0.867 (0.848)  LossB 0.867 (0.848)  Prec1A 49.219 (51.250)  Prec1B 49.609 (52.109)Train Epoch [27/120]  Batch [5/6]  Time 1.242 (10.907)  LossA 0.861 (0.850)  LossB 0.861 (0.850)  Prec1A 48.378 (50.887)  Prec1B 51.351 (52.014)
+ * Top1 acc:	A: 50.887	B: 52.014
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8167	B: 0.8187
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [27/120]  Batch [0/1]  Time 21.675 (21.675)  LossA 0.847 (0.847)  LossB 0.844 (0.844)  Prec1A 72.131 (72.131)  Prec1B 71.858 (71.858)
+ * Top1 acc:	A: 72.131	B: 71.858
+Test Epoch [27/120]  Batch [0/1]  Time 24.628 (24.628)  LossA 0.905 (0.905)  LossB 0.928 (0.928)  Prec1A 68.033 (68.033)  Prec1B 68.579 (68.579)
+ * Top1 acc:	A: 68.033	B: 68.579
+Epoch 27 using 1.0 min 52.10 sec
+-----------------
+Train Epoch [28/120]  Batch [0/6]  Time 33.976 (33.976)  LossA 0.863 (0.863)  LossB 0.863 (0.863)  Prec1A 49.414 (49.414)  Prec1B 51.172 (51.172)Train Epoch [28/120]  Batch [1/6]  Time 1.730 (17.853)  LossA 0.715 (0.789)  LossB 0.715 (0.789)  Prec1A 55.664 (52.539)  Prec1B 57.422 (54.297)Train Epoch [28/120]  Batch [2/6]  Time 1.730 (12.479)  LossA 0.814 (0.797)  LossB 0.814 (0.797)  Prec1A 51.562 (52.214)  Prec1B 54.102 (54.232)Train Epoch [28/120]  Batch [3/6]  Time 1.730 (9.791)  LossA 0.910 (0.825)  LossB 0.910 (0.825)  Prec1A 47.852 (51.123)  Prec1B 49.219 (52.979)Train Epoch [28/120]  Batch [4/6]  Time 25.614 (12.956)  LossA 0.822 (0.825)  LossB 0.822 (0.825)  Prec1A 52.539 (51.406)  Prec1B 53.711 (53.125)Train Epoch [28/120]  Batch [5/6]  Time 1.242 (11.004)  LossA 0.880 (0.834)  LossB 0.880 (0.834)  Prec1A 48.919 (51.092)  Prec1B 50.000 (52.730)
+ * Top1 acc:	A: 51.092	B: 52.730
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8196	B: 0.8228
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [28/120]  Batch [0/1]  Time 21.815 (21.815)  LossA 0.845 (0.845)  LossB 0.842 (0.842)  Prec1A 71.858 (71.858)  Prec1B 71.311 (71.311)
+ * Top1 acc:	A: 71.858	B: 71.311
+Test Epoch [28/120]  Batch [0/1]  Time 24.762 (24.762)  LossA 0.902 (0.902)  LossB 0.926 (0.926)  Prec1A 68.306 (68.306)  Prec1B 69.126 (69.126)
+ * Top1 acc:	A: 68.306	B: 69.126
+Epoch 28 using 1.0 min 52.95 sec
+-----------------
+Train Epoch [29/120]  Batch [0/6]  Time 33.332 (33.332)  LossA 0.841 (0.841)  LossB 0.841 (0.841)  Prec1A 53.906 (53.906)  Prec1B 53.125 (53.125)Train Epoch [29/120]  Batch [1/6]  Time 1.729 (17.530)  LossA 0.797 (0.819)  LossB 0.797 (0.819)  Prec1A 52.734 (53.320)  Prec1B 51.758 (52.441)Train Epoch [29/120]  Batch [2/6]  Time 1.729 (12.263)  LossA 0.741 (0.793)  LossB 0.741 (0.793)  Prec1A 54.297 (53.646)  Prec1B 55.664 (53.516)Train Epoch [29/120]  Batch [3/6]  Time 1.729 (9.630)  LossA 0.834 (0.803)  LossB 0.834 (0.803)  Prec1A 50.781 (52.930)  Prec1B 52.148 (53.174)Train Epoch [29/120]  Batch [4/6]  Time 25.647 (12.833)  LossA 0.958 (0.834)  LossB 0.958 (0.834)  Prec1A 48.633 (52.070)  Prec1B 49.023 (52.344)Train Epoch [29/120]  Batch [5/6]  Time 1.242 (10.901)  LossA 0.905 (0.846)  LossB 0.905 (0.846)  Prec1A 48.919 (51.672)  Prec1B 48.649 (51.877)
+ * Top1 acc:	A: 51.672	B: 51.877
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8204	B: 0.8204
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [29/120]  Batch [0/1]  Time 21.672 (21.672)  LossA 0.841 (0.841)  LossB 0.839 (0.839)  Prec1A 72.131 (72.131)  Prec1B 71.585 (71.585)
+ * Top1 acc:	A: 72.131	B: 71.585
+Test Epoch [29/120]  Batch [0/1]  Time 24.633 (24.633)  LossA 0.901 (0.901)  LossB 0.923 (0.923)  Prec1A 68.033 (68.033)  Prec1B 68.579 (68.579)
+ * Top1 acc:	A: 68.033	B: 68.579
+Epoch 29 using 1.0 min 52.09 sec
+-----------------
+Train Epoch [30/120]  Batch [0/6]  Time 34.221 (34.221)  LossA 0.804 (0.804)  LossB 0.804 (0.804)  Prec1A 51.367 (51.367)  Prec1B 51.758 (51.758)Train Epoch [30/120]  Batch [1/6]  Time 1.729 (17.975)  LossA 0.820 (0.812)  LossB 0.820 (0.812)  Prec1A 51.758 (51.562)  Prec1B 52.148 (51.953)Train Epoch [30/120]  Batch [2/6]  Time 1.729 (12.559)  LossA 0.880 (0.835)  LossB 0.880 (0.835)  Prec1A 47.656 (50.260)  Prec1B 48.828 (50.911)Train Epoch [30/120]  Batch [3/6]  Time 1.729 (9.852)  LossA 0.853 (0.839)  LossB 0.853 (0.839)  Prec1A 51.367 (50.537)  Prec1B 50.781 (50.879)Train Epoch [30/120]  Batch [4/6]  Time 24.474 (12.776)  LossA 0.779 (0.827)  LossB 0.779 (0.827)  Prec1A 55.273 (51.484)  Prec1B 54.688 (51.641)Train Epoch [30/120]  Batch [5/6]  Time 1.242 (10.854)  LossA 0.806 (0.824)  LossB 0.806 (0.824)  Prec1A 50.541 (51.365)  Prec1B 52.703 (51.775)
+ * Top1 acc:	A: 51.365	B: 51.775
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8175	B: 0.8207
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [30/120]  Batch [0/1]  Time 21.766 (21.766)  LossA 0.837 (0.837)  LossB 0.836 (0.836)  Prec1A 72.404 (72.404)  Prec1B 71.585 (71.585)
+ * Top1 acc:	A: 72.404	B: 71.585
+Test Epoch [30/120]  Batch [0/1]  Time 24.756 (24.756)  LossA 0.899 (0.899)  LossB 0.920 (0.920)  Prec1A 68.306 (68.306)  Prec1B 69.126 (69.126)
+ * Top1 acc:	A: 68.306	B: 69.126
+Epoch 30 using 1.0 min 52.03 sec
+-----------------
+Train Epoch [31/120]  Batch [0/6]  Time 34.181 (34.181)  LossA 0.851 (0.851)  LossB 0.851 (0.851)  Prec1A 50.977 (50.977)  Prec1B 51.758 (51.758)Train Epoch [31/120]  Batch [1/6]  Time 1.729 (17.955)  LossA 0.903 (0.877)  LossB 0.903 (0.877)  Prec1A 50.391 (50.684)  Prec1B 48.633 (50.195)Train Epoch [31/120]  Batch [2/6]  Time 1.729 (12.546)  LossA 0.781 (0.845)  LossB 0.781 (0.845)  Prec1A 51.758 (51.042)  Prec1B 53.516 (51.302)Train Epoch [31/120]  Batch [3/6]  Time 1.729 (9.842)  LossA 0.773 (0.827)  LossB 0.773 (0.827)  Prec1A 53.711 (51.709)  Prec1B 53.320 (51.807)Train Epoch [31/120]  Batch [4/6]  Time 26.446 (13.163)  LossA 0.824 (0.826)  LossB 0.824 (0.826)  Prec1A 51.953 (51.758)  Prec1B 54.688 (52.383)Train Epoch [31/120]  Batch [5/6]  Time 1.242 (11.176)  LossA 0.813 (0.824)  LossB 0.813 (0.824)  Prec1A 51.351 (51.706)  Prec1B 52.162 (52.355)
+ * Top1 acc:	A: 51.706	B: 52.355
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8227	B: 0.8224
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [31/120]  Batch [0/1]  Time 21.712 (21.712)  LossA 0.834 (0.834)  LossB 0.836 (0.836)  Prec1A 72.404 (72.404)  Prec1B 71.585 (71.585)
+ * Top1 acc:	A: 72.404	B: 71.585
+Test Epoch [31/120]  Batch [0/1]  Time 24.668 (24.668)  LossA 0.897 (0.897)  LossB 0.920 (0.920)  Prec1A 68.306 (68.306)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 68.306	B: 69.672
+Epoch 31 using 1.0 min 53.80 sec
+-----------------
+Train Epoch [32/120]  Batch [0/6]  Time 33.535 (33.535)  LossA 0.829 (0.829)  LossB 0.829 (0.829)  Prec1A 51.953 (51.953)  Prec1B 52.930 (52.930)Train Epoch [32/120]  Batch [1/6]  Time 1.729 (17.632)  LossA 0.811 (0.820)  LossB 0.811 (0.820)  Prec1A 50.977 (51.465)  Prec1B 51.758 (52.344)Train Epoch [32/120]  Batch [2/6]  Time 1.729 (12.331)  LossA 0.755 (0.798)  LossB 0.755 (0.798)  Prec1A 52.344 (51.758)  Prec1B 54.102 (52.930)Train Epoch [32/120]  Batch [3/6]  Time 1.729 (9.680)  LossA 0.835 (0.807)  LossB 0.835 (0.807)  Prec1A 51.758 (51.758)  Prec1B 51.562 (52.588)Train Epoch [32/120]  Batch [4/6]  Time 26.384 (13.021)  LossA 0.854 (0.817)  LossB 0.854 (0.817)  Prec1A 49.219 (51.250)  Prec1B 49.414 (51.953)Train Epoch [32/120]  Batch [5/6]  Time 1.242 (11.058)  LossA 0.767 (0.808)  LossB 0.767 (0.808)  Prec1A 53.514 (51.536)  Prec1B 54.595 (52.287)
+ * Top1 acc:	A: 51.536	B: 52.287
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8289	B: 0.8283
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [32/120]  Batch [0/1]  Time 21.833 (21.833)  LossA 0.831 (0.831)  LossB 0.833 (0.833)  Prec1A 72.404 (72.404)  Prec1B 71.311 (71.311)
+ * Top1 acc:	A: 72.404	B: 71.311
+Test Epoch [32/120]  Batch [0/1]  Time 24.720 (24.720)  LossA 0.894 (0.894)  LossB 0.919 (0.919)  Prec1A 68.306 (68.306)  Prec1B 69.399 (69.399)
+ * Top1 acc:	A: 68.306	B: 69.399
+Epoch 32 using 1.0 min 53.33 sec
+-----------------
+Train Epoch [33/120]  Batch [0/6]  Time 32.210 (32.210)  LossA 0.800 (0.800)  LossB 0.800 (0.800)  Prec1A 51.562 (51.562)  Prec1B 53.516 (53.516)Train Epoch [33/120]  Batch [1/6]  Time 1.729 (16.970)  LossA 0.782 (0.791)  LossB 0.782 (0.791)  Prec1A 51.953 (51.758)  Prec1B 52.539 (53.027)Train Epoch [33/120]  Batch [2/6]  Time 1.729 (11.890)  LossA 0.876 (0.820)  LossB 0.876 (0.820)  Prec1A 49.414 (50.977)  Prec1B 50.391 (52.148)Train Epoch [33/120]  Batch [3/6]  Time 1.729 (9.349)  LossA 0.851 (0.827)  LossB 0.851 (0.827)  Prec1A 51.562 (51.123)  Prec1B 52.344 (52.197)Train Epoch [33/120]  Batch [4/6]  Time 25.782 (12.636)  LossA 0.744 (0.811)  LossB 0.744 (0.811)  Prec1A 54.688 (51.836)  Prec1B 55.859 (52.930)Train Epoch [33/120]  Batch [5/6]  Time 1.242 (10.737)  LossA 0.890 (0.824)  LossB 0.890 (0.824)  Prec1A 51.622 (51.809)  Prec1B 52.162 (52.833)
+ * Top1 acc:	A: 51.809	B: 52.833
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8214	B: 0.8206
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [33/120]  Batch [0/1]  Time 21.696 (21.696)  LossA 0.826 (0.826)  LossB 0.828 (0.828)  Prec1A 73.224 (73.224)  Prec1B 71.038 (71.038)
+ * Top1 acc:	A: 73.224	B: 71.038
+Test Epoch [33/120]  Batch [0/1]  Time 24.593 (24.593)  LossA 0.891 (0.891)  LossB 0.917 (0.917)  Prec1A 68.852 (68.852)  Prec1B 68.852 (68.852)
+ * Top1 acc:	A: 68.852	B: 68.852
+Saving best model at epoch 34
+Epoch 33 using 1.0 min 51.39 sec
+-----------------
+Train Epoch [34/120]  Batch [0/6]  Time 33.600 (33.600)  LossA 0.893 (0.893)  LossB 0.893 (0.893)  Prec1A 48.242 (48.242)  Prec1B 49.219 (49.219)Train Epoch [34/120]  Batch [1/6]  Time 1.732 (17.666)  LossA 0.779 (0.836)  LossB 0.779 (0.836)  Prec1A 53.125 (50.684)  Prec1B 52.930 (51.074)Train Epoch [34/120]  Batch [2/6]  Time 1.735 (12.356)  LossA 0.791 (0.821)  LossB 0.791 (0.821)  Prec1A 53.125 (51.497)  Prec1B 52.930 (51.693)Train Epoch [34/120]  Batch [3/6]  Time 1.732 (9.700)  LossA 0.734 (0.799)  LossB 0.734 (0.799)  Prec1A 53.516 (52.002)  Prec1B 54.688 (52.441)Train Epoch [34/120]  Batch [4/6]  Time 29.450 (13.650)  LossA 0.774 (0.794)  LossB 0.774 (0.794)  Prec1A 54.297 (52.461)  Prec1B 55.273 (53.008)Train Epoch [34/120]  Batch [5/6]  Time 1.242 (11.582)  LossA 0.824 (0.799)  LossB 0.824 (0.799)  Prec1A 50.000 (52.150)  Prec1B 50.811 (52.730)
+ * Top1 acc:	A: 52.150	B: 52.730
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8267	B: 0.8262
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [34/120]  Batch [0/1]  Time 21.998 (21.998)  LossA 0.824 (0.824)  LossB 0.823 (0.823)  Prec1A 72.951 (72.951)  Prec1B 71.858 (71.858)
+ * Top1 acc:	A: 72.951	B: 71.858
+Test Epoch [34/120]  Batch [0/1]  Time 24.881 (24.881)  LossA 0.888 (0.888)  LossB 0.914 (0.914)  Prec1A 68.579 (68.579)  Prec1B 69.399 (69.399)
+ * Top1 acc:	A: 68.579	B: 69.399
+Epoch 34 using 1.0 min 56.74 sec
+-----------------
+Train Epoch [35/120]  Batch [0/6]  Time 33.983 (33.983)  LossA 0.844 (0.844)  LossB 0.844 (0.844)  Prec1A 49.609 (49.609)  Prec1B 50.977 (50.977)Train Epoch [35/120]  Batch [1/6]  Time 1.874 (17.929)  LossA 0.808 (0.826)  LossB 0.808 (0.826)  Prec1A 52.930 (51.270)  Prec1B 52.930 (51.953)Train Epoch [35/120]  Batch [2/6]  Time 1.772 (12.543)  LossA 0.797 (0.816)  LossB 0.797 (0.816)  Prec1A 53.320 (51.953)  Prec1B 53.906 (52.604)Train Epoch [35/120]  Batch [3/6]  Time 1.841 (9.868)  LossA 0.832 (0.820)  LossB 0.832 (0.820)  Prec1A 49.414 (51.318)  Prec1B 53.320 (52.783)Train Epoch [35/120]  Batch [4/6]  Time 25.656 (13.025)  LossA 0.761 (0.808)  LossB 0.761 (0.808)  Prec1A 51.953 (51.445)  Prec1B 53.125 (52.852)Train Epoch [35/120]  Batch [5/6]  Time 1.243 (11.062)  LossA 0.747 (0.798)  LossB 0.747 (0.798)  Prec1A 54.595 (51.843)  Prec1B 55.405 (53.174)
+ * Top1 acc:	A: 51.843	B: 53.174
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8245	B: 0.8272
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [35/120]  Batch [0/1]  Time 21.660 (21.660)  LossA 0.819 (0.819)  LossB 0.819 (0.819)  Prec1A 72.951 (72.951)  Prec1B 72.951 (72.951)
+ * Top1 acc:	A: 72.951	B: 72.951
+Test Epoch [35/120]  Batch [0/1]  Time 24.633 (24.633)  LossA 0.885 (0.885)  LossB 0.913 (0.913)  Prec1A 68.579 (68.579)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 68.579	B: 69.945
+Epoch 35 using 1.0 min 53.04 sec
+-----------------
+Train Epoch [36/120]  Batch [0/6]  Time 32.997 (32.997)  LossA 0.802 (0.802)  LossB 0.802 (0.802)  Prec1A 52.148 (52.148)  Prec1B 51.562 (51.562)Train Epoch [36/120]  Batch [1/6]  Time 1.729 (17.363)  LossA 0.819 (0.810)  LossB 0.819 (0.810)  Prec1A 52.148 (52.148)  Prec1B 50.586 (51.074)Train Epoch [36/120]  Batch [2/6]  Time 1.729 (12.152)  LossA 0.779 (0.800)  LossB 0.779 (0.800)  Prec1A 52.539 (52.279)  Prec1B 50.781 (50.977)Train Epoch [36/120]  Batch [3/6]  Time 1.730 (9.546)  LossA 0.800 (0.800)  LossB 0.800 (0.800)  Prec1A 51.758 (52.148)  Prec1B 54.492 (51.855)Train Epoch [36/120]  Batch [4/6]  Time 25.877 (12.813)  LossA 0.789 (0.798)  LossB 0.789 (0.798)  Prec1A 54.688 (52.656)  Prec1B 54.492 (52.383)Train Epoch [36/120]  Batch [5/6]  Time 1.243 (10.884)  LossA 0.860 (0.808)  LossB 0.860 (0.808)  Prec1A 51.622 (52.526)  Prec1B 51.892 (52.321)
+ * Top1 acc:	A: 52.526	B: 52.321
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8202	B: 0.8231
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [36/120]  Batch [0/1]  Time 21.789 (21.789)  LossA 0.819 (0.819)  LossB 0.819 (0.819)  Prec1A 72.951 (72.951)  Prec1B 72.131 (72.131)
+ * Top1 acc:	A: 72.951	B: 72.131
+Test Epoch [36/120]  Batch [0/1]  Time 24.718 (24.718)  LossA 0.885 (0.885)  LossB 0.912 (0.912)  Prec1A 68.852 (68.852)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 68.852	B: 69.945
+Epoch 36 using 1.0 min 52.18 sec
+-----------------
+Train Epoch [37/120]  Batch [0/6]  Time 33.047 (33.047)  LossA 0.901 (0.901)  LossB 0.901 (0.901)  Prec1A 47.852 (47.852)  Prec1B 49.219 (49.219)Train Epoch [37/120]  Batch [1/6]  Time 1.729 (17.388)  LossA 0.839 (0.870)  LossB 0.839 (0.870)  Prec1A 51.172 (49.512)  Prec1B 53.516 (51.367)Train Epoch [37/120]  Batch [2/6]  Time 1.729 (12.169)  LossA 0.836 (0.859)  LossB 0.836 (0.859)  Prec1A 50.000 (49.674)  Prec1B 51.172 (51.302)Train Epoch [37/120]  Batch [3/6]  Time 1.729 (9.559)  LossA 0.774 (0.838)  LossB 0.774 (0.838)  Prec1A 52.734 (50.439)  Prec1B 52.148 (51.514)Train Epoch [37/120]  Batch [4/6]  Time 25.580 (12.763)  LossA 0.769 (0.824)  LossB 0.769 (0.824)  Prec1A 53.320 (51.016)  Prec1B 55.078 (52.227)Train Epoch [37/120]  Batch [5/6]  Time 1.374 (10.865)  LossA 0.634 (0.792)  LossB 0.634 (0.792)  Prec1A 58.108 (51.911)  Prec1B 57.297 (52.867)
+ * Top1 acc:	A: 51.911	B: 52.867
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8265	B: 0.8315
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [37/120]  Batch [0/1]  Time 21.766 (21.766)  LossA 0.818 (0.818)  LossB 0.820 (0.820)  Prec1A 72.951 (72.951)  Prec1B 72.404 (72.404)
+ * Top1 acc:	A: 72.951	B: 72.404
+Test Epoch [37/120]  Batch [0/1]  Time 24.709 (24.709)  LossA 0.884 (0.884)  LossB 0.911 (0.911)  Prec1A 69.126 (69.126)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 69.126	B: 69.945
+Epoch 37 using 1.0 min 52.03 sec
+-----------------
+Train Epoch [38/120]  Batch [0/6]  Time 35.130 (35.130)  LossA 0.859 (0.859)  LossB 0.859 (0.859)  Prec1A 50.391 (50.391)  Prec1B 50.977 (50.977)Train Epoch [38/120]  Batch [1/6]  Time 1.731 (18.431)  LossA 0.795 (0.827)  LossB 0.795 (0.827)  Prec1A 53.711 (52.051)  Prec1B 52.344 (51.660)Train Epoch [38/120]  Batch [2/6]  Time 1.729 (12.864)  LossA 0.744 (0.799)  LossB 0.744 (0.799)  Prec1A 52.930 (52.344)  Prec1B 54.297 (52.539)Train Epoch [38/120]  Batch [3/6]  Time 1.730 (10.080)  LossA 0.880 (0.820)  LossB 0.880 (0.820)  Prec1A 48.828 (51.465)  Prec1B 49.609 (51.807)Train Epoch [38/120]  Batch [4/6]  Time 26.674 (13.399)  LossA 0.754 (0.806)  LossB 0.754 (0.806)  Prec1A 52.148 (51.602)  Prec1B 52.344 (51.914)Train Epoch [38/120]  Batch [5/6]  Time 1.243 (11.373)  LossA 0.726 (0.793)  LossB 0.726 (0.793)  Prec1A 56.757 (52.253)  Prec1B 55.946 (52.423)
+ * Top1 acc:	A: 52.253	B: 52.423
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8252	B: 0.8250
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [38/120]  Batch [0/1]  Time 21.799 (21.799)  LossA 0.817 (0.817)  LossB 0.818 (0.818)  Prec1A 73.770 (73.770)  Prec1B 72.131 (72.131)
+ * Top1 acc:	A: 73.770	B: 72.131
+Test Epoch [38/120]  Batch [0/1]  Time 24.757 (24.757)  LossA 0.884 (0.884)  LossB 0.910 (0.910)  Prec1A 69.399 (69.399)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 69.399	B: 69.672
+Saving best model at epoch 39
+Epoch 38 using 1.0 min 55.42 sec
+-----------------
+Train Epoch [39/120]  Batch [0/6]  Time 33.159 (33.159)  LossA 0.774 (0.774)  LossB 0.774 (0.774)  Prec1A 50.195 (50.195)  Prec1B 51.367 (51.367)Train Epoch [39/120]  Batch [1/6]  Time 1.729 (17.444)  LossA 0.811 (0.793)  LossB 0.811 (0.793)  Prec1A 52.344 (51.270)  Prec1B 54.492 (52.930)Train Epoch [39/120]  Batch [2/6]  Time 1.729 (12.206)  LossA 0.829 (0.805)  LossB 0.829 (0.805)  Prec1A 50.781 (51.107)  Prec1B 52.539 (52.799)Train Epoch [39/120]  Batch [3/6]  Time 1.730 (9.587)  LossA 0.747 (0.790)  LossB 0.747 (0.790)  Prec1A 51.953 (51.318)  Prec1B 52.148 (52.637)Train Epoch [39/120]  Batch [4/6]  Time 25.943 (12.858)  LossA 0.758 (0.784)  LossB 0.758 (0.784)  Prec1A 54.688 (51.992)  Prec1B 54.102 (52.930)Train Epoch [39/120]  Batch [5/6]  Time 1.242 (10.922)  LossA 0.791 (0.785)  LossB 0.791 (0.785)  Prec1A 53.784 (52.218)  Prec1B 52.432 (52.867)
+ * Top1 acc:	A: 52.218	B: 52.867
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8273	B: 0.8266
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [39/120]  Batch [0/1]  Time 21.734 (21.734)  LossA 0.811 (0.811)  LossB 0.816 (0.816)  Prec1A 73.497 (73.497)  Prec1B 72.131 (72.131)
+ * Top1 acc:	A: 73.497	B: 72.131
+Test Epoch [39/120]  Batch [0/1]  Time 24.705 (24.705)  LossA 0.881 (0.881)  LossB 0.907 (0.907)  Prec1A 69.126 (69.126)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 69.126	B: 70.219
+Epoch 39 using 1.0 min 52.35 sec
+-----------------
+Train Epoch [40/120]  Batch [0/6]  Time 34.763 (34.763)  LossA 0.766 (0.766)  LossB 0.766 (0.766)  Prec1A 54.297 (54.297)  Prec1B 53.320 (53.320)Train Epoch [40/120]  Batch [1/6]  Time 1.729 (18.246)  LossA 0.809 (0.787)  LossB 0.809 (0.787)  Prec1A 51.367 (52.832)  Prec1B 50.977 (52.148)Train Epoch [40/120]  Batch [2/6]  Time 1.747 (12.746)  LossA 0.770 (0.782)  LossB 0.770 (0.782)  Prec1A 51.367 (52.344)  Prec1B 52.539 (52.279)Train Epoch [40/120]  Batch [3/6]  Time 1.730 (9.992)  LossA 0.814 (0.790)  LossB 0.814 (0.790)  Prec1A 51.172 (52.051)  Prec1B 53.320 (52.539)Train Epoch [40/120]  Batch [4/6]  Time 27.014 (13.396)  LossA 0.794 (0.791)  LossB 0.794 (0.791)  Prec1A 53.320 (52.305)  Prec1B 52.344 (52.500)Train Epoch [40/120]  Batch [5/6]  Time 1.242 (11.371)  LossA 0.753 (0.784)  LossB 0.753 (0.784)  Prec1A 52.432 (52.321)  Prec1B 55.676 (52.901)
+ * Top1 acc:	A: 52.321	B: 52.901
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8277	B: 0.8265
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [40/120]  Batch [0/1]  Time 21.866 (21.866)  LossA 0.809 (0.809)  LossB 0.813 (0.813)  Prec1A 73.497 (73.497)  Prec1B 72.404 (72.404)
+ * Top1 acc:	A: 73.497	B: 72.404
+Test Epoch [40/120]  Batch [0/1]  Time 24.733 (24.733)  LossA 0.879 (0.879)  LossB 0.905 (0.905)  Prec1A 69.399 (69.399)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 69.399	B: 69.945
+Epoch 40 using 1.0 min 55.18 sec
+-----------------
+Train Epoch [41/120]  Batch [0/6]  Time 32.509 (32.509)  LossA 0.783 (0.783)  LossB 0.783 (0.783)  Prec1A 54.102 (54.102)  Prec1B 54.883 (54.883)Train Epoch [41/120]  Batch [1/6]  Time 1.979 (17.244)  LossA 0.837 (0.810)  LossB 0.837 (0.810)  Prec1A 48.438 (51.270)  Prec1B 49.219 (52.051)Train Epoch [41/120]  Batch [2/6]  Time 1.767 (12.085)  LossA 0.813 (0.811)  LossB 0.813 (0.811)  Prec1A 51.367 (51.302)  Prec1B 53.320 (52.474)Train Epoch [41/120]  Batch [3/6]  Time 1.808 (9.516)  LossA 0.805 (0.810)  LossB 0.805 (0.810)  Prec1A 50.000 (50.977)  Prec1B 51.758 (52.295)Train Epoch [41/120]  Batch [4/6]  Time 25.930 (12.799)  LossA 0.688 (0.785)  LossB 0.688 (0.785)  Prec1A 53.320 (51.445)  Prec1B 56.445 (53.125)Train Epoch [41/120]  Batch [5/6]  Time 1.242 (10.872)  LossA 0.647 (0.762)  LossB 0.647 (0.762)  Prec1A 56.757 (52.116)  Prec1B 57.838 (53.720)
+ * Top1 acc:	A: 52.116	B: 53.720
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8292	B: 0.8302
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [41/120]  Batch [0/1]  Time 21.951 (21.951)  LossA 0.808 (0.808)  LossB 0.811 (0.811)  Prec1A 73.497 (73.497)  Prec1B 72.131 (72.131)
+ * Top1 acc:	A: 73.497	B: 72.131
+Test Epoch [41/120]  Batch [0/1]  Time 24.754 (24.754)  LossA 0.878 (0.878)  LossB 0.905 (0.905)  Prec1A 69.945 (69.945)  Prec1B 69.399 (69.399)
+ * Top1 acc:	A: 69.945	B: 69.399
+Epoch 41 using 1.0 min 52.30 sec
+-----------------
+Train Epoch [42/120]  Batch [0/6]  Time 33.176 (33.176)  LossA 0.747 (0.747)  LossB 0.747 (0.747)  Prec1A 53.320 (53.320)  Prec1B 53.320 (53.320)Train Epoch [42/120]  Batch [1/6]  Time 1.730 (17.453)  LossA 0.707 (0.727)  LossB 0.707 (0.727)  Prec1A 54.883 (54.102)  Prec1B 56.445 (54.883)Train Epoch [42/120]  Batch [2/6]  Time 1.729 (12.212)  LossA 0.830 (0.762)  LossB 0.830 (0.762)  Prec1A 50.000 (52.734)  Prec1B 50.391 (53.385)Train Epoch [42/120]  Batch [3/6]  Time 1.730 (9.591)  LossA 0.798 (0.771)  LossB 0.798 (0.771)  Prec1A 50.781 (52.246)  Prec1B 51.562 (52.930)Train Epoch [42/120]  Batch [4/6]  Time 25.590 (12.791)  LossA 0.810 (0.779)  LossB 0.810 (0.779)  Prec1A 50.977 (51.992)  Prec1B 52.734 (52.891)Train Epoch [42/120]  Batch [5/6]  Time 1.243 (10.866)  LossA 0.750 (0.774)  LossB 0.750 (0.774)  Prec1A 55.676 (52.457)  Prec1B 56.216 (53.311)
+ * Top1 acc:	A: 52.457	B: 53.311
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8280	B: 0.8293
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [42/120]  Batch [0/1]  Time 21.833 (21.833)  LossA 0.807 (0.807)  LossB 0.811 (0.811)  Prec1A 73.497 (73.497)  Prec1B 72.678 (72.678)
+ * Top1 acc:	A: 73.497	B: 72.678
+Test Epoch [42/120]  Batch [0/1]  Time 24.797 (24.797)  LossA 0.877 (0.877)  LossB 0.905 (0.905)  Prec1A 69.945 (69.945)  Prec1B 69.399 (69.399)
+ * Top1 acc:	A: 69.945	B: 69.399
+Epoch 42 using 1.0 min 52.19 sec
+-----------------
+Train Epoch [43/120]  Batch [0/6]  Time 33.961 (33.961)  LossA 0.812 (0.812)  LossB 0.812 (0.812)  Prec1A 52.930 (52.930)  Prec1B 53.320 (53.320)Train Epoch [43/120]  Batch [1/6]  Time 1.730 (17.845)  LossA 0.799 (0.806)  LossB 0.799 (0.806)  Prec1A 49.609 (51.270)  Prec1B 50.586 (51.953)Train Epoch [43/120]  Batch [2/6]  Time 1.730 (12.473)  LossA 0.803 (0.805)  LossB 0.803 (0.805)  Prec1A 52.734 (51.758)  Prec1B 53.125 (52.344)Train Epoch [43/120]  Batch [3/6]  Time 1.730 (9.788)  LossA 0.680 (0.773)  LossB 0.680 (0.773)  Prec1A 54.883 (52.539)  Prec1B 55.469 (53.125)Train Epoch [43/120]  Batch [4/6]  Time 25.110 (12.852)  LossA 0.778 (0.774)  LossB 0.778 (0.774)  Prec1A 53.320 (52.695)  Prec1B 52.930 (53.086)Train Epoch [43/120]  Batch [5/6]  Time 1.243 (10.917)  LossA 0.786 (0.776)  LossB 0.786 (0.776)  Prec1A 54.054 (52.867)  Prec1B 53.243 (53.106)
+ * Top1 acc:	A: 52.867	B: 53.106
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8242	B: 0.8238
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [43/120]  Batch [0/1]  Time 21.782 (21.782)  LossA 0.807 (0.807)  LossB 0.810 (0.810)  Prec1A 73.497 (73.497)  Prec1B 72.951 (72.951)
+ * Top1 acc:	A: 73.497	B: 72.951
+Test Epoch [43/120]  Batch [0/1]  Time 24.716 (24.716)  LossA 0.878 (0.878)  LossB 0.906 (0.906)  Prec1A 69.399 (69.399)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 69.399	B: 69.672
+Epoch 43 using 1.0 min 52.38 sec
+-----------------
+Train Epoch [44/120]  Batch [0/6]  Time 35.595 (35.595)  LossA 0.770 (0.770)  LossB 0.770 (0.770)  Prec1A 53.320 (53.320)  Prec1B 54.492 (54.492)Train Epoch [44/120]  Batch [1/6]  Time 1.729 (18.662)  LossA 0.742 (0.756)  LossB 0.742 (0.756)  Prec1A 53.711 (53.516)  Prec1B 53.711 (54.102)Train Epoch [44/120]  Batch [2/6]  Time 1.729 (13.018)  LossA 0.682 (0.732)  LossB 0.682 (0.732)  Prec1A 55.664 (54.232)  Prec1B 57.031 (55.078)Train Epoch [44/120]  Batch [3/6]  Time 1.730 (10.196)  LossA 0.787 (0.745)  LossB 0.787 (0.745)  Prec1A 51.367 (53.516)  Prec1B 51.562 (54.199)Train Epoch [44/120]  Batch [4/6]  Time 25.992 (13.355)  LossA 0.802 (0.757)  LossB 0.802 (0.757)  Prec1A 49.023 (52.617)  Prec1B 50.977 (53.555)Train Epoch [44/120]  Batch [5/6]  Time 1.280 (11.342)  LossA 0.784 (0.761)  LossB 0.784 (0.761)  Prec1A 51.081 (52.423)  Prec1B 52.973 (53.481)
+ * Top1 acc:	A: 52.423	B: 53.481
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8222	B: 0.8221
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [44/120]  Batch [0/1]  Time 21.979 (21.979)  LossA 0.803 (0.803)  LossB 0.808 (0.808)  Prec1A 73.770 (73.770)  Prec1B 72.678 (72.678)
+ * Top1 acc:	A: 73.770	B: 72.678
+Test Epoch [44/120]  Batch [0/1]  Time 25.115 (25.115)  LossA 0.872 (0.872)  LossB 0.905 (0.905)  Prec1A 69.945 (69.945)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 69.945	B: 69.672
+Epoch 44 using 1.0 min 55.52 sec
+-----------------
+get clustering data: [1/6]get clustering data: [2/6]get clustering data: [3/6]get clustering data: [4/6]get clustering data: [5/6]get clustering data: [6/6]
+Finish collect cluster data.
+len: 1141	max: 30000
+PCA process... 
+Calc densities
+calc auxiliary info
+Start Kmeans clustering....
+Clustering 1 of 5 categories into 3 curriculum subsets (2.85 secs).
+len: 403	max: 30000
+PCA process... 
+Calc densities
+calc auxiliary info
+Start Kmeans clustering....
+Clustering 2 of 5 categories into 3 curriculum subsets (1.73 secs).
+len: 709	max: 30000
+PCA process... 
+Calc densities
+calc auxiliary info
+Start Kmeans clustering....
+Clustering 3 of 5 categories into 3 curriculum subsets (2.13 secs).
+len: 303	max: 30000
+PCA process... 
+Calc densities
+calc auxiliary info
+Start Kmeans clustering....
+Clustering 4 of 5 categories into 3 curriculum subsets (0.24 secs).
+len: 374	max: 30000
+PCA process... 
+Calc densities
+calc auxiliary info
+Start Kmeans clustering....
+Clustering 5 of 5 categories into 3 curriculum subsets (1.91 secs).
+Train Epoch [45/120]  Batch [0/6]  Time 32.174 (32.174)  LossA 1.051 (1.051)  LossB 1.051 (1.051)  Prec1A 52.148 (52.148)  Prec1B 52.734 (52.734)Train Epoch [45/120]  Batch [1/6]  Time 3.018 (17.596)  LossA 1.010 (1.030)  LossB 1.010 (1.030)  Prec1A 54.492 (53.320)  Prec1B 55.078 (53.906)Train Epoch [45/120]  Batch [2/6]  Time 1.732 (12.308)  LossA 1.043 (1.035)  LossB 1.043 (1.035)  Prec1A 51.562 (52.734)  Prec1B 54.492 (54.102)Train Epoch [45/120]  Batch [3/6]  Time 1.732 (9.664)  LossA 1.078 (1.046)  LossB 1.078 (1.046)  Prec1A 52.148 (52.588)  Prec1B 53.125 (53.857)Train Epoch [45/120]  Batch [4/6]  Time 23.911 (12.513)  LossA 1.073 (1.051)  LossB 1.073 (1.051)  Prec1A 49.805 (52.031)  Prec1B 51.172 (53.320)Train Epoch [45/120]  Batch [5/6]  Time 1.279 (10.641)  LossA 0.999 (1.042)  LossB 0.999 (1.042)  Prec1A 56.216 (52.560)  Prec1B 56.486 (53.720)
+ * Top1 acc:	A: 52.560	B: 53.720
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8277	B: 0.8290
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [45/120]  Batch [0/1]  Time 21.675 (21.675)  LossA 0.799 (0.799)  LossB 0.806 (0.806)  Prec1A 74.044 (74.044)  Prec1B 73.770 (73.770)
+ * Top1 acc:	A: 74.044	B: 73.770
+Test Epoch [45/120]  Batch [0/1]  Time 24.798 (24.798)  LossA 0.869 (0.869)  LossB 0.904 (0.904)  Prec1A 69.945 (69.945)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 69.945	B: 69.945
+Saving best model at epoch 46
+Epoch 45 using 3.0 min 39.76 sec
+-----------------
+Train Epoch [46/120]  Batch [0/6]  Time 32.586 (32.586)  LossA 1.012 (1.012)  LossB 1.012 (1.012)  Prec1A 56.055 (56.055)  Prec1B 55.469 (55.469)Train Epoch [46/120]  Batch [1/6]  Time 1.737 (17.162)  LossA 0.990 (1.001)  LossB 0.990 (1.001)  Prec1A 53.320 (54.688)  Prec1B 54.102 (54.785)Train Epoch [46/120]  Batch [2/6]  Time 1.732 (12.018)  LossA 0.992 (0.998)  LossB 0.992 (0.998)  Prec1A 53.125 (54.167)  Prec1B 54.102 (54.557)Train Epoch [46/120]  Batch [3/6]  Time 1.732 (9.447)  LossA 1.069 (1.016)  LossB 1.069 (1.016)  Prec1A 49.023 (52.881)  Prec1B 49.023 (53.174)Train Epoch [46/120]  Batch [4/6]  Time 23.713 (12.300)  LossA 1.000 (1.013)  LossB 1.000 (1.013)  Prec1A 52.539 (52.812)  Prec1B 53.125 (53.164)Train Epoch [46/120]  Batch [5/6]  Time 1.244 (10.457)  LossA 1.044 (1.018)  LossB 1.044 (1.018)  Prec1A 54.865 (53.072)  Prec1B 54.865 (53.379)
+ * Top1 acc:	A: 53.072	B: 53.379
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8298	B: 0.8313
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [46/120]  Batch [0/1]  Time 21.385 (21.385)  LossA 0.797 (0.797)  LossB 0.806 (0.806)  Prec1A 73.770 (73.770)  Prec1B 73.497 (73.497)
+ * Top1 acc:	A: 73.770	B: 73.497
+Test Epoch [46/120]  Batch [0/1]  Time 24.308 (24.308)  LossA 0.870 (0.870)  LossB 0.905 (0.905)  Prec1A 69.672 (69.672)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 69.672	B: 69.945
+Epoch 46 using 1.0 min 48.81 sec
+-----------------
+Train Epoch [47/120]  Batch [0/6]  Time 32.699 (32.699)  LossA 0.984 (0.984)  LossB 0.984 (0.984)  Prec1A 54.102 (54.102)  Prec1B 55.273 (55.273)Train Epoch [47/120]  Batch [1/6]  Time 1.732 (17.215)  LossA 1.036 (1.010)  LossB 1.036 (1.010)  Prec1A 51.758 (52.930)  Prec1B 51.953 (53.613)Train Epoch [47/120]  Batch [2/6]  Time 1.732 (12.054)  LossA 1.002 (1.008)  LossB 1.002 (1.008)  Prec1A 52.734 (52.865)  Prec1B 54.688 (53.971)Train Epoch [47/120]  Batch [3/6]  Time 1.731 (9.473)  LossA 1.017 (1.010)  LossB 1.017 (1.010)  Prec1A 52.930 (52.881)  Prec1B 53.320 (53.809)Train Epoch [47/120]  Batch [4/6]  Time 24.919 (12.563)  LossA 1.005 (1.009)  LossB 1.005 (1.009)  Prec1A 51.953 (52.695)  Prec1B 52.148 (53.477)Train Epoch [47/120]  Batch [5/6]  Time 1.244 (10.676)  LossA 1.009 (1.009)  LossB 1.009 (1.009)  Prec1A 52.703 (52.696)  Prec1B 50.811 (53.140)
+ * Top1 acc:	A: 52.696	B: 53.140
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8280	B: 0.8272
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [47/120]  Batch [0/1]  Time 21.328 (21.328)  LossA 0.796 (0.796)  LossB 0.805 (0.805)  Prec1A 73.770 (73.770)  Prec1B 72.951 (72.951)
+ * Top1 acc:	A: 73.770	B: 72.951
+Test Epoch [47/120]  Batch [0/1]  Time 24.266 (24.266)  LossA 0.873 (0.873)  LossB 0.904 (0.904)  Prec1A 69.399 (69.399)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 69.399	B: 69.672
+Epoch 47 using 1.0 min 50.01 sec
+-----------------
+Train Epoch [48/120]  Batch [0/6]  Time 32.528 (32.528)  LossA 0.948 (0.948)  LossB 0.948 (0.948)  Prec1A 55.078 (55.078)  Prec1B 55.078 (55.078)Train Epoch [48/120]  Batch [1/6]  Time 1.732 (17.130)  LossA 0.998 (0.973)  LossB 0.998 (0.973)  Prec1A 51.953 (53.516)  Prec1B 52.148 (53.613)Train Epoch [48/120]  Batch [2/6]  Time 1.732 (11.997)  LossA 1.024 (0.990)  LossB 1.024 (0.990)  Prec1A 49.414 (52.148)  Prec1B 50.195 (52.474)Train Epoch [48/120]  Batch [3/6]  Time 1.732 (9.431)  LossA 0.997 (0.992)  LossB 0.997 (0.992)  Prec1A 53.125 (52.393)  Prec1B 52.148 (52.393)Train Epoch [48/120]  Batch [4/6]  Time 27.323 (13.009)  LossA 0.972 (0.988)  LossB 0.972 (0.988)  Prec1A 52.539 (52.422)  Prec1B 54.297 (52.773)Train Epoch [48/120]  Batch [5/6]  Time 1.245 (11.049)  LossA 0.945 (0.981)  LossB 0.945 (0.981)  Prec1A 56.216 (52.901)  Prec1B 57.297 (53.345)
+ * Top1 acc:	A: 52.901	B: 53.345
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8325	B: 0.8326
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [48/120]  Batch [0/1]  Time 21.371 (21.371)  LossA 0.796 (0.796)  LossB 0.806 (0.806)  Prec1A 73.770 (73.770)  Prec1B 73.497 (73.497)
+ * Top1 acc:	A: 73.770	B: 73.497
+Test Epoch [48/120]  Batch [0/1]  Time 24.484 (24.484)  LossA 0.878 (0.878)  LossB 0.905 (0.905)  Prec1A 69.126 (69.126)  Prec1B 69.126 (69.126)
+ * Top1 acc:	A: 69.126	B: 69.126
+Epoch 48 using 1.0 min 52.51 sec
+-----------------
+Train Epoch [49/120]  Batch [0/6]  Time 34.010 (34.010)  LossA 0.971 (0.971)  LossB 0.971 (0.971)  Prec1A 51.758 (51.758)  Prec1B 52.734 (52.734)Train Epoch [49/120]  Batch [1/6]  Time 2.122 (18.066)  LossA 0.994 (0.983)  LossB 0.994 (0.983)  Prec1A 49.609 (50.684)  Prec1B 50.391 (51.562)Train Epoch [49/120]  Batch [2/6]  Time 1.923 (12.685)  LossA 0.953 (0.973)  LossB 0.953 (0.973)  Prec1A 54.492 (51.953)  Prec1B 54.688 (52.604)Train Epoch [49/120]  Batch [3/6]  Time 2.008 (10.016)  LossA 0.935 (0.963)  LossB 0.935 (0.963)  Prec1A 53.516 (52.344)  Prec1B 53.711 (52.881)Train Epoch [49/120]  Batch [4/6]  Time 26.291 (13.271)  LossA 0.960 (0.962)  LossB 0.960 (0.962)  Prec1A 52.734 (52.422)  Prec1B 53.125 (52.930)Train Epoch [49/120]  Batch [5/6]  Time 1.401 (11.292)  LossA 0.947 (0.960)  LossB 0.947 (0.960)  Prec1A 54.595 (52.696)  Prec1B 54.595 (53.140)
+ * Top1 acc:	A: 52.696	B: 53.140
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8339	B: 0.8326
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [49/120]  Batch [0/1]  Time 21.819 (21.819)  LossA 0.797 (0.797)  LossB 0.805 (0.805)  Prec1A 73.497 (73.497)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 73.497	B: 74.044
+Test Epoch [49/120]  Batch [0/1]  Time 24.683 (24.683)  LossA 0.881 (0.881)  LossB 0.905 (0.905)  Prec1A 68.852 (68.852)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 68.852	B: 69.672
+Epoch 49 using 1.0 min 54.61 sec
+-----------------
+Train Epoch [50/120]  Batch [0/6]  Time 32.859 (32.859)  LossA 0.938 (0.938)  LossB 0.938 (0.938)  Prec1A 52.344 (52.344)  Prec1B 53.906 (53.906)Train Epoch [50/120]  Batch [1/6]  Time 1.998 (17.429)  LossA 0.947 (0.943)  LossB 0.947 (0.943)  Prec1A 52.344 (52.344)  Prec1B 52.734 (53.320)Train Epoch [50/120]  Batch [2/6]  Time 2.074 (12.310)  LossA 0.942 (0.942)  LossB 0.942 (0.942)  Prec1A 50.000 (51.562)  Prec1B 51.562 (52.734)Train Epoch [50/120]  Batch [3/6]  Time 1.932 (9.716)  LossA 0.984 (0.953)  LossB 0.984 (0.953)  Prec1A 48.438 (50.781)  Prec1B 48.633 (51.709)Train Epoch [50/120]  Batch [4/6]  Time 24.037 (12.580)  LossA 0.892 (0.940)  LossB 0.892 (0.940)  Prec1A 57.422 (52.109)  Prec1B 57.812 (52.930)Train Epoch [50/120]  Batch [5/6]  Time 1.284 (10.697)  LossA 0.920 (0.937)  LossB 0.920 (0.937)  Prec1A 54.324 (52.389)  Prec1B 55.405 (53.242)
+ * Top1 acc:	A: 52.389	B: 53.242
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8296	B: 0.8341
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [50/120]  Batch [0/1]  Time 21.573 (21.573)  LossA 0.800 (0.800)  LossB 0.806 (0.806)  Prec1A 73.497 (73.497)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 73.497	B: 74.044
+Test Epoch [50/120]  Batch [0/1]  Time 24.624 (24.624)  LossA 0.886 (0.886)  LossB 0.910 (0.910)  Prec1A 68.852 (68.852)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 68.852	B: 69.672
+Epoch 50 using 1.0 min 50.74 sec
+-----------------
+Train Epoch [51/120]  Batch [0/6]  Time 32.898 (32.898)  LossA 0.925 (0.925)  LossB 0.925 (0.925)  Prec1A 52.539 (52.539)  Prec1B 53.711 (53.711)Train Epoch [51/120]  Batch [1/6]  Time 2.269 (17.583)  LossA 0.907 (0.916)  LossB 0.907 (0.916)  Prec1A 53.320 (52.930)  Prec1B 53.711 (53.711)Train Epoch [51/120]  Batch [2/6]  Time 1.995 (12.387)  LossA 0.995 (0.942)  LossB 0.995 (0.942)  Prec1A 48.828 (51.562)  Prec1B 49.805 (52.409)Train Epoch [51/120]  Batch [3/6]  Time 1.867 (9.757)  LossA 0.913 (0.935)  LossB 0.913 (0.935)  Prec1A 51.953 (51.660)  Prec1B 54.297 (52.881)Train Epoch [51/120]  Batch [4/6]  Time 24.776 (12.761)  LossA 0.853 (0.919)  LossB 0.853 (0.919)  Prec1A 53.516 (52.031)  Prec1B 55.469 (53.398)Train Epoch [51/120]  Batch [5/6]  Time 1.245 (10.842)  LossA 0.882 (0.913)  LossB 0.882 (0.913)  Prec1A 55.946 (52.526)  Prec1B 55.946 (53.720)
+ * Top1 acc:	A: 52.526	B: 53.720
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8351	B: 0.8327
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [51/120]  Batch [0/1]  Time 21.413 (21.413)  LossA 0.802 (0.802)  LossB 0.808 (0.808)  Prec1A 73.497 (73.497)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 73.497	B: 74.044
+Test Epoch [51/120]  Batch [0/1]  Time 24.417 (24.417)  LossA 0.890 (0.890)  LossB 0.914 (0.914)  Prec1A 68.852 (68.852)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 68.852	B: 69.672
+Epoch 51 using 1.0 min 51.25 sec
+-----------------
+Train Epoch [52/120]  Batch [0/6]  Time 33.082 (33.082)  LossA 0.925 (0.925)  LossB 0.925 (0.925)  Prec1A 50.000 (50.000)  Prec1B 51.953 (51.953)Train Epoch [52/120]  Batch [1/6]  Time 1.835 (17.458)  LossA 0.895 (0.910)  LossB 0.895 (0.910)  Prec1A 53.906 (51.953)  Prec1B 54.688 (53.320)Train Epoch [52/120]  Batch [2/6]  Time 1.812 (12.243)  LossA 0.919 (0.913)  LossB 0.919 (0.913)  Prec1A 50.195 (51.367)  Prec1B 50.586 (52.409)Train Epoch [52/120]  Batch [3/6]  Time 1.850 (9.645)  LossA 0.890 (0.907)  LossB 0.890 (0.907)  Prec1A 52.930 (51.758)  Prec1B 53.711 (52.734)Train Epoch [52/120]  Batch [4/6]  Time 24.696 (12.655)  LossA 0.881 (0.902)  LossB 0.881 (0.902)  Prec1A 52.930 (51.992)  Prec1B 54.688 (53.125)Train Epoch [52/120]  Batch [5/6]  Time 1.244 (10.753)  LossA 0.882 (0.899)  LossB 0.882 (0.899)  Prec1A 52.432 (52.048)  Prec1B 54.595 (53.311)
+ * Top1 acc:	A: 52.048	B: 53.311
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8270	B: 0.8243
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [52/120]  Batch [0/1]  Time 21.465 (21.465)  LossA 0.803 (0.803)  LossB 0.811 (0.811)  Prec1A 73.497 (73.497)  Prec1B 74.317 (74.317)
+ * Top1 acc:	A: 73.497	B: 74.317
+Test Epoch [52/120]  Batch [0/1]  Time 24.794 (24.794)  LossA 0.893 (0.893)  LossB 0.918 (0.918)  Prec1A 68.579 (68.579)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 68.579	B: 69.672
+Saving best model at epoch 53
+Epoch 52 using 1.0 min 51.32 sec
+-----------------
+Train Epoch [53/120]  Batch [0/6]  Time 31.933 (31.933)  LossA 0.851 (0.851)  LossB 0.851 (0.851)  Prec1A 54.688 (54.688)  Prec1B 54.102 (54.102)Train Epoch [53/120]  Batch [1/6]  Time 1.766 (16.849)  LossA 0.866 (0.859)  LossB 0.866 (0.859)  Prec1A 54.102 (54.395)  Prec1B 55.273 (54.688)Train Epoch [53/120]  Batch [2/6]  Time 1.732 (11.810)  LossA 0.857 (0.858)  LossB 0.857 (0.858)  Prec1A 54.297 (54.362)  Prec1B 54.883 (54.753)Train Epoch [53/120]  Batch [3/6]  Time 1.942 (9.343)  LossA 0.887 (0.865)  LossB 0.887 (0.865)  Prec1A 51.172 (53.564)  Prec1B 51.953 (54.053)Train Epoch [53/120]  Batch [4/6]  Time 26.296 (12.734)  LossA 0.909 (0.874)  LossB 0.909 (0.874)  Prec1A 48.242 (52.500)  Prec1B 50.000 (53.242)Train Epoch [53/120]  Batch [5/6]  Time 1.245 (10.819)  LossA 0.882 (0.875)  LossB 0.882 (0.875)  Prec1A 51.892 (52.423)  Prec1B 52.703 (53.174)
+ * Top1 acc:	A: 52.423	B: 53.174
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8198	B: 0.8192
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [53/120]  Batch [0/1]  Time 21.602 (21.602)  LossA 0.802 (0.802)  LossB 0.814 (0.814)  Prec1A 73.497 (73.497)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 73.497	B: 74.044
+Test Epoch [53/120]  Batch [0/1]  Time 24.867 (24.867)  LossA 0.895 (0.895)  LossB 0.920 (0.920)  Prec1A 68.579 (68.579)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 68.579	B: 69.672
+Epoch 53 using 1.0 min 51.75 sec
+-----------------
+Train Epoch [54/120]  Batch [0/6]  Time 34.648 (34.648)  LossA 0.883 (0.883)  LossB 0.883 (0.883)  Prec1A 48.828 (48.828)  Prec1B 49.805 (49.805)Train Epoch [54/120]  Batch [1/6]  Time 1.988 (18.318)  LossA 0.865 (0.874)  LossB 0.865 (0.874)  Prec1A 51.367 (50.098)  Prec1B 51.562 (50.684)Train Epoch [54/120]  Batch [2/6]  Time 1.806 (12.814)  LossA 0.807 (0.852)  LossB 0.807 (0.852)  Prec1A 54.688 (51.628)  Prec1B 55.469 (52.279)Train Epoch [54/120]  Batch [3/6]  Time 1.908 (10.087)  LossA 0.881 (0.859)  LossB 0.881 (0.859)  Prec1A 49.805 (51.172)  Prec1B 50.781 (51.904)Train Epoch [54/120]  Batch [4/6]  Time 25.727 (13.215)  LossA 0.845 (0.856)  LossB 0.845 (0.856)  Prec1A 54.883 (51.914)  Prec1B 54.297 (52.383)Train Epoch [54/120]  Batch [5/6]  Time 1.364 (11.240)  LossA 0.804 (0.848)  LossB 0.804 (0.848)  Prec1A 56.486 (52.491)  Prec1B 56.486 (52.901)
+ * Top1 acc:	A: 52.491	B: 52.901
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8202	B: 0.8215
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [54/120]  Batch [0/1]  Time 21.937 (21.937)  LossA 0.802 (0.802)  LossB 0.817 (0.817)  Prec1A 73.770 (73.770)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 73.770	B: 74.044
+Test Epoch [54/120]  Batch [0/1]  Time 24.930 (24.930)  LossA 0.895 (0.895)  LossB 0.922 (0.922)  Prec1A 68.852 (68.852)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 68.852	B: 69.672
+Epoch 54 using 1.0 min 54.68 sec
+-----------------
+Train Epoch [55/120]  Batch [0/6]  Time 34.451 (34.451)  LossA 0.849 (0.849)  LossB 0.849 (0.849)  Prec1A 50.195 (50.195)  Prec1B 50.586 (50.586)Train Epoch [55/120]  Batch [1/6]  Time 1.733 (18.092)  LossA 0.846 (0.848)  LossB 0.846 (0.848)  Prec1A 50.586 (50.391)  Prec1B 51.367 (50.977)Train Epoch [55/120]  Batch [2/6]  Time 1.732 (12.638)  LossA 0.816 (0.837)  LossB 0.816 (0.837)  Prec1A 53.125 (51.302)  Prec1B 53.516 (51.823)Train Epoch [55/120]  Batch [3/6]  Time 1.732 (9.912)  LossA 0.793 (0.826)  LossB 0.793 (0.826)  Prec1A 54.492 (52.100)  Prec1B 54.883 (52.588)Train Epoch [55/120]  Batch [4/6]  Time 25.533 (13.036)  LossA 0.833 (0.828)  LossB 0.833 (0.828)  Prec1A 52.734 (52.227)  Prec1B 52.148 (52.500)Train Epoch [55/120]  Batch [5/6]  Time 1.245 (11.071)  LossA 0.787 (0.821)  LossB 0.787 (0.821)  Prec1A 57.297 (52.867)  Prec1B 58.108 (53.208)
+ * Top1 acc:	A: 52.867	B: 53.208
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8182	B: 0.8202
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [55/120]  Batch [0/1]  Time 21.358 (21.358)  LossA 0.804 (0.804)  LossB 0.821 (0.821)  Prec1A 73.770 (73.770)  Prec1B 73.770 (73.770)
+ * Top1 acc:	A: 73.770	B: 73.770
+Test Epoch [55/120]  Batch [0/1]  Time 24.496 (24.496)  LossA 0.895 (0.895)  LossB 0.923 (0.923)  Prec1A 68.852 (68.852)  Prec1B 69.399 (69.399)
+ * Top1 acc:	A: 68.852	B: 69.399
+Epoch 55 using 1.0 min 52.63 sec
+-----------------
+Train Epoch [56/120]  Batch [0/6]  Time 33.756 (33.756)  LossA 0.801 (0.801)  LossB 0.801 (0.801)  Prec1A 53.906 (53.906)  Prec1B 54.102 (54.102)Train Epoch [56/120]  Batch [1/6]  Time 1.841 (17.798)  LossA 0.815 (0.808)  LossB 0.815 (0.808)  Prec1A 52.344 (53.125)  Prec1B 52.734 (53.418)Train Epoch [56/120]  Batch [2/6]  Time 1.742 (12.446)  LossA 0.775 (0.797)  LossB 0.775 (0.797)  Prec1A 54.688 (53.646)  Prec1B 55.078 (53.971)Train Epoch [56/120]  Batch [3/6]  Time 1.848 (9.797)  LossA 0.806 (0.799)  LossB 0.806 (0.799)  Prec1A 51.562 (53.125)  Prec1B 52.734 (53.662)Train Epoch [56/120]  Batch [4/6]  Time 25.718 (12.981)  LossA 0.812 (0.802)  LossB 0.812 (0.802)  Prec1A 52.344 (52.969)  Prec1B 52.930 (53.516)Train Epoch [56/120]  Batch [5/6]  Time 1.244 (11.025)  LossA 0.826 (0.806)  LossB 0.826 (0.806)  Prec1A 49.730 (52.560)  Prec1B 51.081 (53.208)
+ * Top1 acc:	A: 52.560	B: 53.208
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8127	B: 0.8169
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [56/120]  Batch [0/1]  Time 21.671 (21.671)  LossA 0.809 (0.809)  LossB 0.824 (0.824)  Prec1A 73.770 (73.770)  Prec1B 73.770 (73.770)
+ * Top1 acc:	A: 73.770	B: 73.770
+Test Epoch [56/120]  Batch [0/1]  Time 24.705 (24.705)  LossA 0.901 (0.901)  LossB 0.928 (0.928)  Prec1A 69.126 (69.126)  Prec1B 69.399 (69.399)
+ * Top1 acc:	A: 69.126	B: 69.399
+Epoch 56 using 1.0 min 52.89 sec
+-----------------
+Train Epoch [57/120]  Batch [0/6]  Time 33.262 (33.262)  LossA 0.764 (0.764)  LossB 0.764 (0.764)  Prec1A 53.711 (53.711)  Prec1B 55.078 (55.078)Train Epoch [57/120]  Batch [1/6]  Time 2.006 (17.634)  LossA 0.791 (0.778)  LossB 0.791 (0.778)  Prec1A 51.172 (52.441)  Prec1B 51.562 (53.320)Train Epoch [57/120]  Batch [2/6]  Time 2.167 (12.479)  LossA 0.766 (0.774)  LossB 0.766 (0.774)  Prec1A 54.102 (52.995)  Prec1B 53.320 (53.320)Train Epoch [57/120]  Batch [3/6]  Time 2.159 (9.899)  LossA 0.755 (0.769)  LossB 0.755 (0.769)  Prec1A 56.055 (53.760)  Prec1B 56.641 (54.150)Train Epoch [57/120]  Batch [4/6]  Time 24.494 (12.818)  LossA 0.820 (0.779)  LossB 0.820 (0.779)  Prec1A 50.391 (53.086)  Prec1B 50.586 (53.438)Train Epoch [57/120]  Batch [5/6]  Time 1.510 (10.933)  LossA 0.817 (0.786)  LossB 0.817 (0.786)  Prec1A 48.649 (52.526)  Prec1B 47.568 (52.696)
+ * Top1 acc:	A: 52.526	B: 52.696
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8175	B: 0.8167
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [57/120]  Batch [0/1]  Time 21.840 (21.840)  LossA 0.814 (0.814)  LossB 0.827 (0.827)  Prec1A 74.044 (74.044)  Prec1B 73.770 (73.770)
+ * Top1 acc:	A: 74.044	B: 73.770
+Test Epoch [57/120]  Batch [0/1]  Time 24.919 (24.919)  LossA 0.907 (0.907)  LossB 0.934 (0.934)  Prec1A 69.126 (69.126)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 69.126	B: 69.672
+Epoch 57 using 1.0 min 52.74 sec
+-----------------
+Train Epoch [58/120]  Batch [0/6]  Time 33.585 (33.585)  LossA 0.721 (0.721)  LossB 0.721 (0.721)  Prec1A 55.859 (55.859)  Prec1B 56.055 (56.055)Train Epoch [58/120]  Batch [1/6]  Time 2.126 (17.855)  LossA 0.775 (0.748)  LossB 0.775 (0.748)  Prec1A 50.977 (53.418)  Prec1B 50.977 (53.516)Train Epoch [58/120]  Batch [2/6]  Time 2.118 (12.609)  LossA 0.790 (0.762)  LossB 0.790 (0.762)  Prec1A 49.805 (52.214)  Prec1B 50.586 (52.539)Train Epoch [58/120]  Batch [3/6]  Time 2.157 (9.996)  LossA 0.747 (0.758)  LossB 0.747 (0.758)  Prec1A 52.930 (52.393)  Prec1B 54.102 (52.930)Train Epoch [58/120]  Batch [4/6]  Time 27.615 (13.520)  LossA 0.768 (0.760)  LossB 0.768 (0.760)  Prec1A 50.781 (52.070)  Prec1B 51.367 (52.617)Train Epoch [58/120]  Batch [5/6]  Time 1.559 (11.527)  LossA 0.748 (0.758)  LossB 0.748 (0.758)  Prec1A 54.865 (52.423)  Prec1B 54.054 (52.799)
+ * Top1 acc:	A: 52.423	B: 52.799
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8075	B: 0.8132
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [58/120]  Batch [0/1]  Time 21.921 (21.921)  LossA 0.818 (0.818)  LossB 0.831 (0.831)  Prec1A 74.044 (74.044)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 74.044	B: 74.044
+Test Epoch [58/120]  Batch [0/1]  Time 24.922 (24.922)  LossA 0.910 (0.910)  LossB 0.938 (0.938)  Prec1A 69.126 (69.126)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 69.126	B: 69.945
+Epoch 58 using 1.0 min 56.36 sec
+-----------------
+Train Epoch [59/120]  Batch [0/6]  Time 36.021 (36.021)  LossA 0.751 (0.751)  LossB 0.751 (0.751)  Prec1A 50.586 (50.586)  Prec1B 51.953 (51.953)Train Epoch [59/120]  Batch [1/6]  Time 2.106 (19.063)  LossA 0.745 (0.748)  LossB 0.745 (0.748)  Prec1A 52.148 (51.367)  Prec1B 52.148 (52.051)Train Epoch [59/120]  Batch [2/6]  Time 2.129 (13.419)  LossA 0.739 (0.745)  LossB 0.739 (0.745)  Prec1A 53.320 (52.018)  Prec1B 53.516 (52.539)Train Epoch [59/120]  Batch [3/6]  Time 2.141 (10.599)  LossA 0.749 (0.746)  LossB 0.749 (0.746)  Prec1A 50.586 (51.660)  Prec1B 51.562 (52.295)Train Epoch [59/120]  Batch [4/6]  Time 25.084 (13.496)  LossA 0.730 (0.743)  LossB 0.730 (0.743)  Prec1A 53.711 (52.070)  Prec1B 54.102 (52.656)Train Epoch [59/120]  Batch [5/6]  Time 1.547 (11.505)  LossA 0.717 (0.739)  LossB 0.717 (0.739)  Prec1A 54.324 (52.355)  Prec1B 54.865 (52.935)
+ * Top1 acc:	A: 52.355	B: 52.935
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8102	B: 0.8144
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [59/120]  Batch [0/1]  Time 21.943 (21.943)  LossA 0.822 (0.822)  LossB 0.836 (0.836)  Prec1A 74.044 (74.044)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 74.044	B: 74.044
+Test Epoch [59/120]  Batch [0/1]  Time 24.983 (24.983)  LossA 0.916 (0.916)  LossB 0.942 (0.942)  Prec1A 69.126 (69.126)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 69.126	B: 69.945
+Epoch 59 using 1.0 min 56.31 sec
+-----------------
+Train Epoch [60/120]  Batch [0/6]  Time 35.324 (35.324)  LossA 0.686 (0.686)  LossB 0.686 (0.686)  Prec1A 55.664 (55.664)  Prec1B 56.250 (56.250)Train Epoch [60/120]  Batch [1/6]  Time 2.067 (18.695)  LossA 0.725 (0.705)  LossB 0.725 (0.705)  Prec1A 50.977 (53.320)  Prec1B 51.758 (54.004)Train Epoch [60/120]  Batch [2/6]  Time 2.149 (13.180)  LossA 0.732 (0.714)  LossB 0.732 (0.714)  Prec1A 50.977 (52.539)  Prec1B 51.367 (53.125)Train Epoch [60/120]  Batch [3/6]  Time 2.140 (10.420)  LossA 0.689 (0.708)  LossB 0.689 (0.708)  Prec1A 55.078 (53.174)  Prec1B 55.078 (53.613)Train Epoch [60/120]  Batch [4/6]  Time 24.378 (13.211)  LossA 0.756 (0.718)  LossB 0.756 (0.718)  Prec1A 47.656 (52.070)  Prec1B 47.461 (52.383)Train Epoch [60/120]  Batch [5/6]  Time 1.516 (11.262)  LossA 0.697 (0.714)  LossB 0.697 (0.714)  Prec1A 52.703 (52.150)  Prec1B 54.054 (52.594)
+ * Top1 acc:	A: 52.150	B: 52.594
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8096	B: 0.8127
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [60/120]  Batch [0/1]  Time 21.972 (21.972)  LossA 0.826 (0.826)  LossB 0.840 (0.840)  Prec1A 74.044 (74.044)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 74.044	B: 74.044
+Test Epoch [60/120]  Batch [0/1]  Time 24.585 (24.585)  LossA 0.921 (0.921)  LossB 0.948 (0.948)  Prec1A 69.399 (69.399)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 69.399	B: 70.219
+Epoch 60 using 1.0 min 54.49 sec
+-----------------
+Train Epoch [61/120]  Batch [0/6]  Time 33.836 (33.836)  LossA 0.667 (0.667)  LossB 0.667 (0.667)  Prec1A 56.250 (56.250)  Prec1B 55.664 (55.664)Train Epoch [61/120]  Batch [1/6]  Time 1.732 (17.784)  LossA 0.725 (0.696)  LossB 0.725 (0.696)  Prec1A 49.414 (52.832)  Prec1B 49.414 (52.539)Train Epoch [61/120]  Batch [2/6]  Time 1.731 (12.433)  LossA 0.696 (0.696)  LossB 0.696 (0.696)  Prec1A 52.539 (52.734)  Prec1B 52.734 (52.604)Train Epoch [61/120]  Batch [3/6]  Time 1.732 (9.758)  LossA 0.720 (0.702)  LossB 0.720 (0.702)  Prec1A 50.586 (52.197)  Prec1B 50.586 (52.100)Train Epoch [61/120]  Batch [4/6]  Time 24.941 (12.795)  LossA 0.689 (0.699)  LossB 0.689 (0.699)  Prec1A 53.711 (52.500)  Prec1B 53.906 (52.461)Train Epoch [61/120]  Batch [5/6]  Time 1.300 (10.879)  LossA 0.672 (0.695)  LossB 0.672 (0.695)  Prec1A 54.595 (52.765)  Prec1B 55.676 (52.867)
+ * Top1 acc:	A: 52.765	B: 52.867
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8103	B: 0.8089
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [61/120]  Batch [0/1]  Time 21.686 (21.686)  LossA 0.832 (0.832)  LossB 0.843 (0.843)  Prec1A 74.044 (74.044)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 74.044	B: 74.044
+Test Epoch [61/120]  Batch [0/1]  Time 24.672 (24.672)  LossA 0.928 (0.928)  LossB 0.951 (0.951)  Prec1A 69.672 (69.672)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 69.672	B: 70.219
+Epoch 61 using 1.0 min 51.99 sec
+-----------------
+Train Epoch [62/120]  Batch [0/6]  Time 32.905 (32.905)  LossA 0.652 (0.652)  LossB 0.652 (0.652)  Prec1A 56.836 (56.836)  Prec1B 56.641 (56.641)Train Epoch [62/120]  Batch [1/6]  Time 1.927 (17.416)  LossA 0.668 (0.660)  LossB 0.668 (0.660)  Prec1A 52.148 (54.492)  Prec1B 53.516 (55.078)Train Epoch [62/120]  Batch [2/6]  Time 2.088 (12.307)  LossA 0.666 (0.662)  LossB 0.666 (0.662)  Prec1A 52.539 (53.841)  Prec1B 52.930 (54.362)Train Epoch [62/120]  Batch [3/6]  Time 2.082 (9.751)  LossA 0.646 (0.658)  LossB 0.646 (0.658)  Prec1A 53.516 (53.760)  Prec1B 53.906 (54.248)Train Epoch [62/120]  Batch [4/6]  Time 26.895 (13.180)  LossA 0.677 (0.662)  LossB 0.677 (0.662)  Prec1A 50.781 (53.164)  Prec1B 52.148 (53.828)Train Epoch [62/120]  Batch [5/6]  Time 1.443 (11.223)  LossA 0.707 (0.670)  LossB 0.707 (0.670)  Prec1A 48.919 (52.628)  Prec1B 49.189 (53.242)
+ * Top1 acc:	A: 52.628	B: 53.242
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8072	B: 0.8101
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [62/120]  Batch [0/1]  Time 22.023 (22.023)  LossA 0.835 (0.835)  LossB 0.846 (0.846)  Prec1A 74.044 (74.044)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 74.044	B: 74.044
+Test Epoch [62/120]  Batch [0/1]  Time 24.701 (24.701)  LossA 0.933 (0.933)  LossB 0.955 (0.955)  Prec1A 69.672 (69.672)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 69.672	B: 70.219
+Epoch 62 using 1.0 min 54.44 sec
+-----------------
+Train Epoch [63/120]  Batch [0/6]  Time 34.567 (34.567)  LossA 0.675 (0.675)  LossB 0.675 (0.675)  Prec1A 48.047 (48.047)  Prec1B 48.828 (48.828)Train Epoch [63/120]  Batch [1/6]  Time 1.800 (18.184)  LossA 0.639 (0.657)  LossB 0.639 (0.657)  Prec1A 54.883 (51.465)  Prec1B 54.297 (51.562)Train Epoch [63/120]  Batch [2/6]  Time 1.733 (12.700)  LossA 0.666 (0.660)  LossB 0.666 (0.660)  Prec1A 50.195 (51.042)  Prec1B 50.586 (51.237)Train Epoch [63/120]  Batch [3/6]  Time 1.805 (9.976)  LossA 0.640 (0.655)  LossB 0.640 (0.655)  Prec1A 53.711 (51.709)  Prec1B 53.711 (51.855)Train Epoch [63/120]  Batch [4/6]  Time 26.178 (13.217)  LossA 0.651 (0.654)  LossB 0.651 (0.654)  Prec1A 52.344 (51.836)  Prec1B 53.711 (52.227)Train Epoch [63/120]  Batch [5/6]  Time 1.296 (11.230)  LossA 0.620 (0.649)  LossB 0.620 (0.649)  Prec1A 57.027 (52.491)  Prec1B 57.027 (52.833)
+ * Top1 acc:	A: 52.491	B: 52.833
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8069	B: 0.8079
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [63/120]  Batch [0/1]  Time 21.900 (21.900)  LossA 0.837 (0.837)  LossB 0.850 (0.850)  Prec1A 74.044 (74.044)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 74.044	B: 74.044
+Test Epoch [63/120]  Batch [0/1]  Time 25.015 (25.015)  LossA 0.938 (0.938)  LossB 0.960 (0.960)  Prec1A 69.672 (69.672)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 69.672	B: 69.945
+Epoch 63 using 1.0 min 54.65 sec
+-----------------
+Train Epoch [64/120]  Batch [0/6]  Time 32.950 (32.950)  LossA 0.624 (0.624)  LossB 0.624 (0.624)  Prec1A 56.055 (56.055)  Prec1B 55.859 (55.859)Train Epoch [64/120]  Batch [1/6]  Time 2.742 (17.846)  LossA 0.645 (0.635)  LossB 0.645 (0.635)  Prec1A 50.195 (53.125)  Prec1B 51.172 (53.516)Train Epoch [64/120]  Batch [2/6]  Time 2.183 (12.625)  LossA 0.611 (0.627)  LossB 0.611 (0.627)  Prec1A 55.273 (53.841)  Prec1B 55.078 (54.036)Train Epoch [64/120]  Batch [3/6]  Time 2.135 (10.002)  LossA 0.639 (0.630)  LossB 0.639 (0.630)  Prec1A 50.586 (53.027)  Prec1B 50.977 (53.271)Train Epoch [64/120]  Batch [4/6]  Time 24.114 (12.825)  LossA 0.632 (0.630)  LossB 0.632 (0.630)  Prec1A 52.734 (52.969)  Prec1B 53.125 (53.242)Train Epoch [64/120]  Batch [5/6]  Time 1.583 (10.951)  LossA 0.621 (0.629)  LossB 0.621 (0.629)  Prec1A 50.811 (52.696)  Prec1B 51.622 (53.038)
+ * Top1 acc:	A: 52.696	B: 53.038
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8072	B: 0.8074
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [64/120]  Batch [0/1]  Time 21.929 (21.929)  LossA 0.843 (0.843)  LossB 0.856 (0.856)  Prec1A 74.044 (74.044)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 74.044	B: 74.044
+Test Epoch [64/120]  Batch [0/1]  Time 24.999 (24.999)  LossA 0.943 (0.943)  LossB 0.967 (0.967)  Prec1A 69.672 (69.672)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 69.672	B: 69.945
+Epoch 64 using 1.0 min 53.01 sec
+-----------------
+Train Epoch [65/120]  Batch [0/6]  Time 33.750 (33.750)  LossA 0.595 (0.595)  LossB 0.595 (0.595)  Prec1A 55.469 (55.469)  Prec1B 55.664 (55.664)Train Epoch [65/120]  Batch [1/6]  Time 2.149 (17.949)  LossA 0.613 (0.604)  LossB 0.613 (0.604)  Prec1A 50.977 (53.223)  Prec1B 52.344 (54.004)Train Epoch [65/120]  Batch [2/6]  Time 2.117 (12.672)  LossA 0.615 (0.607)  LossB 0.615 (0.607)  Prec1A 53.906 (53.451)  Prec1B 53.320 (53.776)Train Epoch [65/120]  Batch [3/6]  Time 2.113 (10.032)  LossA 0.618 (0.610)  LossB 0.618 (0.610)  Prec1A 50.391 (52.686)  Prec1B 51.562 (53.223)Train Epoch [65/120]  Batch [4/6]  Time 24.138 (12.853)  LossA 0.611 (0.610)  LossB 0.611 (0.610)  Prec1A 52.930 (52.734)  Prec1B 52.930 (53.164)Train Epoch [65/120]  Batch [5/6]  Time 1.519 (10.964)  LossA 0.615 (0.611)  LossB 0.615 (0.611)  Prec1A 51.351 (52.560)  Prec1B 53.243 (53.174)
+ * Top1 acc:	A: 52.560	B: 53.174
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8058	B: 0.8072
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [65/120]  Batch [0/1]  Time 21.969 (21.969)  LossA 0.849 (0.849)  LossB 0.863 (0.863)  Prec1A 74.044 (74.044)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 74.044	B: 74.044
+Test Epoch [65/120]  Batch [0/1]  Time 24.943 (24.943)  LossA 0.948 (0.948)  LossB 0.972 (0.972)  Prec1A 69.945 (69.945)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 69.945	B: 69.945
+Epoch 65 using 1.0 min 53.08 sec
+-----------------
+Train Epoch [66/120]  Batch [0/6]  Time 34.226 (34.226)  LossA 0.590 (0.590)  LossB 0.590 (0.590)  Prec1A 54.297 (54.297)  Prec1B 53.516 (53.516)Train Epoch [66/120]  Batch [1/6]  Time 2.119 (18.173)  LossA 0.580 (0.585)  LossB 0.580 (0.585)  Prec1A 53.906 (54.102)  Prec1B 53.516 (53.516)Train Epoch [66/120]  Batch [2/6]  Time 2.177 (12.841)  LossA 0.605 (0.592)  LossB 0.605 (0.592)  Prec1A 52.148 (53.451)  Prec1B 52.930 (53.320)Train Epoch [66/120]  Batch [3/6]  Time 1.972 (10.124)  LossA 0.601 (0.594)  LossB 0.601 (0.594)  Prec1A 51.953 (53.076)  Prec1B 53.711 (53.418)Train Epoch [66/120]  Batch [4/6]  Time 23.890 (12.877)  LossA 0.592 (0.594)  LossB 0.592 (0.594)  Prec1A 51.953 (52.852)  Prec1B 51.953 (53.125)Train Epoch [66/120]  Batch [5/6]  Time 1.263 (10.941)  LossA 0.592 (0.594)  LossB 0.592 (0.594)  Prec1A 52.432 (52.799)  Prec1B 51.892 (52.969)
+ * Top1 acc:	A: 52.799	B: 52.969
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8045	B: 0.8066
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [66/120]  Batch [0/1]  Time 21.633 (21.633)  LossA 0.856 (0.856)  LossB 0.871 (0.871)  Prec1A 74.044 (74.044)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 74.044	B: 74.044
+Test Epoch [66/120]  Batch [0/1]  Time 24.847 (24.847)  LossA 0.954 (0.954)  LossB 0.977 (0.977)  Prec1A 69.945 (69.945)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 69.945	B: 69.672
+Epoch 66 using 1.0 min 52.50 sec
+-----------------
+Train Epoch [67/120]  Batch [0/6]  Time 33.885 (33.885)  LossA 0.586 (0.586)  LossB 0.586 (0.586)  Prec1A 51.172 (51.172)  Prec1B 51.172 (51.172)Train Epoch [67/120]  Batch [1/6]  Time 2.121 (18.003)  LossA 0.592 (0.589)  LossB 0.592 (0.589)  Prec1A 50.977 (51.074)  Prec1B 51.562 (51.367)Train Epoch [67/120]  Batch [2/6]  Time 2.160 (12.722)  LossA 0.578 (0.585)  LossB 0.578 (0.585)  Prec1A 51.758 (51.302)  Prec1B 53.320 (52.018)Train Epoch [67/120]  Batch [3/6]  Time 2.152 (10.079)  LossA 0.574 (0.582)  LossB 0.574 (0.582)  Prec1A 53.906 (51.953)  Prec1B 53.125 (52.295)Train Epoch [67/120]  Batch [4/6]  Time 24.139 (12.891)  LossA 0.568 (0.579)  LossB 0.568 (0.579)  Prec1A 53.516 (52.266)  Prec1B 52.734 (52.383)Train Epoch [67/120]  Batch [5/6]  Time 1.527 (10.997)  LossA 0.583 (0.580)  LossB 0.583 (0.580)  Prec1A 54.595 (52.560)  Prec1B 53.784 (52.560)
+ * Top1 acc:	A: 52.560	B: 52.560
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8061	B: 0.8053
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [67/120]  Batch [0/1]  Time 21.824 (21.824)  LossA 0.861 (0.861)  LossB 0.875 (0.875)  Prec1A 74.044 (74.044)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 74.044	B: 74.044
+Test Epoch [67/120]  Batch [0/1]  Time 25.056 (25.056)  LossA 0.960 (0.960)  LossB 0.983 (0.983)  Prec1A 69.945 (69.945)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 69.945	B: 69.945
+Epoch 67 using 1.0 min 53.24 sec
+-----------------
+Train Epoch [68/120]  Batch [0/6]  Time 33.799 (33.799)  LossA 0.572 (0.572)  LossB 0.572 (0.572)  Prec1A 50.391 (50.391)  Prec1B 51.953 (51.953)Train Epoch [68/120]  Batch [1/6]  Time 2.126 (17.962)  LossA 0.568 (0.570)  LossB 0.568 (0.570)  Prec1A 53.125 (51.758)  Prec1B 52.344 (52.148)Train Epoch [68/120]  Batch [2/6]  Time 2.122 (12.682)  LossA 0.568 (0.569)  LossB 0.568 (0.569)  Prec1A 51.758 (51.758)  Prec1B 51.953 (52.083)Train Epoch [68/120]  Batch [3/6]  Time 2.140 (10.047)  LossA 0.558 (0.566)  LossB 0.558 (0.566)  Prec1A 55.664 (52.734)  Prec1B 54.688 (52.734)Train Epoch [68/120]  Batch [4/6]  Time 24.457 (12.929)  LossA 0.561 (0.565)  LossB 0.561 (0.565)  Prec1A 52.930 (52.773)  Prec1B 52.930 (52.773)Train Epoch [68/120]  Batch [5/6]  Time 1.514 (11.026)  LossA 0.559 (0.564)  LossB 0.559 (0.564)  Prec1A 53.243 (52.833)  Prec1B 53.514 (52.867)
+ * Top1 acc:	A: 52.833	B: 52.867
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8045	B: 0.8044
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [68/120]  Batch [0/1]  Time 21.936 (21.936)  LossA 0.865 (0.865)  LossB 0.879 (0.879)  Prec1A 74.044 (74.044)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 74.044	B: 74.044
+Test Epoch [68/120]  Batch [0/1]  Time 24.945 (24.945)  LossA 0.963 (0.963)  LossB 0.989 (0.989)  Prec1A 70.219 (70.219)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 70.219	B: 70.219
+Epoch 68 using 1.0 min 53.40 sec
+-----------------
+Train Epoch [69/120]  Batch [0/6]  Time 34.326 (34.326)  LossA 0.571 (0.571)  LossB 0.571 (0.571)  Prec1A 51.367 (51.367)  Prec1B 51.367 (51.367)Train Epoch [69/120]  Batch [1/6]  Time 2.148 (18.237)  LossA 0.548 (0.559)  LossB 0.548 (0.559)  Prec1A 53.906 (52.637)  Prec1B 54.492 (52.930)Train Epoch [69/120]  Batch [2/6]  Time 2.151 (12.875)  LossA 0.548 (0.555)  LossB 0.548 (0.555)  Prec1A 54.492 (53.255)  Prec1B 54.492 (53.451)Train Epoch [69/120]  Batch [3/6]  Time 2.118 (10.186)  LossA 0.560 (0.556)  LossB 0.560 (0.556)  Prec1A 49.023 (52.197)  Prec1B 49.023 (52.344)Train Epoch [69/120]  Batch [4/6]  Time 26.162 (13.381)  LossA 0.549 (0.555)  LossB 0.549 (0.555)  Prec1A 55.078 (52.773)  Prec1B 54.492 (52.773)Train Epoch [69/120]  Batch [5/6]  Time 1.523 (11.405)  LossA 0.552 (0.555)  LossB 0.552 (0.555)  Prec1A 54.324 (52.969)  Prec1B 54.324 (52.969)
+ * Top1 acc:	A: 52.969	B: 52.969
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8042	B: 0.8016
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [69/120]  Batch [0/1]  Time 21.960 (21.960)  LossA 0.867 (0.867)  LossB 0.882 (0.882)  Prec1A 74.044 (74.044)  Prec1B 74.317 (74.317)
+ * Top1 acc:	A: 74.044	B: 74.317
+Test Epoch [69/120]  Batch [0/1]  Time 24.964 (24.964)  LossA 0.966 (0.966)  LossB 0.994 (0.994)  Prec1A 69.945 (69.945)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 69.945	B: 70.219
+Epoch 69 using 1.0 min 55.72 sec
+-----------------
+Train Epoch [70/120]  Batch [0/6]  Time 32.431 (32.431)  LossA 0.542 (0.542)  LossB 0.542 (0.542)  Prec1A 54.883 (54.883)  Prec1B 55.469 (55.469)Train Epoch [70/120]  Batch [1/6]  Time 3.948 (18.189)  LossA 0.548 (0.545)  LossB 0.548 (0.545)  Prec1A 46.875 (50.879)  Prec1B 47.266 (51.367)Train Epoch [70/120]  Batch [2/6]  Time 2.168 (12.849)  LossA 0.548 (0.546)  LossB 0.548 (0.546)  Prec1A 52.930 (51.562)  Prec1B 53.711 (52.148)Train Epoch [70/120]  Batch [3/6]  Time 2.144 (10.173)  LossA 0.534 (0.543)  LossB 0.534 (0.543)  Prec1A 53.320 (52.002)  Prec1B 53.516 (52.490)Train Epoch [70/120]  Batch [4/6]  Time 22.452 (12.628)  LossA 0.536 (0.541)  LossB 0.536 (0.541)  Prec1A 55.664 (52.734)  Prec1B 56.250 (53.242)Train Epoch [70/120]  Batch [5/6]  Time 1.539 (10.780)  LossA 0.560 (0.545)  LossB 0.560 (0.545)  Prec1A 49.730 (52.355)  Prec1B 51.081 (52.969)
+ * Top1 acc:	A: 52.355	B: 52.969
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7997	B: 0.7987
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [70/120]  Batch [0/1]  Time 21.713 (21.713)  LossA 0.869 (0.869)  LossB 0.885 (0.885)  Prec1A 74.044 (74.044)  Prec1B 74.044 (74.044)
+ * Top1 acc:	A: 74.044	B: 74.044
+Test Epoch [70/120]  Batch [0/1]  Time 24.821 (24.821)  LossA 0.970 (0.970)  LossB 0.998 (0.998)  Prec1A 69.945 (69.945)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 69.945	B: 70.219
+Epoch 70 using 1.0 min 51.58 sec
+-----------------
+Train Epoch [71/120]  Batch [0/6]  Time 34.126 (34.126)  LossA 0.538 (0.538)  LossB 0.538 (0.538)  Prec1A 53.125 (53.125)  Prec1B 53.711 (53.711)Train Epoch [71/120]  Batch [1/6]  Time 2.118 (18.122)  LossA 0.538 (0.538)  LossB 0.538 (0.538)  Prec1A 50.195 (51.660)  Prec1B 49.609 (51.660)Train Epoch [71/120]  Batch [2/6]  Time 2.168 (12.804)  LossA 0.534 (0.537)  LossB 0.534 (0.537)  Prec1A 51.953 (51.758)  Prec1B 52.930 (52.083)Train Epoch [71/120]  Batch [3/6]  Time 2.170 (10.145)  LossA 0.525 (0.534)  LossB 0.525 (0.534)  Prec1A 57.422 (53.174)  Prec1B 57.031 (53.320)Train Epoch [71/120]  Batch [4/6]  Time 25.582 (13.233)  LossA 0.538 (0.535)  LossB 0.538 (0.535)  Prec1A 54.102 (53.359)  Prec1B 53.516 (53.359)Train Epoch [71/120]  Batch [5/6]  Time 1.531 (11.282)  LossA 0.543 (0.536)  LossB 0.543 (0.536)  Prec1A 51.351 (53.106)  Prec1B 51.892 (53.174)
+ * Top1 acc:	A: 53.106	B: 53.174
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8046	B: 0.8042
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [71/120]  Batch [0/1]  Time 21.851 (21.851)  LossA 0.871 (0.871)  LossB 0.886 (0.886)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [71/120]  Batch [0/1]  Time 24.826 (24.826)  LossA 0.972 (0.972)  LossB 0.999 (0.999)  Prec1A 70.219 (70.219)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 70.219	B: 70.219
+Saving best model at epoch 72
+Epoch 71 using 1.0 min 55.04 sec
+-----------------
+Train Epoch [72/120]  Batch [0/6]  Time 33.091 (33.091)  LossA 0.525 (0.525)  LossB 0.525 (0.525)  Prec1A 55.469 (55.469)  Prec1B 54.688 (54.688)Train Epoch [72/120]  Batch [1/6]  Time 1.732 (17.411)  LossA 0.529 (0.527)  LossB 0.529 (0.527)  Prec1A 53.320 (54.395)  Prec1B 53.320 (54.004)Train Epoch [72/120]  Batch [2/6]  Time 1.732 (12.185)  LossA 0.530 (0.528)  LossB 0.530 (0.528)  Prec1A 53.320 (54.036)  Prec1B 53.516 (53.841)Train Epoch [72/120]  Batch [3/6]  Time 1.732 (9.572)  LossA 0.538 (0.531)  LossB 0.538 (0.531)  Prec1A 49.219 (52.832)  Prec1B 49.609 (52.783)Train Epoch [72/120]  Batch [4/6]  Time 25.085 (12.674)  LossA 0.524 (0.529)  LossB 0.524 (0.529)  Prec1A 54.102 (53.086)  Prec1B 53.711 (52.969)Train Epoch [72/120]  Batch [5/6]  Time 1.244 (10.769)  LossA 0.526 (0.529)  LossB 0.526 (0.529)  Prec1A 51.622 (52.901)  Prec1B 52.432 (52.901)
+ * Top1 acc:	A: 52.901	B: 52.901
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8029	B: 0.8029
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [72/120]  Batch [0/1]  Time 21.435 (21.435)  LossA 0.878 (0.878)  LossB 0.890 (0.890)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [72/120]  Batch [0/1]  Time 24.409 (24.409)  LossA 0.979 (0.979)  LossB 1.006 (1.006)  Prec1A 69.945 (69.945)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 69.945	B: 69.945
+Epoch 72 using 1.0 min 50.81 sec
+-----------------
+Train Epoch [73/120]  Batch [0/6]  Time 34.190 (34.190)  LossA 0.535 (0.535)  LossB 0.535 (0.535)  Prec1A 50.977 (50.977)  Prec1B 50.977 (50.977)Train Epoch [73/120]  Batch [1/6]  Time 1.792 (17.991)  LossA 0.527 (0.531)  LossB 0.527 (0.531)  Prec1A 50.000 (50.488)  Prec1B 50.977 (50.977)Train Epoch [73/120]  Batch [2/6]  Time 1.735 (12.572)  LossA 0.521 (0.528)  LossB 0.521 (0.528)  Prec1A 51.758 (50.911)  Prec1B 51.172 (51.042)Train Epoch [73/120]  Batch [3/6]  Time 1.739 (9.864)  LossA 0.514 (0.524)  LossB 0.514 (0.524)  Prec1A 54.297 (51.758)  Prec1B 54.297 (51.855)Train Epoch [73/120]  Batch [4/6]  Time 24.922 (12.876)  LossA 0.512 (0.522)  LossB 0.512 (0.522)  Prec1A 56.836 (52.773)  Prec1B 56.250 (52.734)Train Epoch [73/120]  Batch [5/6]  Time 1.255 (10.939)  LossA 0.523 (0.522)  LossB 0.523 (0.522)  Prec1A 51.892 (52.662)  Prec1B 51.892 (52.628)
+ * Top1 acc:	A: 52.662	B: 52.628
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8070	B: 0.8051
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [73/120]  Batch [0/1]  Time 21.565 (21.565)  LossA 0.886 (0.886)  LossB 0.896 (0.896)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [73/120]  Batch [0/1]  Time 24.973 (24.973)  LossA 0.984 (0.984)  LossB 1.010 (1.010)  Prec1A 70.219 (70.219)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 70.219	B: 70.219
+Epoch 73 using 1.0 min 52.55 sec
+-----------------
+Train Epoch [74/120]  Batch [0/6]  Time 34.813 (34.813)  LossA 0.522 (0.522)  LossB 0.522 (0.522)  Prec1A 51.758 (51.758)  Prec1B 51.953 (51.953)Train Epoch [74/120]  Batch [1/6]  Time 1.841 (18.327)  LossA 0.512 (0.517)  LossB 0.512 (0.517)  Prec1A 53.516 (52.637)  Prec1B 54.297 (53.125)Train Epoch [74/120]  Batch [2/6]  Time 2.104 (12.919)  LossA 0.512 (0.515)  LossB 0.512 (0.515)  Prec1A 54.492 (53.255)  Prec1B 54.883 (53.711)Train Epoch [74/120]  Batch [3/6]  Time 2.132 (10.223)  LossA 0.528 (0.518)  LossB 0.528 (0.518)  Prec1A 50.586 (52.588)  Prec1B 51.953 (53.271)Train Epoch [74/120]  Batch [4/6]  Time 24.114 (13.001)  LossA 0.508 (0.516)  LossB 0.508 (0.516)  Prec1A 52.930 (52.656)  Prec1B 53.906 (53.398)Train Epoch [74/120]  Batch [5/6]  Time 1.515 (11.087)  LossA 0.523 (0.517)  LossB 0.523 (0.517)  Prec1A 52.703 (52.662)  Prec1B 53.243 (53.379)
+ * Top1 acc:	A: 52.662	B: 53.379
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8031	B: 0.8018
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [74/120]  Batch [0/1]  Time 21.982 (21.982)  LossA 0.893 (0.893)  LossB 0.903 (0.903)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [74/120]  Batch [0/1]  Time 24.947 (24.947)  LossA 0.991 (0.991)  LossB 1.016 (1.016)  Prec1A 70.219 (70.219)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 70.219	B: 69.945
+Epoch 74 using 1.0 min 53.82 sec
+-----------------
+Train Epoch [75/120]  Batch [0/6]  Time 33.637 (33.637)  LossA 0.511 (0.511)  LossB 0.511 (0.511)  Prec1A 53.125 (53.125)  Prec1B 52.539 (52.539)Train Epoch [75/120]  Batch [1/6]  Time 2.128 (17.882)  LossA 0.512 (0.511)  LossB 0.512 (0.511)  Prec1A 53.320 (53.223)  Prec1B 54.297 (53.418)Train Epoch [75/120]  Batch [2/6]  Time 2.129 (12.631)  LossA 0.508 (0.510)  LossB 0.508 (0.510)  Prec1A 53.906 (53.451)  Prec1B 54.688 (53.841)Train Epoch [75/120]  Batch [3/6]  Time 2.158 (10.013)  LossA 0.523 (0.513)  LossB 0.523 (0.513)  Prec1A 51.758 (53.027)  Prec1B 52.344 (53.467)Train Epoch [75/120]  Batch [4/6]  Time 24.812 (12.973)  LossA 0.515 (0.514)  LossB 0.515 (0.514)  Prec1A 51.367 (52.695)  Prec1B 51.953 (53.164)Train Epoch [75/120]  Batch [5/6]  Time 1.520 (11.064)  LossA 0.521 (0.515)  LossB 0.521 (0.515)  Prec1A 52.432 (52.662)  Prec1B 51.892 (53.003)
+ * Top1 acc:	A: 52.662	B: 53.003
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8051	B: 0.8058
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [75/120]  Batch [0/1]  Time 21.973 (21.973)  LossA 0.900 (0.900)  LossB 0.909 (0.909)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [75/120]  Batch [0/1]  Time 24.932 (24.932)  LossA 0.999 (0.999)  LossB 1.023 (1.023)  Prec1A 70.492 (70.492)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 70.492	B: 69.945
+Epoch 75 using 1.0 min 53.67 sec
+-----------------
+Train Epoch [76/120]  Batch [0/6]  Time 35.649 (35.649)  LossA 0.518 (0.518)  LossB 0.518 (0.518)  Prec1A 49.805 (49.805)  Prec1B 49.609 (49.609)Train Epoch [76/120]  Batch [1/6]  Time 2.147 (18.898)  LossA 0.508 (0.513)  LossB 0.508 (0.513)  Prec1A 53.125 (51.465)  Prec1B 53.711 (51.660)Train Epoch [76/120]  Batch [2/6]  Time 2.157 (13.317)  LossA 0.514 (0.513)  LossB 0.514 (0.513)  Prec1A 53.516 (52.148)  Prec1B 52.930 (52.083)Train Epoch [76/120]  Batch [3/6]  Time 2.119 (10.518)  LossA 0.508 (0.512)  LossB 0.508 (0.512)  Prec1A 53.320 (52.441)  Prec1B 53.320 (52.393)Train Epoch [76/120]  Batch [4/6]  Time 24.514 (13.317)  LossA 0.513 (0.512)  LossB 0.513 (0.512)  Prec1A 52.734 (52.500)  Prec1B 52.734 (52.461)Train Epoch [76/120]  Batch [5/6]  Time 1.498 (11.347)  LossA 0.500 (0.510)  LossB 0.500 (0.510)  Prec1A 52.703 (52.526)  Prec1B 54.324 (52.696)
+ * Top1 acc:	A: 52.526	B: 52.696
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8122	B: 0.8081
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [76/120]  Batch [0/1]  Time 21.986 (21.986)  LossA 0.902 (0.902)  LossB 0.912 (0.912)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [76/120]  Batch [0/1]  Time 24.942 (24.942)  LossA 1.001 (1.001)  LossB 1.027 (1.027)  Prec1A 70.492 (70.492)  Prec1B 69.672 (69.672)
+ * Top1 acc:	A: 70.492	B: 69.672
+Epoch 76 using 1.0 min 55.47 sec
+-----------------
+Train Epoch [77/120]  Batch [0/6]  Time 33.109 (33.109)  LossA 0.507 (0.507)  LossB 0.507 (0.507)  Prec1A 52.148 (52.148)  Prec1B 51.758 (51.758)Train Epoch [77/120]  Batch [1/6]  Time 2.263 (17.686)  LossA 0.511 (0.509)  LossB 0.511 (0.509)  Prec1A 53.516 (52.832)  Prec1B 53.320 (52.539)Train Epoch [77/120]  Batch [2/6]  Time 2.135 (12.502)  LossA 0.504 (0.507)  LossB 0.504 (0.507)  Prec1A 54.297 (53.320)  Prec1B 54.492 (53.190)Train Epoch [77/120]  Batch [3/6]  Time 2.134 (9.910)  LossA 0.521 (0.511)  LossB 0.521 (0.511)  Prec1A 48.242 (52.051)  Prec1B 48.242 (51.953)Train Epoch [77/120]  Batch [4/6]  Time 24.601 (12.848)  LossA 0.506 (0.510)  LossB 0.506 (0.510)  Prec1A 51.953 (52.031)  Prec1B 52.344 (52.031)Train Epoch [77/120]  Batch [5/6]  Time 1.443 (10.947)  LossA 0.501 (0.508)  LossB 0.501 (0.508)  Prec1A 55.676 (52.491)  Prec1B 57.027 (52.662)
+ * Top1 acc:	A: 52.491	B: 52.662
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8033	B: 0.8038
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [77/120]  Batch [0/1]  Time 21.897 (21.897)  LossA 0.904 (0.904)  LossB 0.919 (0.919)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [77/120]  Batch [0/1]  Time 24.899 (24.899)  LossA 1.003 (1.003)  LossB 1.030 (1.030)  Prec1A 70.492 (70.492)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 70.492	B: 69.945
+Epoch 77 using 1.0 min 52.91 sec
+-----------------
+Train Epoch [78/120]  Batch [0/6]  Time 34.811 (34.811)  LossA 0.499 (0.499)  LossB 0.499 (0.499)  Prec1A 52.734 (52.734)  Prec1B 53.125 (53.125)Train Epoch [78/120]  Batch [1/6]  Time 2.119 (18.465)  LossA 0.508 (0.504)  LossB 0.508 (0.504)  Prec1A 51.367 (52.051)  Prec1B 51.758 (52.441)Train Epoch [78/120]  Batch [2/6]  Time 2.153 (13.028)  LossA 0.501 (0.503)  LossB 0.501 (0.503)  Prec1A 55.273 (53.125)  Prec1B 55.273 (53.385)Train Epoch [78/120]  Batch [3/6]  Time 2.148 (10.308)  LossA 0.506 (0.504)  LossB 0.506 (0.504)  Prec1A 52.539 (52.979)  Prec1B 53.125 (53.320)Train Epoch [78/120]  Batch [4/6]  Time 24.844 (13.215)  LossA 0.505 (0.504)  LossB 0.505 (0.504)  Prec1A 53.125 (53.008)  Prec1B 53.906 (53.438)Train Epoch [78/120]  Batch [5/6]  Time 1.516 (11.265)  LossA 0.508 (0.505)  LossB 0.508 (0.505)  Prec1A 50.811 (52.730)  Prec1B 51.081 (53.140)
+ * Top1 acc:	A: 52.730	B: 53.140
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8090	B: 0.8080
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [78/120]  Batch [0/1]  Time 21.665 (21.665)  LossA 0.908 (0.908)  LossB 0.923 (0.923)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [78/120]  Batch [0/1]  Time 24.710 (24.710)  LossA 1.008 (1.008)  LossB 1.036 (1.036)  Prec1A 70.492 (70.492)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 70.492	B: 70.219
+Epoch 78 using 1.0 min 54.32 sec
+-----------------
+Train Epoch [79/120]  Batch [0/6]  Time 32.082 (32.082)  LossA 0.528 (0.528)  LossB 0.528 (0.528)  Prec1A 44.922 (44.922)  Prec1B 44.922 (44.922)Train Epoch [79/120]  Batch [1/6]  Time 1.756 (16.919)  LossA 0.503 (0.516)  LossB 0.503 (0.516)  Prec1A 54.102 (49.512)  Prec1B 54.102 (49.512)Train Epoch [79/120]  Batch [2/6]  Time 1.874 (11.904)  LossA 0.488 (0.507)  LossB 0.488 (0.507)  Prec1A 55.664 (51.562)  Prec1B 56.445 (51.823)Train Epoch [79/120]  Batch [3/6]  Time 1.844 (9.389)  LossA 0.489 (0.502)  LossB 0.489 (0.502)  Prec1A 55.469 (52.539)  Prec1B 57.617 (53.271)Train Epoch [79/120]  Batch [4/6]  Time 26.454 (12.802)  LossA 0.504 (0.503)  LossB 0.504 (0.503)  Prec1A 51.172 (52.266)  Prec1B 51.172 (52.852)Train Epoch [79/120]  Batch [5/6]  Time 1.531 (10.923)  LossA 0.497 (0.502)  LossB 0.497 (0.502)  Prec1A 54.054 (52.491)  Prec1B 54.865 (53.106)
+ * Top1 acc:	A: 52.491	B: 53.106
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8118	B: 0.8128
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [79/120]  Batch [0/1]  Time 21.906 (21.906)  LossA 0.910 (0.910)  LossB 0.925 (0.925)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [79/120]  Batch [0/1]  Time 24.919 (24.919)  LossA 1.011 (1.011)  LossB 1.039 (1.039)  Prec1A 70.492 (70.492)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 70.492	B: 70.219
+Epoch 79 using 1.0 min 52.73 sec
+-----------------
+Train Epoch [80/120]  Batch [0/6]  Time 34.555 (34.555)  LossA 0.499 (0.499)  LossB 0.499 (0.499)  Prec1A 50.586 (50.586)  Prec1B 50.781 (50.781)Train Epoch [80/120]  Batch [1/6]  Time 2.140 (18.347)  LossA 0.494 (0.496)  LossB 0.494 (0.496)  Prec1A 53.906 (52.246)  Prec1B 54.492 (52.637)Train Epoch [80/120]  Batch [2/6]  Time 2.143 (12.946)  LossA 0.495 (0.496)  LossB 0.495 (0.496)  Prec1A 55.859 (53.451)  Prec1B 55.859 (53.711)Train Epoch [80/120]  Batch [3/6]  Time 2.136 (10.243)  LossA 0.500 (0.497)  LossB 0.500 (0.497)  Prec1A 52.930 (53.320)  Prec1B 52.930 (53.516)Train Epoch [80/120]  Batch [4/6]  Time 24.623 (13.119)  LossA 0.500 (0.498)  LossB 0.500 (0.498)  Prec1A 51.562 (52.969)  Prec1B 52.344 (53.281)Train Epoch [80/120]  Batch [5/6]  Time 1.574 (11.195)  LossA 0.508 (0.499)  LossB 0.508 (0.499)  Prec1A 50.541 (52.662)  Prec1B 50.811 (52.969)
+ * Top1 acc:	A: 52.662	B: 52.969
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8092	B: 0.8073
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [80/120]  Batch [0/1]  Time 21.925 (21.925)  LossA 0.916 (0.916)  LossB 0.929 (0.929)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [80/120]  Batch [0/1]  Time 24.930 (24.930)  LossA 1.018 (1.018)  LossB 1.045 (1.045)  Prec1A 69.945 (69.945)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 69.945	B: 70.219
+Epoch 80 using 1.0 min 54.40 sec
+-----------------
+Train Epoch [81/120]  Batch [0/6]  Time 34.385 (34.385)  LossA 0.500 (0.500)  LossB 0.500 (0.500)  Prec1A 53.125 (53.125)  Prec1B 52.734 (52.734)Train Epoch [81/120]  Batch [1/6]  Time 2.142 (18.263)  LossA 0.491 (0.495)  LossB 0.491 (0.495)  Prec1A 54.688 (53.906)  Prec1B 55.664 (54.199)Train Epoch [81/120]  Batch [2/6]  Time 2.146 (12.891)  LossA 0.506 (0.499)  LossB 0.506 (0.499)  Prec1A 49.609 (52.474)  Prec1B 50.000 (52.799)Train Epoch [81/120]  Batch [3/6]  Time 2.157 (10.208)  LossA 0.499 (0.499)  LossB 0.499 (0.499)  Prec1A 54.297 (52.930)  Prec1B 54.883 (53.320)Train Epoch [81/120]  Batch [4/6]  Time 24.013 (12.969)  LossA 0.498 (0.499)  LossB 0.498 (0.499)  Prec1A 52.539 (52.852)  Prec1B 53.125 (53.281)Train Epoch [81/120]  Batch [5/6]  Time 1.574 (11.070)  LossA 0.509 (0.500)  LossB 0.509 (0.500)  Prec1A 49.730 (52.457)  Prec1B 50.270 (52.901)
+ * Top1 acc:	A: 52.457	B: 52.901
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8096	B: 0.8070
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [81/120]  Batch [0/1]  Time 21.965 (21.965)  LossA 0.920 (0.920)  LossB 0.932 (0.932)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [81/120]  Batch [0/1]  Time 24.971 (24.971)  LossA 1.023 (1.023)  LossB 1.049 (1.049)  Prec1A 70.492 (70.492)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 70.492	B: 69.945
+Epoch 81 using 1.0 min 53.73 sec
+-----------------
+Train Epoch [82/120]  Batch [0/6]  Time 35.615 (35.615)  LossA 0.498 (0.498)  LossB 0.498 (0.498)  Prec1A 52.734 (52.734)  Prec1B 52.930 (52.930)Train Epoch [82/120]  Batch [1/6]  Time 2.229 (18.922)  LossA 0.499 (0.498)  LossB 0.499 (0.498)  Prec1A 52.344 (52.539)  Prec1B 52.930 (52.930)Train Epoch [82/120]  Batch [2/6]  Time 2.146 (13.330)  LossA 0.495 (0.497)  LossB 0.495 (0.497)  Prec1A 51.367 (52.148)  Prec1B 51.953 (52.604)Train Epoch [82/120]  Batch [3/6]  Time 2.155 (10.536)  LossA 0.488 (0.495)  LossB 0.488 (0.495)  Prec1A 54.102 (52.637)  Prec1B 54.102 (52.979)Train Epoch [82/120]  Batch [4/6]  Time 22.736 (12.976)  LossA 0.498 (0.495)  LossB 0.498 (0.495)  Prec1A 51.758 (52.461)  Prec1B 51.758 (52.734)Train Epoch [82/120]  Batch [5/6]  Time 1.542 (11.071)  LossA 0.492 (0.495)  LossB 0.492 (0.495)  Prec1A 53.784 (52.628)  Prec1B 54.054 (52.901)
+ * Top1 acc:	A: 52.628	B: 52.901
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8113	B: 0.8118
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [82/120]  Batch [0/1]  Time 21.924 (21.924)  LossA 0.926 (0.926)  LossB 0.937 (0.937)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [82/120]  Batch [0/1]  Time 24.987 (24.987)  LossA 1.027 (1.027)  LossB 1.056 (1.056)  Prec1A 70.492 (70.492)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 70.492	B: 69.945
+Epoch 82 using 1.0 min 53.71 sec
+-----------------
+Train Epoch [83/120]  Batch [0/6]  Time 36.136 (36.136)  LossA 0.498 (0.498)  LossB 0.498 (0.498)  Prec1A 53.516 (53.516)  Prec1B 53.906 (53.906)Train Epoch [83/120]  Batch [1/6]  Time 2.139 (19.138)  LossA 0.498 (0.498)  LossB 0.498 (0.498)  Prec1A 51.172 (52.344)  Prec1B 51.758 (52.832)Train Epoch [83/120]  Batch [2/6]  Time 2.149 (13.475)  LossA 0.480 (0.492)  LossB 0.480 (0.492)  Prec1A 56.836 (53.841)  Prec1B 57.227 (54.297)Train Epoch [83/120]  Batch [3/6]  Time 2.142 (10.642)  LossA 0.494 (0.492)  LossB 0.494 (0.492)  Prec1A 52.344 (53.467)  Prec1B 52.734 (53.906)Train Epoch [83/120]  Batch [4/6]  Time 24.125 (13.338)  LossA 0.494 (0.493)  LossB 0.494 (0.493)  Prec1A 51.562 (53.086)  Prec1B 52.344 (53.594)Train Epoch [83/120]  Batch [5/6]  Time 1.520 (11.369)  LossA 0.504 (0.495)  LossB 0.504 (0.495)  Prec1A 50.541 (52.765)  Prec1B 50.541 (53.208)
+ * Top1 acc:	A: 52.765	B: 53.208
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8089	B: 0.8050
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [83/120]  Batch [0/1]  Time 21.934 (21.934)  LossA 0.930 (0.930)  LossB 0.940 (0.940)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [83/120]  Batch [0/1]  Time 24.950 (24.950)  LossA 1.031 (1.031)  LossB 1.059 (1.059)  Prec1A 70.492 (70.492)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 70.492	B: 70.219
+Epoch 83 using 1.0 min 55.46 sec
+-----------------
+Train Epoch [84/120]  Batch [0/6]  Time 34.719 (34.719)  LossA 0.078 (0.078)  LossB 0.078 (0.078)  Prec1A 53.125 (53.125)  Prec1B 52.930 (52.930)Train Epoch [84/120]  Batch [1/6]  Time 2.120 (18.419)  LossA 0.075 (0.076)  LossB 0.075 (0.076)  Prec1A 53.711 (53.418)  Prec1B 53.711 (53.320)Train Epoch [84/120]  Batch [2/6]  Time 2.116 (12.985)  LossA 0.071 (0.074)  LossB 0.071 (0.074)  Prec1A 52.539 (53.125)  Prec1B 52.930 (53.190)Train Epoch [84/120]  Batch [3/6]  Time 2.110 (10.266)  LossA 0.073 (0.074)  LossB 0.073 (0.074)  Prec1A 51.758 (52.783)  Prec1B 51.367 (52.734)Train Epoch [84/120]  Batch [4/6]  Time 23.676 (12.948)  LossA 0.070 (0.073)  LossB 0.070 (0.073)  Prec1A 52.539 (52.734)  Prec1B 52.734 (52.734)Train Epoch [84/120]  Batch [5/6]  Time 1.546 (11.048)  LossA 0.073 (0.073)  LossB 0.073 (0.073)  Prec1A 55.135 (53.038)  Prec1B 54.865 (53.003)
+ * Top1 acc:	A: 53.038	B: 53.003
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8007	B: 0.7966
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [84/120]  Batch [0/1]  Time 21.909 (21.909)  LossA 0.931 (0.931)  LossB 0.942 (0.942)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [84/120]  Batch [0/1]  Time 24.665 (24.665)  LossA 1.032 (1.032)  LossB 1.060 (1.060)  Prec1A 70.765 (70.765)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 70.765	B: 70.219
+Epoch 84 using 1.0 min 53.23 sec
+-----------------
+Train Epoch [85/120]  Batch [0/6]  Time 31.562 (31.562)  LossA 0.075 (0.075)  LossB 0.075 (0.075)  Prec1A 54.883 (54.883)  Prec1B 54.492 (54.492)Train Epoch [85/120]  Batch [1/6]  Time 1.731 (16.646)  LossA 0.072 (0.074)  LossB 0.072 (0.074)  Prec1A 52.930 (53.906)  Prec1B 53.516 (54.004)Train Epoch [85/120]  Batch [2/6]  Time 1.730 (11.674)  LossA 0.074 (0.074)  LossB 0.074 (0.074)  Prec1A 53.906 (53.906)  Prec1B 54.102 (54.036)Train Epoch [85/120]  Batch [3/6]  Time 1.732 (9.189)  LossA 0.068 (0.072)  LossB 0.068 (0.072)  Prec1A 56.641 (54.590)  Prec1B 55.859 (54.492)Train Epoch [85/120]  Batch [4/6]  Time 27.569 (12.865)  LossA 0.080 (0.074)  LossB 0.080 (0.074)  Prec1A 47.656 (53.203)  Prec1B 48.242 (53.242)Train Epoch [85/120]  Batch [5/6]  Time 1.590 (10.986)  LossA 0.078 (0.075)  LossB 0.078 (0.075)  Prec1A 51.622 (53.003)  Prec1B 51.622 (53.038)
+ * Top1 acc:	A: 53.003	B: 53.038
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7953	B: 0.7914
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [85/120]  Batch [0/1]  Time 21.969 (21.969)  LossA 0.931 (0.931)  LossB 0.943 (0.943)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [85/120]  Batch [0/1]  Time 24.917 (24.917)  LossA 1.034 (1.034)  LossB 1.061 (1.061)  Prec1A 70.765 (70.765)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.765	B: 70.492
+Epoch 85 using 1.0 min 53.17 sec
+-----------------
+Train Epoch [86/120]  Batch [0/6]  Time 34.035 (34.035)  LossA 0.073 (0.073)  LossB 0.073 (0.073)  Prec1A 54.297 (54.297)  Prec1B 53.516 (53.516)Train Epoch [86/120]  Batch [1/6]  Time 2.125 (18.080)  LossA 0.078 (0.075)  LossB 0.078 (0.075)  Prec1A 54.297 (54.297)  Prec1B 54.102 (53.809)Train Epoch [86/120]  Batch [2/6]  Time 2.140 (12.767)  LossA 0.074 (0.075)  LossB 0.074 (0.075)  Prec1A 51.758 (53.451)  Prec1B 52.344 (53.320)Train Epoch [86/120]  Batch [3/6]  Time 2.111 (10.103)  LossA 0.077 (0.075)  LossB 0.077 (0.075)  Prec1A 51.172 (52.881)  Prec1B 51.172 (52.783)Train Epoch [86/120]  Batch [4/6]  Time 24.255 (12.933)  LossA 0.075 (0.075)  LossB 0.075 (0.075)  Prec1A 53.906 (53.086)  Prec1B 54.492 (53.125)Train Epoch [86/120]  Batch [5/6]  Time 1.244 (10.985)  LossA 0.076 (0.075)  LossB 0.076 (0.075)  Prec1A 51.081 (52.833)  Prec1B 50.811 (52.833)
+ * Top1 acc:	A: 52.833	B: 52.833
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7984	B: 0.7975
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [86/120]  Batch [0/1]  Time 21.503 (21.503)  LossA 0.934 (0.934)  LossB 0.945 (0.945)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [86/120]  Batch [0/1]  Time 24.375 (24.375)  LossA 1.036 (1.036)  LossB 1.062 (1.062)  Prec1A 70.765 (70.765)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 70.765	B: 70.219
+Epoch 86 using 1.0 min 52.14 sec
+-----------------
+Train Epoch [87/120]  Batch [0/6]  Time 32.619 (32.619)  LossA 0.071 (0.071)  LossB 0.071 (0.071)  Prec1A 54.883 (54.883)  Prec1B 55.078 (55.078)Train Epoch [87/120]  Batch [1/6]  Time 2.139 (17.379)  LossA 0.081 (0.076)  LossB 0.081 (0.076)  Prec1A 50.586 (52.734)  Prec1B 50.195 (52.637)Train Epoch [87/120]  Batch [2/6]  Time 2.148 (12.302)  LossA 0.075 (0.075)  LossB 0.075 (0.075)  Prec1A 52.344 (52.604)  Prec1B 52.148 (52.474)Train Epoch [87/120]  Batch [3/6]  Time 2.151 (9.764)  LossA 0.074 (0.075)  LossB 0.074 (0.075)  Prec1A 52.539 (52.588)  Prec1B 52.539 (52.490)Train Epoch [87/120]  Batch [4/6]  Time 25.709 (12.953)  LossA 0.070 (0.074)  LossB 0.070 (0.074)  Prec1A 54.688 (53.008)  Prec1B 55.469 (53.086)Train Epoch [87/120]  Batch [5/6]  Time 1.570 (11.056)  LossA 0.075 (0.074)  LossB 0.075 (0.074)  Prec1A 50.270 (52.662)  Prec1B 50.541 (52.765)
+ * Top1 acc:	A: 52.662	B: 52.765
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8010	B: 0.8027
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [87/120]  Batch [0/1]  Time 21.906 (21.906)  LossA 0.933 (0.933)  LossB 0.942 (0.942)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [87/120]  Batch [0/1]  Time 24.931 (24.931)  LossA 1.034 (1.034)  LossB 1.060 (1.060)  Prec1A 70.765 (70.765)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.765	B: 70.492
+Epoch 87 using 1.0 min 53.55 sec
+-----------------
+Train Epoch [88/120]  Batch [0/6]  Time 34.352 (34.352)  LossA 0.078 (0.078)  LossB 0.078 (0.078)  Prec1A 51.172 (51.172)  Prec1B 50.586 (50.586)Train Epoch [88/120]  Batch [1/6]  Time 2.145 (18.249)  LossA 0.077 (0.077)  LossB 0.077 (0.077)  Prec1A 52.930 (52.051)  Prec1B 53.320 (51.953)Train Epoch [88/120]  Batch [2/6]  Time 2.144 (12.880)  LossA 0.074 (0.076)  LossB 0.074 (0.076)  Prec1A 53.516 (52.539)  Prec1B 53.516 (52.474)Train Epoch [88/120]  Batch [3/6]  Time 2.139 (10.195)  LossA 0.071 (0.075)  LossB 0.071 (0.075)  Prec1A 55.859 (53.369)  Prec1B 56.250 (53.418)Train Epoch [88/120]  Batch [4/6]  Time 26.476 (13.451)  LossA 0.074 (0.075)  LossB 0.074 (0.075)  Prec1A 53.125 (53.320)  Prec1B 52.734 (53.281)Train Epoch [88/120]  Batch [5/6]  Time 1.550 (11.468)  LossA 0.075 (0.075)  LossB 0.075 (0.075)  Prec1A 51.892 (53.140)  Prec1B 51.351 (53.038)
+ * Top1 acc:	A: 53.140	B: 53.038
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7971	B: 0.7962
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [88/120]  Batch [0/1]  Time 21.920 (21.920)  LossA 0.929 (0.929)  LossB 0.940 (0.940)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [88/120]  Batch [0/1]  Time 24.898 (24.898)  LossA 1.030 (1.030)  LossB 1.058 (1.058)  Prec1A 70.765 (70.765)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.765	B: 70.492
+Epoch 88 using 1.0 min 55.98 sec
+-----------------
+Train Epoch [89/120]  Batch [0/6]  Time 35.400 (35.400)  LossA 0.073 (0.073)  LossB 0.073 (0.073)  Prec1A 54.688 (54.688)  Prec1B 55.664 (55.664)Train Epoch [89/120]  Batch [1/6]  Time 2.139 (18.769)  LossA 0.077 (0.075)  LossB 0.077 (0.075)  Prec1A 51.172 (52.930)  Prec1B 51.562 (53.613)Train Epoch [89/120]  Batch [2/6]  Time 2.159 (13.233)  LossA 0.074 (0.075)  LossB 0.074 (0.075)  Prec1A 51.367 (52.409)  Prec1B 50.781 (52.669)Train Epoch [89/120]  Batch [3/6]  Time 2.129 (10.457)  LossA 0.072 (0.074)  LossB 0.072 (0.074)  Prec1A 54.102 (52.832)  Prec1B 54.492 (53.125)Train Epoch [89/120]  Batch [4/6]  Time 24.202 (13.206)  LossA 0.078 (0.075)  LossB 0.078 (0.075)  Prec1A 53.711 (53.008)  Prec1B 53.711 (53.242)Train Epoch [89/120]  Batch [5/6]  Time 1.534 (11.260)  LossA 0.072 (0.074)  LossB 0.072 (0.074)  Prec1A 51.351 (52.799)  Prec1B 51.351 (53.003)
+ * Top1 acc:	A: 52.799	B: 53.003
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7992	B: 0.7968
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [89/120]  Batch [0/1]  Time 21.846 (21.846)  LossA 0.932 (0.932)  LossB 0.941 (0.941)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [89/120]  Batch [0/1]  Time 24.857 (24.857)  LossA 1.033 (1.033)  LossB 1.059 (1.059)  Prec1A 70.765 (70.765)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.765	B: 70.492
+Epoch 89 using 1.0 min 54.63 sec
+-----------------
+Train Epoch [90/120]  Batch [0/6]  Time 32.226 (32.226)  LossA 0.074 (0.074)  LossB 0.074 (0.074)  Prec1A 51.758 (51.758)  Prec1B 51.562 (51.562)Train Epoch [90/120]  Batch [1/6]  Time 2.075 (17.150)  LossA 0.072 (0.073)  LossB 0.072 (0.073)  Prec1A 53.516 (52.637)  Prec1B 53.906 (52.734)Train Epoch [90/120]  Batch [2/6]  Time 2.264 (12.188)  LossA 0.073 (0.073)  LossB 0.073 (0.073)  Prec1A 55.078 (53.451)  Prec1B 55.273 (53.581)Train Epoch [90/120]  Batch [3/6]  Time 2.116 (9.670)  LossA 0.075 (0.073)  LossB 0.075 (0.073)  Prec1A 52.344 (53.174)  Prec1B 52.930 (53.418)Train Epoch [90/120]  Batch [4/6]  Time 25.351 (12.806)  LossA 0.077 (0.074)  LossB 0.077 (0.074)  Prec1A 51.758 (52.891)  Prec1B 51.562 (53.047)Train Epoch [90/120]  Batch [5/6]  Time 1.248 (10.880)  LossA 0.079 (0.075)  LossB 0.079 (0.075)  Prec1A 52.162 (52.799)  Prec1B 53.243 (53.072)
+ * Top1 acc:	A: 52.799	B: 53.072
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7951	B: 0.7964
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [90/120]  Batch [0/1]  Time 21.591 (21.591)  LossA 0.931 (0.931)  LossB 0.941 (0.941)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [90/120]  Batch [0/1]  Time 24.555 (24.555)  LossA 1.033 (1.033)  LossB 1.061 (1.061)  Prec1A 70.765 (70.765)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.765	B: 70.492
+Epoch 90 using 1.0 min 51.78 sec
+-----------------
+Train Epoch [91/120]  Batch [0/6]  Time 32.841 (32.841)  LossA 0.072 (0.072)  LossB 0.072 (0.072)  Prec1A 52.344 (52.344)  Prec1B 52.930 (52.930)Train Epoch [91/120]  Batch [1/6]  Time 2.121 (17.481)  LossA 0.070 (0.071)  LossB 0.070 (0.071)  Prec1A 56.836 (54.590)  Prec1B 57.031 (54.980)Train Epoch [91/120]  Batch [2/6]  Time 1.899 (12.287)  LossA 0.078 (0.073)  LossB 0.078 (0.073)  Prec1A 51.953 (53.711)  Prec1B 52.344 (54.102)Train Epoch [91/120]  Batch [3/6]  Time 1.733 (9.648)  LossA 0.074 (0.074)  LossB 0.074 (0.074)  Prec1A 50.781 (52.979)  Prec1B 51.367 (53.418)Train Epoch [91/120]  Batch [4/6]  Time 23.526 (12.424)  LossA 0.074 (0.074)  LossB 0.074 (0.074)  Prec1A 53.320 (53.047)  Prec1B 53.125 (53.359)Train Epoch [91/120]  Batch [5/6]  Time 1.244 (10.561)  LossA 0.077 (0.074)  LossB 0.077 (0.074)  Prec1A 50.811 (52.765)  Prec1B 51.081 (53.072)
+ * Top1 acc:	A: 52.765	B: 53.072
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7969	B: 0.7963
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [91/120]  Batch [0/1]  Time 21.518 (21.518)  LossA 0.933 (0.933)  LossB 0.944 (0.944)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [91/120]  Batch [0/1]  Time 24.758 (24.758)  LossA 1.035 (1.035)  LossB 1.064 (1.064)  Prec1A 70.765 (70.765)  Prec1B 70.765 (70.765)
+ * Top1 acc:	A: 70.765	B: 70.765
+Epoch 91 using 1.0 min 50.00 sec
+-----------------
+Train Epoch [92/120]  Batch [0/6]  Time 32.531 (32.531)  LossA 0.080 (0.080)  LossB 0.080 (0.080)  Prec1A 50.781 (50.781)  Prec1B 50.586 (50.586)Train Epoch [92/120]  Batch [1/6]  Time 1.782 (17.157)  LossA 0.076 (0.078)  LossB 0.076 (0.078)  Prec1A 51.953 (51.367)  Prec1B 51.367 (50.977)Train Epoch [92/120]  Batch [2/6]  Time 1.794 (12.036)  LossA 0.070 (0.075)  LossB 0.070 (0.075)  Prec1A 53.125 (51.953)  Prec1B 54.102 (52.018)Train Epoch [92/120]  Batch [3/6]  Time 1.886 (9.498)  LossA 0.069 (0.074)  LossB 0.069 (0.074)  Prec1A 54.102 (52.490)  Prec1B 54.297 (52.588)Train Epoch [92/120]  Batch [4/6]  Time 25.964 (12.791)  LossA 0.071 (0.073)  LossB 0.071 (0.073)  Prec1A 54.883 (52.969)  Prec1B 54.883 (53.047)Train Epoch [92/120]  Batch [5/6]  Time 1.243 (10.867)  LossA 0.073 (0.073)  LossB 0.073 (0.073)  Prec1A 51.351 (52.765)  Prec1B 51.622 (52.867)
+ * Top1 acc:	A: 52.765	B: 52.867
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7963	B: 0.7988
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [92/120]  Batch [0/1]  Time 21.348 (21.348)  LossA 0.933 (0.933)  LossB 0.942 (0.942)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [92/120]  Batch [0/1]  Time 24.316 (24.316)  LossA 1.036 (1.036)  LossB 1.063 (1.063)  Prec1A 70.765 (70.765)  Prec1B 70.765 (70.765)
+ * Top1 acc:	A: 70.765	B: 70.765
+Epoch 92 using 1.0 min 51.23 sec
+-----------------
+Train Epoch [93/120]  Batch [0/6]  Time 31.080 (31.080)  LossA 0.073 (0.073)  LossB 0.073 (0.073)  Prec1A 53.125 (53.125)  Prec1B 52.539 (52.539)Train Epoch [93/120]  Batch [1/6]  Time 2.574 (16.827)  LossA 0.075 (0.074)  LossB 0.075 (0.074)  Prec1A 53.906 (53.516)  Prec1B 53.906 (53.223)Train Epoch [93/120]  Batch [2/6]  Time 2.127 (11.927)  LossA 0.070 (0.073)  LossB 0.070 (0.073)  Prec1A 54.492 (53.841)  Prec1B 55.469 (53.971)Train Epoch [93/120]  Batch [3/6]  Time 2.123 (9.476)  LossA 0.073 (0.073)  LossB 0.073 (0.073)  Prec1A 52.734 (53.564)  Prec1B 52.930 (53.711)Train Epoch [93/120]  Batch [4/6]  Time 23.908 (12.362)  LossA 0.075 (0.074)  LossB 0.075 (0.074)  Prec1A 51.562 (53.164)  Prec1B 51.562 (53.281)Train Epoch [93/120]  Batch [5/6]  Time 1.557 (10.561)  LossA 0.082 (0.075)  LossB 0.082 (0.075)  Prec1A 49.459 (52.696)  Prec1B 49.459 (52.799)
+ * Top1 acc:	A: 52.696	B: 52.799
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7923	B: 0.7945
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [93/120]  Batch [0/1]  Time 21.944 (21.944)  LossA 0.935 (0.935)  LossB 0.943 (0.943)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [93/120]  Batch [0/1]  Time 24.838 (24.838)  LossA 1.036 (1.036)  LossB 1.064 (1.064)  Prec1A 70.765 (70.765)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.765	B: 70.492
+Epoch 93 using 1.0 min 50.52 sec
+-----------------
+Train Epoch [94/120]  Batch [0/6]  Time 33.571 (33.571)  LossA 0.078 (0.078)  LossB 0.078 (0.078)  Prec1A 52.148 (52.148)  Prec1B 51.758 (51.758)Train Epoch [94/120]  Batch [1/6]  Time 1.731 (17.651)  LossA 0.074 (0.076)  LossB 0.074 (0.076)  Prec1A 54.102 (53.125)  Prec1B 54.492 (53.125)Train Epoch [94/120]  Batch [2/6]  Time 1.732 (12.345)  LossA 0.077 (0.076)  LossB 0.077 (0.076)  Prec1A 52.148 (52.799)  Prec1B 52.539 (52.930)Train Epoch [94/120]  Batch [3/6]  Time 1.731 (9.691)  LossA 0.070 (0.075)  LossB 0.070 (0.075)  Prec1A 52.930 (52.832)  Prec1B 53.906 (53.174)Train Epoch [94/120]  Batch [4/6]  Time 25.140 (12.781)  LossA 0.078 (0.075)  LossB 0.078 (0.075)  Prec1A 47.656 (51.797)  Prec1B 47.852 (52.109)Train Epoch [94/120]  Batch [5/6]  Time 1.455 (10.893)  LossA 0.070 (0.074)  LossB 0.070 (0.074)  Prec1A 58.378 (52.628)  Prec1B 57.838 (52.833)
+ * Top1 acc:	A: 52.628	B: 52.833
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7972	B: 0.7955
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [94/120]  Batch [0/1]  Time 21.603 (21.603)  LossA 0.934 (0.934)  LossB 0.942 (0.942)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [94/120]  Batch [0/1]  Time 24.500 (24.500)  LossA 1.034 (1.034)  LossB 1.062 (1.062)  Prec1A 70.765 (70.765)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.765	B: 70.492
+Epoch 94 using 1.0 min 51.82 sec
+-----------------
+Train Epoch [95/120]  Batch [0/6]  Time 33.461 (33.461)  LossA 0.068 (0.068)  LossB 0.068 (0.068)  Prec1A 55.078 (55.078)  Prec1B 55.273 (55.273)Train Epoch [95/120]  Batch [1/6]  Time 2.117 (17.789)  LossA 0.074 (0.071)  LossB 0.074 (0.071)  Prec1A 53.320 (54.199)  Prec1B 53.516 (54.395)Train Epoch [95/120]  Batch [2/6]  Time 2.155 (12.578)  LossA 0.071 (0.071)  LossB 0.071 (0.071)  Prec1A 53.906 (54.102)  Prec1B 54.883 (54.557)Train Epoch [95/120]  Batch [3/6]  Time 2.086 (9.955)  LossA 0.074 (0.072)  LossB 0.074 (0.072)  Prec1A 53.320 (53.906)  Prec1B 52.148 (53.955)Train Epoch [95/120]  Batch [4/6]  Time 25.824 (13.129)  LossA 0.082 (0.074)  LossB 0.082 (0.074)  Prec1A 49.414 (53.008)  Prec1B 49.219 (53.008)Train Epoch [95/120]  Batch [5/6]  Time 1.248 (11.148)  LossA 0.077 (0.074)  LossB 0.077 (0.074)  Prec1A 52.703 (52.969)  Prec1B 51.622 (52.833)
+ * Top1 acc:	A: 52.969	B: 52.833
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7958	B: 0.7991
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [95/120]  Batch [0/1]  Time 21.688 (21.688)  LossA 0.935 (0.935)  LossB 0.944 (0.944)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [95/120]  Batch [0/1]  Time 24.576 (24.576)  LossA 1.037 (1.037)  LossB 1.064 (1.064)  Prec1A 70.492 (70.492)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.492	B: 70.492
+Epoch 95 using 1.0 min 53.53 sec
+-----------------
+Train Epoch [96/120]  Batch [0/6]  Time 34.158 (34.158)  LossA 0.071 (0.071)  LossB 0.071 (0.071)  Prec1A 56.641 (56.641)  Prec1B 56.836 (56.836)Train Epoch [96/120]  Batch [1/6]  Time 1.730 (17.944)  LossA 0.075 (0.073)  LossB 0.075 (0.073)  Prec1A 53.711 (55.176)  Prec1B 54.102 (55.469)Train Epoch [96/120]  Batch [2/6]  Time 1.731 (12.540)  LossA 0.072 (0.072)  LossB 0.072 (0.072)  Prec1A 52.344 (54.232)  Prec1B 52.930 (54.622)Train Epoch [96/120]  Batch [3/6]  Time 1.731 (9.838)  LossA 0.079 (0.074)  LossB 0.079 (0.074)  Prec1A 50.781 (53.369)  Prec1B 50.586 (53.613)Train Epoch [96/120]  Batch [4/6]  Time 24.928 (12.856)  LossA 0.073 (0.074)  LossB 0.073 (0.074)  Prec1A 52.734 (53.242)  Prec1B 52.734 (53.438)Train Epoch [96/120]  Batch [5/6]  Time 1.301 (10.930)  LossA 0.081 (0.075)  LossB 0.081 (0.075)  Prec1A 47.838 (52.560)  Prec1B 48.108 (52.765)
+ * Top1 acc:	A: 52.560	B: 52.765
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7909	B: 0.7958
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [96/120]  Batch [0/1]  Time 21.657 (21.657)  LossA 0.937 (0.937)  LossB 0.945 (0.945)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [96/120]  Batch [0/1]  Time 24.743 (24.743)  LossA 1.037 (1.037)  LossB 1.063 (1.063)  Prec1A 70.492 (70.492)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.492	B: 70.492
+Epoch 96 using 1.0 min 52.34 sec
+-----------------
+Train Epoch [97/120]  Batch [0/6]  Time 32.521 (32.521)  LossA 0.076 (0.076)  LossB 0.076 (0.076)  Prec1A 52.930 (52.930)  Prec1B 52.344 (52.344)Train Epoch [97/120]  Batch [1/6]  Time 1.943 (17.232)  LossA 0.077 (0.076)  LossB 0.077 (0.076)  Prec1A 51.172 (52.051)  Prec1B 51.562 (51.953)Train Epoch [97/120]  Batch [2/6]  Time 2.144 (12.203)  LossA 0.075 (0.076)  LossB 0.075 (0.076)  Prec1A 52.344 (52.148)  Prec1B 53.906 (52.604)Train Epoch [97/120]  Batch [3/6]  Time 2.135 (9.686)  LossA 0.074 (0.075)  LossB 0.074 (0.075)  Prec1A 54.492 (52.734)  Prec1B 53.906 (52.930)Train Epoch [97/120]  Batch [4/6]  Time 25.516 (12.852)  LossA 0.075 (0.075)  LossB 0.075 (0.075)  Prec1A 51.562 (52.500)  Prec1B 51.953 (52.734)Train Epoch [97/120]  Batch [5/6]  Time 1.536 (10.966)  LossA 0.074 (0.075)  LossB 0.074 (0.075)  Prec1A 53.784 (52.662)  Prec1B 52.973 (52.765)
+ * Top1 acc:	A: 52.662	B: 52.765
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7991	B: 0.7972
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [97/120]  Batch [0/1]  Time 21.903 (21.903)  LossA 0.932 (0.932)  LossB 0.942 (0.942)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [97/120]  Batch [0/1]  Time 24.746 (24.746)  LossA 1.034 (1.034)  LossB 1.060 (1.060)  Prec1A 70.492 (70.492)  Prec1B 69.945 (69.945)
+ * Top1 acc:	A: 70.492	B: 69.945
+Epoch 97 using 1.0 min 52.81 sec
+-----------------
+Train Epoch [98/120]  Batch [0/6]  Time 32.284 (32.284)  LossA 0.069 (0.069)  LossB 0.069 (0.069)  Prec1A 57.227 (57.227)  Prec1B 58.008 (58.008)Train Epoch [98/120]  Batch [1/6]  Time 2.120 (17.202)  LossA 0.071 (0.070)  LossB 0.071 (0.070)  Prec1A 54.883 (56.055)  Prec1B 54.883 (56.445)Train Epoch [98/120]  Batch [2/6]  Time 2.145 (12.183)  LossA 0.074 (0.071)  LossB 0.074 (0.071)  Prec1A 50.977 (54.362)  Prec1B 51.562 (54.818)Train Epoch [98/120]  Batch [3/6]  Time 2.137 (9.672)  LossA 0.078 (0.073)  LossB 0.078 (0.073)  Prec1A 50.977 (53.516)  Prec1B 50.977 (53.857)Train Epoch [98/120]  Batch [4/6]  Time 25.106 (12.758)  LossA 0.075 (0.073)  LossB 0.075 (0.073)  Prec1A 52.148 (53.242)  Prec1B 53.320 (53.750)Train Epoch [98/120]  Batch [5/6]  Time 1.513 (10.884)  LossA 0.085 (0.075)  LossB 0.085 (0.075)  Prec1A 47.568 (52.526)  Prec1B 47.838 (53.003)
+ * Top1 acc:	A: 52.526	B: 53.003
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7919	B: 0.7974
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [98/120]  Batch [0/1]  Time 21.910 (21.910)  LossA 0.933 (0.933)  LossB 0.942 (0.942)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [98/120]  Batch [0/1]  Time 24.802 (24.802)  LossA 1.035 (1.035)  LossB 1.060 (1.060)  Prec1A 70.492 (70.492)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 70.492	B: 70.219
+Epoch 98 using 1.0 min 52.39 sec
+-----------------
+Train Epoch [99/120]  Batch [0/6]  Time 33.368 (33.368)  LossA 0.078 (0.078)  LossB 0.078 (0.078)  Prec1A 52.148 (52.148)  Prec1B 52.734 (52.734)Train Epoch [99/120]  Batch [1/6]  Time 2.127 (17.748)  LossA 0.071 (0.074)  LossB 0.071 (0.074)  Prec1A 53.711 (52.930)  Prec1B 53.516 (53.125)Train Epoch [99/120]  Batch [2/6]  Time 2.134 (12.543)  LossA 0.078 (0.076)  LossB 0.078 (0.076)  Prec1A 50.000 (51.953)  Prec1B 50.391 (52.214)Train Epoch [99/120]  Batch [3/6]  Time 2.137 (9.942)  LossA 0.073 (0.075)  LossB 0.073 (0.075)  Prec1A 52.344 (52.051)  Prec1B 52.734 (52.344)Train Epoch [99/120]  Batch [4/6]  Time 24.754 (12.904)  LossA 0.069 (0.074)  LossB 0.069 (0.074)  Prec1A 55.664 (52.773)  Prec1B 56.055 (53.086)Train Epoch [99/120]  Batch [5/6]  Time 1.561 (11.014)  LossA 0.074 (0.074)  LossB 0.074 (0.074)  Prec1A 52.162 (52.696)  Prec1B 52.973 (53.072)
+ * Top1 acc:	A: 52.696	B: 53.072
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7996	B: 0.7999
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [99/120]  Batch [0/1]  Time 21.943 (21.943)  LossA 0.931 (0.931)  LossB 0.939 (0.939)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [99/120]  Batch [0/1]  Time 25.024 (25.024)  LossA 1.033 (1.033)  LossB 1.058 (1.058)  Prec1A 70.492 (70.492)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.492	B: 70.492
+Epoch 99 using 1.0 min 53.40 sec
+-----------------
+Train Epoch [100/120]  Batch [0/6]  Time 33.955 (33.955)  LossA 0.075 (0.075)  LossB 0.075 (0.075)  Prec1A 50.586 (50.586)  Prec1B 51.562 (51.562)Train Epoch [100/120]  Batch [1/6]  Time 2.240 (18.097)  LossA 0.073 (0.074)  LossB 0.073 (0.074)  Prec1A 52.930 (51.758)  Prec1B 53.125 (52.344)Train Epoch [100/120]  Batch [2/6]  Time 2.124 (12.773)  LossA 0.074 (0.074)  LossB 0.074 (0.074)  Prec1A 52.539 (52.018)  Prec1B 52.734 (52.474)Train Epoch [100/120]  Batch [3/6]  Time 2.142 (10.115)  LossA 0.073 (0.074)  LossB 0.073 (0.074)  Prec1A 55.469 (52.881)  Prec1B 56.836 (53.564)Train Epoch [100/120]  Batch [4/6]  Time 24.375 (12.967)  LossA 0.071 (0.073)  LossB 0.071 (0.073)  Prec1A 53.711 (53.047)  Prec1B 52.539 (53.359)Train Epoch [100/120]  Batch [5/6]  Time 1.535 (11.062)  LossA 0.073 (0.073)  LossB 0.073 (0.073)  Prec1A 50.270 (52.696)  Prec1B 51.622 (53.140)
+ * Top1 acc:	A: 52.696	B: 53.140
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7949	B: 0.8002
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [100/120]  Batch [0/1]  Time 21.832 (21.832)  LossA 0.933 (0.933)  LossB 0.940 (0.940)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [100/120]  Batch [0/1]  Time 24.853 (24.853)  LossA 1.033 (1.033)  LossB 1.058 (1.058)  Prec1A 70.492 (70.492)  Prec1B 70.765 (70.765)
+ * Top1 acc:	A: 70.492	B: 70.765
+Epoch 100 using 1.0 min 53.42 sec
+-----------------
+Train Epoch [101/120]  Batch [0/6]  Time 35.713 (35.713)  LossA 0.072 (0.072)  LossB 0.072 (0.072)  Prec1A 55.859 (55.859)  Prec1B 56.250 (56.250)Train Epoch [101/120]  Batch [1/6]  Time 2.133 (18.923)  LossA 0.077 (0.075)  LossB 0.077 (0.075)  Prec1A 50.000 (52.930)  Prec1B 49.805 (53.027)Train Epoch [101/120]  Batch [2/6]  Time 2.084 (13.310)  LossA 0.073 (0.074)  LossB 0.073 (0.074)  Prec1A 53.516 (53.125)  Prec1B 54.102 (53.385)Train Epoch [101/120]  Batch [3/6]  Time 2.136 (10.516)  LossA 0.073 (0.074)  LossB 0.073 (0.074)  Prec1A 53.516 (53.223)  Prec1B 53.320 (53.369)Train Epoch [101/120]  Batch [4/6]  Time 25.772 (13.567)  LossA 0.076 (0.074)  LossB 0.076 (0.074)  Prec1A 51.953 (52.969)  Prec1B 52.148 (53.125)Train Epoch [101/120]  Batch [5/6]  Time 1.606 (11.574)  LossA 0.071 (0.074)  LossB 0.071 (0.074)  Prec1A 53.514 (53.038)  Prec1B 53.784 (53.208)
+ * Top1 acc:	A: 53.038	B: 53.208
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7933	B: 0.7962
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [101/120]  Batch [0/1]  Time 21.858 (21.858)  LossA 0.933 (0.933)  LossB 0.942 (0.942)  Prec1A 74.044 (74.044)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.044	B: 74.590
+Test Epoch [101/120]  Batch [0/1]  Time 24.633 (24.633)  LossA 1.033 (1.033)  LossB 1.059 (1.059)  Prec1A 70.765 (70.765)  Prec1B 70.765 (70.765)
+ * Top1 acc:	A: 70.765	B: 70.765
+Epoch 101 using 1.0 min 56.34 sec
+-----------------
+Train Epoch [102/120]  Batch [0/6]  Time 32.975 (32.975)  LossA 0.077 (0.077)  LossB 0.077 (0.077)  Prec1A 50.586 (50.586)  Prec1B 50.781 (50.781)Train Epoch [102/120]  Batch [1/6]  Time 1.731 (17.353)  LossA 0.070 (0.074)  LossB 0.070 (0.074)  Prec1A 54.688 (52.637)  Prec1B 54.297 (52.539)Train Epoch [102/120]  Batch [2/6]  Time 1.731 (12.146)  LossA 0.070 (0.073)  LossB 0.070 (0.073)  Prec1A 56.055 (53.776)  Prec1B 55.664 (53.581)Train Epoch [102/120]  Batch [3/6]  Time 1.730 (9.542)  LossA 0.074 (0.073)  LossB 0.074 (0.073)  Prec1A 52.734 (53.516)  Prec1B 53.125 (53.467)Train Epoch [102/120]  Batch [4/6]  Time 25.935 (12.820)  LossA 0.072 (0.073)  LossB 0.072 (0.073)  Prec1A 51.367 (53.086)  Prec1B 51.953 (53.164)Train Epoch [102/120]  Batch [5/6]  Time 1.244 (10.891)  LossA 0.080 (0.074)  LossB 0.080 (0.074)  Prec1A 50.270 (52.730)  Prec1B 50.541 (52.833)
+ * Top1 acc:	A: 52.730	B: 52.833
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7939	B: 0.7975
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [102/120]  Batch [0/1]  Time 21.355 (21.355)  LossA 0.933 (0.933)  LossB 0.942 (0.942)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [102/120]  Batch [0/1]  Time 24.474 (24.474)  LossA 1.033 (1.033)  LossB 1.060 (1.060)  Prec1A 70.765 (70.765)  Prec1B 70.765 (70.765)
+ * Top1 acc:	A: 70.765	B: 70.765
+Epoch 102 using 1.0 min 51.53 sec
+-----------------
+Train Epoch [103/120]  Batch [0/6]  Time 33.093 (33.093)  LossA 0.071 (0.071)  LossB 0.071 (0.071)  Prec1A 52.148 (52.148)  Prec1B 52.148 (52.148)Train Epoch [103/120]  Batch [1/6]  Time 1.926 (17.510)  LossA 0.074 (0.072)  LossB 0.074 (0.072)  Prec1A 53.320 (52.734)  Prec1B 52.930 (52.539)Train Epoch [103/120]  Batch [2/6]  Time 1.942 (12.320)  LossA 0.077 (0.074)  LossB 0.077 (0.074)  Prec1A 51.562 (52.344)  Prec1B 51.562 (52.214)Train Epoch [103/120]  Batch [3/6]  Time 1.818 (9.695)  LossA 0.077 (0.075)  LossB 0.077 (0.075)  Prec1A 51.367 (52.100)  Prec1B 51.758 (52.100)Train Epoch [103/120]  Batch [4/6]  Time 25.622 (12.880)  LossA 0.074 (0.074)  LossB 0.074 (0.074)  Prec1A 53.516 (52.383)  Prec1B 54.102 (52.500)Train Epoch [103/120]  Batch [5/6]  Time 1.302 (10.951)  LossA 0.068 (0.073)  LossB 0.068 (0.073)  Prec1A 56.486 (52.901)  Prec1B 56.757 (53.038)
+ * Top1 acc:	A: 52.901	B: 53.038
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8020	B: 0.8033
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [103/120]  Batch [0/1]  Time 21.686 (21.686)  LossA 0.932 (0.932)  LossB 0.942 (0.942)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [103/120]  Batch [0/1]  Time 24.724 (24.724)  LossA 1.034 (1.034)  LossB 1.060 (1.060)  Prec1A 70.765 (70.765)  Prec1B 70.765 (70.765)
+ * Top1 acc:	A: 70.765	B: 70.765
+Epoch 103 using 1.0 min 52.47 sec
+-----------------
+Train Epoch [104/120]  Batch [0/6]  Time 34.915 (34.915)  LossA 0.084 (0.084)  LossB 0.084 (0.084)  Prec1A 47.461 (47.461)  Prec1B 47.852 (47.852)Train Epoch [104/120]  Batch [1/6]  Time 1.964 (18.439)  LossA 0.067 (0.075)  LossB 0.067 (0.075)  Prec1A 58.594 (53.027)  Prec1B 59.375 (53.613)Train Epoch [104/120]  Batch [2/6]  Time 2.071 (12.983)  LossA 0.077 (0.076)  LossB 0.077 (0.076)  Prec1A 48.828 (51.628)  Prec1B 49.805 (52.344)Train Epoch [104/120]  Batch [3/6]  Time 2.035 (10.246)  LossA 0.068 (0.074)  LossB 0.068 (0.074)  Prec1A 56.250 (52.783)  Prec1B 55.664 (53.174)Train Epoch [104/120]  Batch [4/6]  Time 25.183 (13.234)  LossA 0.074 (0.074)  LossB 0.074 (0.074)  Prec1A 50.391 (52.305)  Prec1B 50.195 (52.578)Train Epoch [104/120]  Batch [5/6]  Time 1.403 (11.262)  LossA 0.072 (0.074)  LossB 0.072 (0.074)  Prec1A 55.946 (52.765)  Prec1B 56.757 (53.106)
+ * Top1 acc:	A: 52.765	B: 53.106
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7972	B: 0.7991
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [104/120]  Batch [0/1]  Time 21.800 (21.800)  LossA 0.932 (0.932)  LossB 0.940 (0.940)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [104/120]  Batch [0/1]  Time 24.846 (24.846)  LossA 1.033 (1.033)  LossB 1.058 (1.058)  Prec1A 70.765 (70.765)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.765	B: 70.492
+Epoch 104 using 1.0 min 54.57 sec
+-----------------
+Train Epoch [105/120]  Batch [0/6]  Time 34.555 (34.555)  LossA 0.081 (0.081)  LossB 0.081 (0.081)  Prec1A 48.438 (48.438)  Prec1B 47.852 (47.852)Train Epoch [105/120]  Batch [1/6]  Time 1.932 (18.244)  LossA 0.070 (0.076)  LossB 0.070 (0.076)  Prec1A 56.250 (52.344)  Prec1B 55.859 (51.855)Train Epoch [105/120]  Batch [2/6]  Time 1.939 (12.809)  LossA 0.067 (0.073)  LossB 0.067 (0.073)  Prec1A 55.664 (53.451)  Prec1B 56.055 (53.255)Train Epoch [105/120]  Batch [3/6]  Time 1.928 (10.089)  LossA 0.070 (0.072)  LossB 0.070 (0.072)  Prec1A 53.906 (53.564)  Prec1B 54.297 (53.516)Train Epoch [105/120]  Batch [4/6]  Time 26.003 (13.272)  LossA 0.078 (0.073)  LossB 0.078 (0.073)  Prec1A 52.930 (53.438)  Prec1B 52.148 (53.242)Train Epoch [105/120]  Batch [5/6]  Time 1.243 (11.267)  LossA 0.074 (0.073)  LossB 0.074 (0.073)  Prec1A 50.000 (53.003)  Prec1B 50.811 (52.935)
+ * Top1 acc:	A: 53.003	B: 52.935
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7951	B: 0.7984
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [105/120]  Batch [0/1]  Time 21.410 (21.410)  LossA 0.933 (0.933)  LossB 0.942 (0.942)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [105/120]  Batch [0/1]  Time 24.368 (24.368)  LossA 1.034 (1.034)  LossB 1.062 (1.062)  Prec1A 70.765 (70.765)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.765	B: 70.492
+Epoch 105 using 1.0 min 53.75 sec
+-----------------
+Train Epoch [106/120]  Batch [0/6]  Time 32.450 (32.450)  LossA 0.080 (0.080)  LossB 0.080 (0.080)  Prec1A 50.586 (50.586)  Prec1B 50.781 (50.781)Train Epoch [106/120]  Batch [1/6]  Time 1.738 (17.094)  LossA 0.072 (0.076)  LossB 0.072 (0.076)  Prec1A 54.102 (52.344)  Prec1B 54.102 (52.441)Train Epoch [106/120]  Batch [2/6]  Time 1.735 (11.974)  LossA 0.070 (0.074)  LossB 0.070 (0.074)  Prec1A 54.102 (52.930)  Prec1B 54.297 (53.060)Train Epoch [106/120]  Batch [3/6]  Time 1.736 (9.415)  LossA 0.070 (0.073)  LossB 0.070 (0.073)  Prec1A 55.078 (53.467)  Prec1B 56.445 (53.906)Train Epoch [106/120]  Batch [4/6]  Time 25.777 (12.687)  LossA 0.078 (0.074)  LossB 0.078 (0.074)  Prec1A 48.828 (52.539)  Prec1B 48.438 (52.812)Train Epoch [106/120]  Batch [5/6]  Time 1.253 (10.782)  LossA 0.074 (0.074)  LossB 0.074 (0.074)  Prec1A 54.865 (52.833)  Prec1B 54.865 (53.072)
+ * Top1 acc:	A: 52.833	B: 53.072
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7953	B: 0.7947
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [106/120]  Batch [0/1]  Time 21.752 (21.752)  LossA 0.933 (0.933)  LossB 0.942 (0.942)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [106/120]  Batch [0/1]  Time 24.855 (24.855)  LossA 1.036 (1.036)  LossB 1.060 (1.060)  Prec1A 70.492 (70.492)  Prec1B 70.765 (70.765)
+ * Top1 acc:	A: 70.492	B: 70.765
+Epoch 106 using 1.0 min 51.65 sec
+-----------------
+Train Epoch [107/120]  Batch [0/6]  Time 31.964 (31.964)  LossA 0.071 (0.071)  LossB 0.071 (0.071)  Prec1A 57.031 (57.031)  Prec1B 57.227 (57.227)Train Epoch [107/120]  Batch [1/6]  Time 2.771 (17.368)  LossA 0.074 (0.073)  LossB 0.074 (0.073)  Prec1A 52.539 (54.785)  Prec1B 51.367 (54.297)Train Epoch [107/120]  Batch [2/6]  Time 2.131 (12.289)  LossA 0.075 (0.073)  LossB 0.075 (0.073)  Prec1A 56.055 (55.208)  Prec1B 56.641 (55.078)Train Epoch [107/120]  Batch [3/6]  Time 2.161 (9.757)  LossA 0.075 (0.074)  LossB 0.075 (0.074)  Prec1A 51.562 (54.297)  Prec1B 52.344 (54.395)Train Epoch [107/120]  Batch [4/6]  Time 25.853 (12.976)  LossA 0.078 (0.075)  LossB 0.078 (0.075)  Prec1A 48.047 (53.047)  Prec1B 48.047 (53.125)Train Epoch [107/120]  Batch [5/6]  Time 1.382 (11.044)  LossA 0.079 (0.075)  LossB 0.079 (0.075)  Prec1A 50.541 (52.730)  Prec1B 50.270 (52.765)
+ * Top1 acc:	A: 52.730	B: 52.765
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7937	B: 0.7943
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [107/120]  Batch [0/1]  Time 21.718 (21.718)  LossA 0.934 (0.934)  LossB 0.942 (0.942)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [107/120]  Batch [0/1]  Time 24.556 (24.556)  LossA 1.035 (1.035)  LossB 1.062 (1.062)  Prec1A 70.492 (70.492)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.492	B: 70.492
+Epoch 107 using 1.0 min 52.91 sec
+-----------------
+Train Epoch [108/120]  Batch [0/6]  Time 32.975 (32.975)  LossA 0.070 (0.070)  LossB 0.070 (0.070)  Prec1A 52.148 (52.148)  Prec1B 52.734 (52.734)Train Epoch [108/120]  Batch [1/6]  Time 1.751 (17.363)  LossA 0.073 (0.071)  LossB 0.073 (0.071)  Prec1A 52.539 (52.344)  Prec1B 53.125 (52.930)Train Epoch [108/120]  Batch [2/6]  Time 1.748 (12.158)  LossA 0.078 (0.074)  LossB 0.078 (0.074)  Prec1A 52.734 (52.474)  Prec1B 52.344 (52.734)Train Epoch [108/120]  Batch [3/6]  Time 1.776 (9.562)  LossA 0.076 (0.074)  LossB 0.076 (0.074)  Prec1A 53.320 (52.686)  Prec1B 53.320 (52.881)Train Epoch [108/120]  Batch [4/6]  Time 24.506 (12.551)  LossA 0.072 (0.074)  LossB 0.072 (0.074)  Prec1A 53.320 (52.812)  Prec1B 52.344 (52.773)Train Epoch [108/120]  Batch [5/6]  Time 1.257 (10.669)  LossA 0.072 (0.073)  LossB 0.072 (0.073)  Prec1A 53.784 (52.935)  Prec1B 54.324 (52.969)
+ * Top1 acc:	A: 52.935	B: 52.969
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7992	B: 0.8001
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [108/120]  Batch [0/1]  Time 21.815 (21.815)  LossA 0.935 (0.935)  LossB 0.944 (0.944)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [108/120]  Batch [0/1]  Time 24.710 (24.710)  LossA 1.036 (1.036)  LossB 1.064 (1.064)  Prec1A 70.765 (70.765)  Prec1B 70.765 (70.765)
+ * Top1 acc:	A: 70.765	B: 70.765
+Epoch 108 using 1.0 min 50.90 sec
+-----------------
+Train Epoch [109/120]  Batch [0/6]  Time 32.956 (32.956)  LossA 0.073 (0.073)  LossB 0.073 (0.073)  Prec1A 54.102 (54.102)  Prec1B 54.297 (54.297)Train Epoch [109/120]  Batch [1/6]  Time 1.860 (17.408)  LossA 0.073 (0.073)  LossB 0.073 (0.073)  Prec1A 53.125 (53.613)  Prec1B 53.125 (53.711)Train Epoch [109/120]  Batch [2/6]  Time 1.909 (12.241)  LossA 0.074 (0.073)  LossB 0.074 (0.073)  Prec1A 51.953 (53.060)  Prec1B 52.734 (53.385)Train Epoch [109/120]  Batch [3/6]  Time 1.830 (9.639)  LossA 0.070 (0.073)  LossB 0.070 (0.073)  Prec1A 52.344 (52.881)  Prec1B 51.953 (53.027)Train Epoch [109/120]  Batch [4/6]  Time 24.643 (12.639)  LossA 0.076 (0.073)  LossB 0.076 (0.073)  Prec1A 54.297 (53.164)  Prec1B 54.883 (53.398)Train Epoch [109/120]  Batch [5/6]  Time 1.304 (10.750)  LossA 0.076 (0.074)  LossB 0.076 (0.074)  Prec1A 50.000 (52.765)  Prec1B 50.270 (53.003)
+ * Top1 acc:	A: 52.765	B: 53.003
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7999	B: 0.7997
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [109/120]  Batch [0/1]  Time 21.822 (21.822)  LossA 0.933 (0.933)  LossB 0.942 (0.942)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [109/120]  Batch [0/1]  Time 24.736 (24.736)  LossA 1.036 (1.036)  LossB 1.062 (1.062)  Prec1A 70.765 (70.765)  Prec1B 70.765 (70.765)
+ * Top1 acc:	A: 70.765	B: 70.765
+Epoch 109 using 1.0 min 51.42 sec
+-----------------
+Train Epoch [110/120]  Batch [0/6]  Time 32.611 (32.611)  LossA 0.074 (0.074)  LossB 0.074 (0.074)  Prec1A 54.297 (54.297)  Prec1B 55.078 (55.078)Train Epoch [110/120]  Batch [1/6]  Time 1.800 (17.206)  LossA 0.071 (0.072)  LossB 0.071 (0.072)  Prec1A 53.711 (54.004)  Prec1B 53.711 (54.395)Train Epoch [110/120]  Batch [2/6]  Time 1.859 (12.090)  LossA 0.073 (0.073)  LossB 0.073 (0.073)  Prec1A 55.078 (54.362)  Prec1B 54.883 (54.557)Train Epoch [110/120]  Batch [3/6]  Time 1.866 (9.534)  LossA 0.076 (0.073)  LossB 0.076 (0.073)  Prec1A 52.734 (53.955)  Prec1B 52.344 (54.004)Train Epoch [110/120]  Batch [4/6]  Time 24.683 (12.564)  LossA 0.078 (0.074)  LossB 0.078 (0.074)  Prec1A 50.781 (53.320)  Prec1B 51.367 (53.477)Train Epoch [110/120]  Batch [5/6]  Time 1.365 (10.697)  LossA 0.077 (0.075)  LossB 0.077 (0.075)  Prec1A 48.649 (52.730)  Prec1B 49.189 (52.935)
+ * Top1 acc:	A: 52.730	B: 52.935
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7964	B: 0.7995
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [110/120]  Batch [0/1]  Time 21.756 (21.756)  LossA 0.935 (0.935)  LossB 0.944 (0.944)  Prec1A 74.044 (74.044)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.044	B: 74.590
+Test Epoch [110/120]  Batch [0/1]  Time 24.462 (24.462)  LossA 1.038 (1.038)  LossB 1.064 (1.064)  Prec1A 70.765 (70.765)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.765	B: 70.492
+Epoch 110 using 1.0 min 50.76 sec
+-----------------
+Train Epoch [111/120]  Batch [0/6]  Time 33.049 (33.049)  LossA 0.076 (0.076)  LossB 0.076 (0.076)  Prec1A 51.367 (51.367)  Prec1B 50.977 (50.977)Train Epoch [111/120]  Batch [1/6]  Time 1.730 (17.389)  LossA 0.072 (0.074)  LossB 0.072 (0.074)  Prec1A 53.906 (52.637)  Prec1B 53.906 (52.441)Train Epoch [111/120]  Batch [2/6]  Time 1.730 (12.169)  LossA 0.080 (0.076)  LossB 0.080 (0.076)  Prec1A 50.586 (51.953)  Prec1B 50.781 (51.888)Train Epoch [111/120]  Batch [3/6]  Time 1.729 (9.559)  LossA 0.073 (0.075)  LossB 0.073 (0.075)  Prec1A 53.125 (52.246)  Prec1B 53.516 (52.295)Train Epoch [111/120]  Batch [4/6]  Time 26.044 (12.856)  LossA 0.074 (0.075)  LossB 0.074 (0.075)  Prec1A 53.711 (52.539)  Prec1B 53.906 (52.617)Train Epoch [111/120]  Batch [5/6]  Time 1.242 (10.921)  LossA 0.072 (0.075)  LossB 0.072 (0.075)  Prec1A 54.595 (52.799)  Prec1B 55.135 (52.935)
+ * Top1 acc:	A: 52.799	B: 52.935
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7961	B: 0.7997
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [111/120]  Batch [0/1]  Time 21.460 (21.460)  LossA 0.936 (0.936)  LossB 0.946 (0.946)  Prec1A 74.044 (74.044)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.044	B: 74.590
+Test Epoch [111/120]  Batch [0/1]  Time 24.387 (24.387)  LossA 1.038 (1.038)  LossB 1.065 (1.065)  Prec1A 70.765 (70.765)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.765	B: 70.492
+Epoch 111 using 1.0 min 51.75 sec
+-----------------
+Train Epoch [112/120]  Batch [0/6]  Time 32.659 (32.659)  LossA 0.075 (0.075)  LossB 0.075 (0.075)  Prec1A 52.148 (52.148)  Prec1B 51.953 (51.953)Train Epoch [112/120]  Batch [1/6]  Time 1.730 (17.194)  LossA 0.073 (0.074)  LossB 0.073 (0.074)  Prec1A 50.977 (51.562)  Prec1B 51.172 (51.562)Train Epoch [112/120]  Batch [2/6]  Time 1.731 (12.040)  LossA 0.073 (0.074)  LossB 0.073 (0.074)  Prec1A 55.078 (52.734)  Prec1B 55.469 (52.865)Train Epoch [112/120]  Batch [3/6]  Time 1.731 (9.463)  LossA 0.072 (0.073)  LossB 0.072 (0.073)  Prec1A 53.125 (52.832)  Prec1B 52.930 (52.881)Train Epoch [112/120]  Batch [4/6]  Time 25.548 (12.680)  LossA 0.071 (0.073)  LossB 0.071 (0.073)  Prec1A 55.859 (53.438)  Prec1B 55.469 (53.398)Train Epoch [112/120]  Batch [5/6]  Time 1.242 (10.774)  LossA 0.080 (0.074)  LossB 0.080 (0.074)  Prec1A 48.378 (52.799)  Prec1B 48.919 (52.833)
+ * Top1 acc:	A: 52.799	B: 52.833
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7951	B: 0.7939
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [112/120]  Batch [0/1]  Time 21.341 (21.341)  LossA 0.934 (0.934)  LossB 0.946 (0.946)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [112/120]  Batch [0/1]  Time 24.318 (24.318)  LossA 1.034 (1.034)  LossB 1.064 (1.064)  Prec1A 70.765 (70.765)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.765	B: 70.492
+Epoch 112 using 1.0 min 50.66 sec
+-----------------
+Train Epoch [113/120]  Batch [0/6]  Time 33.174 (33.174)  LossA 0.068 (0.068)  LossB 0.068 (0.068)  Prec1A 53.711 (53.711)  Prec1B 54.297 (54.297)Train Epoch [113/120]  Batch [1/6]  Time 1.731 (17.452)  LossA 0.073 (0.070)  LossB 0.073 (0.070)  Prec1A 52.930 (53.320)  Prec1B 52.930 (53.613)Train Epoch [113/120]  Batch [2/6]  Time 1.731 (12.212)  LossA 0.078 (0.073)  LossB 0.078 (0.073)  Prec1A 53.125 (53.255)  Prec1B 54.102 (53.776)Train Epoch [113/120]  Batch [3/6]  Time 1.731 (9.591)  LossA 0.073 (0.073)  LossB 0.073 (0.073)  Prec1A 51.172 (52.734)  Prec1B 50.391 (52.930)Train Epoch [113/120]  Batch [4/6]  Time 26.106 (12.894)  LossA 0.079 (0.074)  LossB 0.079 (0.074)  Prec1A 47.461 (51.680)  Prec1B 47.852 (51.914)Train Epoch [113/120]  Batch [5/6]  Time 1.243 (10.952)  LossA 0.067 (0.073)  LossB 0.067 (0.073)  Prec1A 60.000 (52.730)  Prec1B 59.730 (52.901)
+ * Top1 acc:	A: 52.730	B: 52.901
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8018	B: 0.8043
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [113/120]  Batch [0/1]  Time 21.431 (21.431)  LossA 0.934 (0.934)  LossB 0.947 (0.947)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [113/120]  Batch [0/1]  Time 24.522 (24.522)  LossA 1.037 (1.037)  LossB 1.066 (1.066)  Prec1A 70.765 (70.765)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.765	B: 70.492
+Epoch 113 using 1.0 min 52.03 sec
+-----------------
+Train Epoch [114/120]  Batch [0/6]  Time 33.877 (33.877)  LossA 0.076 (0.076)  LossB 0.076 (0.076)  Prec1A 52.344 (52.344)  Prec1B 52.148 (52.148)Train Epoch [114/120]  Batch [1/6]  Time 1.733 (17.805)  LossA 0.068 (0.072)  LossB 0.068 (0.072)  Prec1A 55.469 (53.906)  Prec1B 55.859 (54.004)Train Epoch [114/120]  Batch [2/6]  Time 1.737 (12.449)  LossA 0.075 (0.073)  LossB 0.075 (0.073)  Prec1A 51.758 (53.190)  Prec1B 51.172 (53.060)Train Epoch [114/120]  Batch [3/6]  Time 1.743 (9.773)  LossA 0.078 (0.074)  LossB 0.078 (0.074)  Prec1A 50.391 (52.490)  Prec1B 51.172 (52.588)Train Epoch [114/120]  Batch [4/6]  Time 26.863 (13.191)  LossA 0.077 (0.075)  LossB 0.077 (0.075)  Prec1A 51.562 (52.305)  Prec1B 52.344 (52.539)Train Epoch [114/120]  Batch [5/6]  Time 1.245 (11.200)  LossA 0.069 (0.074)  LossB 0.069 (0.074)  Prec1A 55.946 (52.765)  Prec1B 55.135 (52.867)
+ * Top1 acc:	A: 52.765	B: 52.867
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7964	B: 0.7984
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [114/120]  Batch [0/1]  Time 21.490 (21.490)  LossA 0.934 (0.934)  LossB 0.946 (0.946)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [114/120]  Batch [0/1]  Time 24.427 (24.427)  LossA 1.035 (1.035)  LossB 1.063 (1.063)  Prec1A 70.765 (70.765)  Prec1B 70.765 (70.765)
+ * Top1 acc:	A: 70.765	B: 70.765
+Epoch 114 using 1.0 min 53.48 sec
+-----------------
+Train Epoch [115/120]  Batch [0/6]  Time 33.256 (33.256)  LossA 0.069 (0.069)  LossB 0.069 (0.069)  Prec1A 54.297 (54.297)  Prec1B 55.078 (55.078)Train Epoch [115/120]  Batch [1/6]  Time 1.730 (17.493)  LossA 0.074 (0.072)  LossB 0.074 (0.072)  Prec1A 56.445 (55.371)  Prec1B 55.273 (55.176)Train Epoch [115/120]  Batch [2/6]  Time 1.730 (12.239)  LossA 0.073 (0.072)  LossB 0.073 (0.072)  Prec1A 50.781 (53.841)  Prec1B 51.562 (53.971)Train Epoch [115/120]  Batch [3/6]  Time 1.730 (9.612)  LossA 0.072 (0.072)  LossB 0.072 (0.072)  Prec1A 52.930 (53.613)  Prec1B 52.930 (53.711)Train Epoch [115/120]  Batch [4/6]  Time 25.860 (12.861)  LossA 0.079 (0.074)  LossB 0.079 (0.074)  Prec1A 50.391 (52.969)  Prec1B 49.805 (52.930)Train Epoch [115/120]  Batch [5/6]  Time 1.242 (10.925)  LossA 0.077 (0.074)  LossB 0.077 (0.074)  Prec1A 51.622 (52.799)  Prec1B 52.703 (52.901)
+ * Top1 acc:	A: 52.799	B: 52.901
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7954	B: 0.8002
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [115/120]  Batch [0/1]  Time 21.241 (21.241)  LossA 0.935 (0.935)  LossB 0.946 (0.946)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [115/120]  Batch [0/1]  Time 24.190 (24.190)  LossA 1.038 (1.038)  LossB 1.064 (1.064)  Prec1A 70.492 (70.492)  Prec1B 70.492 (70.492)
+ * Top1 acc:	A: 70.492	B: 70.492
+Epoch 115 using 1.0 min 51.35 sec
+-----------------
+Train Epoch [116/120]  Batch [0/6]  Time 34.329 (34.329)  LossA 0.070 (0.070)  LossB 0.070 (0.070)  Prec1A 53.516 (53.516)  Prec1B 53.516 (53.516)Train Epoch [116/120]  Batch [1/6]  Time 1.730 (18.030)  LossA 0.072 (0.071)  LossB 0.072 (0.071)  Prec1A 55.078 (54.297)  Prec1B 55.664 (54.590)Train Epoch [116/120]  Batch [2/6]  Time 1.730 (12.596)  LossA 0.077 (0.073)  LossB 0.077 (0.073)  Prec1A 50.586 (53.060)  Prec1B 50.781 (53.320)Train Epoch [116/120]  Batch [3/6]  Time 1.730 (9.880)  LossA 0.076 (0.074)  LossB 0.076 (0.074)  Prec1A 51.367 (52.637)  Prec1B 51.562 (52.881)Train Epoch [116/120]  Batch [4/6]  Time 22.981 (12.500)  LossA 0.072 (0.073)  LossB 0.072 (0.073)  Prec1A 52.930 (52.695)  Prec1B 53.125 (52.930)Train Epoch [116/120]  Batch [5/6]  Time 1.242 (10.624)  LossA 0.074 (0.074)  LossB 0.074 (0.074)  Prec1A 54.054 (52.867)  Prec1B 54.054 (53.072)
+ * Top1 acc:	A: 52.867	B: 53.072
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.8000	B: 0.8023
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [116/120]  Batch [0/1]  Time 21.233 (21.233)  LossA 0.933 (0.933)  LossB 0.945 (0.945)  Prec1A 74.044 (74.044)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.044	B: 74.590
+Test Epoch [116/120]  Batch [0/1]  Time 24.188 (24.188)  LossA 1.037 (1.037)  LossB 1.064 (1.064)  Prec1A 70.492 (70.492)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 70.492	B: 70.219
+Epoch 116 using 1.0 min 49.53 sec
+-----------------
+Train Epoch [117/120]  Batch [0/6]  Time 33.102 (33.102)  LossA 0.079 (0.079)  LossB 0.079 (0.079)  Prec1A 50.000 (50.000)  Prec1B 50.391 (50.391)Train Epoch [117/120]  Batch [1/6]  Time 1.730 (17.416)  LossA 0.072 (0.076)  LossB 0.072 (0.076)  Prec1A 53.906 (51.953)  Prec1B 54.297 (52.344)Train Epoch [117/120]  Batch [2/6]  Time 1.730 (12.187)  LossA 0.067 (0.073)  LossB 0.067 (0.073)  Prec1A 54.492 (52.799)  Prec1B 54.492 (53.060)Train Epoch [117/120]  Batch [3/6]  Time 1.734 (9.574)  LossA 0.077 (0.074)  LossB 0.077 (0.074)  Prec1A 48.828 (51.807)  Prec1B 49.023 (52.051)Train Epoch [117/120]  Batch [4/6]  Time 25.208 (12.701)  LossA 0.075 (0.074)  LossB 0.075 (0.074)  Prec1A 54.492 (52.344)  Prec1B 54.297 (52.500)Train Epoch [117/120]  Batch [5/6]  Time 1.242 (10.791)  LossA 0.073 (0.074)  LossB 0.073 (0.074)  Prec1A 55.405 (52.730)  Prec1B 55.405 (52.867)
+ * Top1 acc:	A: 52.730	B: 52.867
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7982	B: 0.8008
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [117/120]  Batch [0/1]  Time 21.280 (21.280)  LossA 0.935 (0.935)  LossB 0.943 (0.943)  Prec1A 74.044 (74.044)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.044	B: 74.590
+Test Epoch [117/120]  Batch [0/1]  Time 24.259 (24.259)  LossA 1.037 (1.037)  LossB 1.063 (1.063)  Prec1A 70.492 (70.492)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 70.492	B: 70.219
+Epoch 117 using 1.0 min 50.64 sec
+-----------------
+Train Epoch [118/120]  Batch [0/6]  Time 31.835 (31.835)  LossA 0.077 (0.077)  LossB 0.077 (0.077)  Prec1A 50.586 (50.586)  Prec1B 50.586 (50.586)Train Epoch [118/120]  Batch [1/6]  Time 2.759 (17.297)  LossA 0.072 (0.075)  LossB 0.072 (0.075)  Prec1A 55.664 (53.125)  Prec1B 55.859 (53.223)Train Epoch [118/120]  Batch [2/6]  Time 1.729 (12.107)  LossA 0.075 (0.075)  LossB 0.075 (0.075)  Prec1A 52.539 (52.930)  Prec1B 52.344 (52.930)Train Epoch [118/120]  Batch [3/6]  Time 1.730 (9.513)  LossA 0.070 (0.073)  LossB 0.070 (0.073)  Prec1A 56.836 (53.906)  Prec1B 56.250 (53.760)Train Epoch [118/120]  Batch [4/6]  Time 25.077 (12.626)  LossA 0.078 (0.074)  LossB 0.078 (0.074)  Prec1A 50.977 (53.320)  Prec1B 50.586 (53.125)Train Epoch [118/120]  Batch [5/6]  Time 1.242 (10.729)  LossA 0.073 (0.074)  LossB 0.073 (0.074)  Prec1A 50.000 (52.901)  Prec1B 50.541 (52.799)
+ * Top1 acc:	A: 52.901	B: 52.799
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7945	B: 0.7934
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [118/120]  Batch [0/1]  Time 21.267 (21.267)  LossA 0.937 (0.937)  LossB 0.945 (0.945)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [118/120]  Batch [0/1]  Time 24.211 (24.211)  LossA 1.039 (1.039)  LossB 1.064 (1.064)  Prec1A 70.492 (70.492)  Prec1B 70.219 (70.219)
+ * Top1 acc:	A: 70.492	B: 70.219
+Epoch 118 using 1.0 min 50.22 sec
+-----------------
+Train Epoch [119/120]  Batch [0/6]  Time 34.285 (34.285)  LossA 0.073 (0.073)  LossB 0.073 (0.073)  Prec1A 55.078 (55.078)  Prec1B 55.078 (55.078)Train Epoch [119/120]  Batch [1/6]  Time 1.730 (18.007)  LossA 0.070 (0.071)  LossB 0.070 (0.071)  Prec1A 54.883 (54.980)  Prec1B 54.688 (54.883)Train Epoch [119/120]  Batch [2/6]  Time 1.731 (12.582)  LossA 0.074 (0.072)  LossB 0.074 (0.072)  Prec1A 53.125 (54.362)  Prec1B 53.516 (54.427)Train Epoch [119/120]  Batch [3/6]  Time 1.730 (9.869)  LossA 0.080 (0.074)  LossB 0.080 (0.074)  Prec1A 49.414 (53.125)  Prec1B 50.000 (53.320)Train Epoch [119/120]  Batch [4/6]  Time 25.492 (12.994)  LossA 0.078 (0.075)  LossB 0.078 (0.075)  Prec1A 51.953 (52.891)  Prec1B 51.758 (53.008)Train Epoch [119/120]  Batch [5/6]  Time 1.242 (11.035)  LossA 0.078 (0.075)  LossB 0.078 (0.075)  Prec1A 50.811 (52.628)  Prec1B 51.081 (52.765)
+ * Top1 acc:	A: 52.628	B: 52.765
+ * Label accu A: 1.0000	B: 1.0000	Pure ratio A: 0.7947	B: 0.7956
+ * n2t_A: 0.2959	n2t_B: 0.2959	t2n_A: 0.0000	t2n_B: 0.0000
+Val Epoch [119/120]  Batch [0/1]  Time 21.283 (21.283)  LossA 0.936 (0.936)  LossB 0.943 (0.943)  Prec1A 74.317 (74.317)  Prec1B 74.590 (74.590)
+ * Top1 acc:	A: 74.317	B: 74.590
+Test Epoch [119/120]  Batch [0/1]  Time 24.276 (24.276)  LossA 1.039 (1.039)  LossB 1.062 (1.062)  Prec1A 70.765 (70.765)  Prec1B 70.765 (70.765)
+ * Top1 acc:	A: 70.765	B: 70.765
+Epoch 119 using 1.0 min 52.13 sec
