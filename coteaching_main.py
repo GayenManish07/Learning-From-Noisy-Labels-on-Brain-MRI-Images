@@ -14,6 +14,7 @@ import numpy as np
 import datetime
 import shutil
 from data.loader import Clover #dataset class
+from data.aptos_loader import APTOS #aptos loader class
 
 from loss import loss_coteaching
 
@@ -62,77 +63,10 @@ torch.manual_seed(args.seed)
 torch.cuda.manual_seed(args.seed)
 
 # Hyper Parameters
-batch_size = 32
+batch_size = 64
 learning_rate = args.lr 
 
-'''
-# load dataset
-if args.dataset=='mnist':
-    input_channel=1
-    num_classes=10
-    args.top_bn = False
-    args.epoch_decay_start = 80
-    args.n_epoch = 100
-    train_dataset = MNIST(root='./data/',
-                                download=True,  
-                                train=True, 
-                                transform=transforms.ToTensor(),
-                                noise_type=args.noise_type,
-                                noise_rate=args.noise_rate
-                         )
-    
-    test_dataset = MNIST(root='./data/',
-                               download=True,  
-                               train=False, 
-                               transform=transforms.ToTensor(),
-                               noise_type=args.noise_type,
-                               noise_rate=args.noise_rate
-                        )
-    
-if args.dataset=='cifar10':
-    input_channel=3
-    num_classes=10
-    args.top_bn = False
-    args.epoch_decay_start = 80
-    args.n_epoch = 100
-    train_dataset = CIFAR10(root='./data/',
-                                download=True,  
-                                train=True, 
-                                transform=transforms.ToTensor(),
-                                noise_type=args.noise_type,
-                                noise_rate=args.noise_rate
-                           )
-    
-    test_dataset = CIFAR10(root='./data/',
-                                download=True,  
-                                train=False, 
-                                transform=transforms.ToTensor(),
-                                noise_type=args.noise_type,
-                                noise_rate=args.noise_rate
-                          )
 
-if args.dataset=='cifar100':
-    input_channel=3
-    num_classes=100
-    args.top_bn = False
-    args.epoch_decay_start = 100
-    args.n_epoch = 200
-    train_dataset = CIFAR100(root='./data/',
-                                download=True,  
-                                train=True, 
-                                transform=transforms.ToTensor(),
-                                noise_type=args.noise_type,
-                                noise_rate=args.noise_rate
-                            )
-    
-    test_dataset = CIFAR100(root='./data/',
-                                download=True,  
-                                train=False, 
-                                transform=transforms.ToTensor(),
-                                noise_type=args.noise_type,
-                                noise_rate=args.noise_rate
-                            )
-'''
 '''    
 # Define transformations (including resizing)
 transform = transforms.Compose([
@@ -147,8 +81,8 @@ if args.dataset == 'mri':
     input_channel = 3  # RGB images, so 3 channels
     num_classes = 2  # Binary classification, so 2 classes
     args.top_bn = False
-    args.epoch_decay_start = 100
-    args.n_epoch = 200
+    args.epoch_decay_start = 75
+    args.n_epoch = 125
     
     # Adjust the paths to where your dataset is stored
     train_dataset = Clover(
@@ -167,7 +101,45 @@ if args.dataset == 'mri':
         noise_type=args.noise_type,
         noise_rate=args.noise_rate
     )
-    
+
+if args.dataset == 'aptos':
+    input_channel = 3  # RGB images, so 3 channels
+    num_classes = 5  # APTOS dataset has 5 classes
+    args.top_bn = False
+    args.epoch_decay_start = 75
+    args.n_epoch = 125
+
+    # Define transforms for training and testing
+    train_transform = transforms.Compose([
+        transforms.RandomHorizontalFlip(),
+        transforms.RandomVerticalFlip(),
+        transforms.ToTensor(),
+    ])
+    test_transform = transforms.Compose([
+        transforms.ToTensor(),
+    ])
+
+    # Load training dataset
+    train_dataset = APTOS(
+        root='./dataset/aptos_coco',  # Path to the dataset root directory
+        csv_file='./dataset/aptos_coco/train.csv',  # Path to the training CSV file
+        train=True,  # Training set
+        transform=train_transform,  # Apply training transforms
+        noise_type=args.noise_type,  # Type of noise to inject
+        noise_rate=args.noise_rate,  # Noise rate (e.g., 0.2 for 20% noise)
+        nb_classes=num_classes  # Number of classes
+    )
+
+    # Load test dataset
+    test_dataset = APTOS(
+        root='./dataset/aptos_coco',  # Path to the dataset root directory
+        csv_file='./dataset/aptos_coco/test.csv',  # Path to the test CSV file
+        train=False,  # Test set
+        transform=test_transform,  # Apply test transforms
+        noise_type=None,  # No noise for the test set
+        noise_rate=0  # No noise for the test set
+    )
+
 print(len(train_dataset))
 print(len(test_dataset))
 print(type(train_dataset))
